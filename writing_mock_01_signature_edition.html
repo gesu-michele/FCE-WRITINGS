@@ -55,7 +55,6 @@
       font-size: 16px;
     }
 
-    /* TOP HEADER */
     header.exam-header {
       background: rgba(6, 21, 45, 0.94);
       backdrop-filter: blur(14px);
@@ -232,7 +231,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* MAIN WORKSPACE */
     main.writing-viewport {
       flex: 1;
       max-width: 1520px;
@@ -682,7 +680,6 @@
       box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.18);
     }
 
-    /* FULL-WIDTH PEDAGOGICAL SCAFFOLDING SUITE */
     .full-width-scaffolding-suite {
       background: var(--surface-white);
       border: 2.5px solid var(--border-subtle);
@@ -922,7 +919,6 @@
       line-height: 1.35;
     }
 
-    /* CONTROLS ROW */
     .controls-bar {
       max-width: 1520px;
       width: 95%;
@@ -1004,7 +1000,6 @@
       box-shadow: 0 0 38px rgba(37, 99, 235, 1);
     }
 
-    /* FOOTER BRANDING */
     footer.exam-footer {
       background: rgba(6, 21, 45, 0.98);
       border-top: 2.5px solid #1e3a8a;
@@ -1050,7 +1045,6 @@
       letter-spacing: 0.8px;
     }
 
-    /* MODALS */
     .modal-veil {
       position: fixed;
       inset: 0;
@@ -1421,7 +1415,6 @@
 </head>
 <body>
 
-  <!-- TOP HEADER CON BOTÓN DIRECTO "RETURN TO MAIN MENU" -->
   <header class="exam-header">
     <div class="brand-left-cluster">
       <div class="cambridge-badge-frame">
@@ -1459,14 +1452,11 @@
     </div>
   </header>
 
-  <!-- MAIN WORKSPACE -->
   <main class="writing-viewport">
 
-    <!-- ================= PART 1 SECTION (MOCK 01) ================= -->
+    <!-- PART 1 SECTION -->
     <section class="writing-section active" id="sectionPart1">
-      
       <div class="top-workspace-grid">
-        
         <div class="prompt-card">
           <div class="exam-main-title-block">
             <span class="exam-paper-heading">📝 B2 FIRST WRITING</span>
@@ -1521,7 +1511,6 @@
             oninput="updateWordCount(1)"
           ></textarea>
         </div>
-
       </div>
 
       <div class="full-width-scaffolding-suite">
@@ -1571,7 +1560,6 @@
 
         <div class="suite-content-pane" id="paneSuiteToolkitP1" style="display:none;">
           <div class="toolkit-super-grid">
-            
             <div class="toolkit-card toolkit-card-purple">
               <h4>🏛️ 6 Advanced Grammar Frames</h4>
               <div class="stacked-lexicon-list">
@@ -1609,18 +1597,14 @@
                 <div class="stacked-lexicon-item"><span class="item-en">Take contemporary amenities for granted</span><span class="item-es">Dar por sentadas las comodidades contemporáneas</span></div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-
     </section>
 
-    <!-- ================= PART 2 SECTION (MOCK 01) ================= -->
+    <!-- PART 2 SECTION -->
     <section class="writing-section" id="sectionPart2">
-      
       <div class="top-workspace-grid">
-        
         <div class="prompt-card">
           <div class="exam-main-title-block">
             <span class="exam-paper-heading">📝 B2 FIRST WRITING</span>
@@ -1685,7 +1669,6 @@
             oninput="updateWordCount(2)"
           ></textarea>
         </div>
-
       </div>
 
       <div class="full-width-scaffolding-suite">
@@ -1708,16 +1691,14 @@
           <div id="p2ModelContent"></div>
         </div>
 
-        <div class="suite-content-pane" id="paneSuiteToolkitP2" style="display:none;">
+        <div class="suite-content-pane" id="paneSuiteToolkitP2">
           <div id="p2ToolkitContent"></div>
         </div>
       </div>
-
     </section>
 
   </main>
 
-  <!-- CONTROLS ROW -->
   <div class="controls-bar">
     <div class="btn-prev-anchor">
       <button type="button" class="btn-act btn-prev" id="btnPrevPart" style="display:none;" onclick="switchPart(1)">
@@ -1730,7 +1711,6 @@
     </button>
   </div>
 
-  <!-- FOOTER BRANDING -->
   <footer class="exam-footer">
     <div class="footer-left">
       © 2026 Cambridge Assessment Practice Engine
@@ -1744,7 +1724,6 @@
     </div>
   </footer>
 
-  <!-- MODAL: PRE-FLIGHT COMPREHENSIVE QUALITY AUDIT -->
   <div class="modal-veil" id="modalQualityAudit">
     <div class="modal-box-audit">
       <h3 class="audit-header-title" id="auditModalTitle">📋 Part 1 Pre-Flight Quality Audit</h3>
@@ -1763,7 +1742,6 @@
     </div>
   </div>
 
-  <!-- MODAL: SIREN WARNING ALERT -->
   <div class="modal-veil" id="modalSirenAlarm">
     <div class="modal-box-alarm">
       <div class="alarm-icon-siren">🚨</div>
@@ -1783,10 +1761,8 @@
     </div>
   </div>
 
-  <!-- MODAL: DETAILED OFFICIAL FEEDBACK -->
   <div class="modal-veil" id="modalOfficialFeedback">
     <div class="modal-box-feedback">
-      
       <div class="fb-header-cluster">
         <div class="fb-header-titles">
           <h2>📊 Official Examiner Evaluation Report</h2>
@@ -1807,8 +1783,6 @@
       </div>
 
       <div class="fb-tasks-grid">
-        
-        <!-- TASK 1 EVALUATION CARD -->
         <div class="fb-task-card">
           <div class="fb-task-top-row">
             <h3>Part 1: Discursive Essay</h3>
@@ -1873,7 +1847,6 @@
           </div>
         </div>
 
-        <!-- TASK 2 EVALUATION CARD -->
         <div class="fb-task-card">
           <div class="fb-task-top-row">
             <h3 id="fbP2TaskTitle">Part 2: Selected Task</h3>
@@ -1937,7 +1910,6 @@
             <div><strong>💎 Vocabulary & Collocations:</strong> <span id="fb_p2_vocabulary">Evaluating...</span></div>
           </div>
         </div>
-
       </div>
 
       <div style="display:flex; justify-content:flex-end; gap:16px; border-top:2px solid #cbd5e1; padding-top:20px;">
@@ -1948,14 +1920,12 @@
           Proceed to Paper 3: Listening (45 mins) ➔
         </button>
       </div>
-
     </div>
   </div>
 
   <script>
     const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw__-c06W-NwMQegRGeJRXlUOj9Lp4Gurezplw_HY2uDiCgwHswVzzPGhecSaCVT-emRg/exec";
 
-    // COUNTDOWN TIMER 80 MINUTOS
     let timeLeft = 80 * 60;
     function updateCountdownTimer() {
       const mins = Math.floor(timeLeft / 60);
@@ -1980,7 +1950,6 @@
       updateCountdownTimer();
     }, 1000);
 
-    // FUNCIÓN DE PESTAÑAS SCAFFOLDING
     function switchFullSuiteTab(section, tabType) {
       const isP1 = (section === 'p1');
       const btnModel = document.getElementById(isP1 ? 'btnSuiteModelP1' : 'btnSuiteModelP2');
@@ -2003,7 +1972,6 @@
       }
     }
 
-    // PART 2 PROMPTS & SCAFFOLDING DATA (MOCK 01)
     const p2Texts = { 2: "", 3: "", 4: "" };
     const P2_DATA = {
       2: {
@@ -2116,7 +2084,7 @@
             <div style="font-size:14px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:0.8px;">Announcement on an English-language travel website:</div>
             <div class="notepad-title-header">
               <span class="notepad-quote-title">ARTICLES WANTED</span>
-              <span style="font-size:18px; font-weight:900; color:#059669;">A day in the city!</span>
+              <span class="notepad-agree-subtitle">A day in the city!</span>
             </div>
             <p style="font-size:17px; font-weight:500; color:#334155; line-height:1.65;">
               We are looking for articles about how a visitor could have a great time in a city in your country in just one day.<br><br>
@@ -2149,7 +2117,7 @@
             </p>
           </div>
           <div style="margin-top:16px; font-size:15px; font-weight:700; color:#047857; display:flex; align-items:center; gap:8px;">
-            <span>💡</span> <strong>Examiner Insight:</strong> 183 words. Direct engagement with the reader, vivid sensory descriptions, clear transit recommendations, and flawless communicative achievement.
+            <span>💡</span> <strong>Examiner Insight (Band 5):</strong> 183 words. Direct engagement with the reader, vivid sensory descriptions, clear transit recommendations, and flawless communicative achievement.
           </div>
         `,
         toolkitHtml: `
@@ -2256,7 +2224,7 @@
             </p>
           </div>
           <div style="margin-top:16px; font-size:15px; font-weight:700; color:#047857; display:flex; align-items:center; gap:8px;">
-            <span>💡</span> <strong>Examiner Insight:</strong> 177 words. Strict formal register, standardized report headings, passive structures, and clear, evidence-based recommendations.
+            <span>💡</span> <strong>Examiner Insight (Band 5):</strong> 177 words. Strict formal register, standardized report headings, passive structures, and clear, evidence-based recommendations.
           </div>
         `,
         toolkitHtml: `
@@ -2585,7 +2553,6 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use markdown,
         return;
       }
 
-      // Guardar sesión en localStorage con la clave oficial fce_writing_trainer_v1
       try {
         const STORAGE_KEY = "fce_writing_trainer_v1";
         let sessionData = {};
@@ -2684,7 +2651,6 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use markdown,
 
       document.getElementById('fbExaminerVerdict').textContent = reportData.examinerSummary;
 
-      // Part 1 render
       document.getElementById('fbP1Score').textContent = `${reportData.part1.score} / 20`;
       document.getElementById('fb_p1_cont').textContent = `${reportData.part1.content} / 5`;
       document.getElementById('fb_bar_p1_cont').style.width = `${(reportData.part1.content / 5) * 100}%`;
@@ -2701,7 +2667,6 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use markdown,
       document.getElementById('fb_p1_grammar').textContent = reportData.part1.grammarAnalysis;
       document.getElementById('fb_p1_vocabulary').textContent = reportData.part1.vocabularyAnalysis;
 
-      // Part 2 render
       document.getElementById('fbP2TaskTitle').textContent = `Part 2: ${P2_DATA[activeP2Option].type}`;
       document.getElementById('fbP2Score').textContent = `${reportData.part2.score} / 20`;
       document.getElementById('fb_p2_cont').textContent = `${reportData.part2.content} / 5`;
@@ -2724,7 +2689,6 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use markdown,
       window.location.href = './listening.html';
     }
 
-    // INITIAL SETUP
     selectP2Option(2);
     switchPart(1);
   </script>
