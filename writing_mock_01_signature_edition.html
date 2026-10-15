@@ -19,9 +19,7 @@
       --cambridge-emerald: #059669;
       --cambridge-purple: #7c3aed;
       --cambridge-gold: #d97706;
-      --cambridge-amber-glow: #f59e0b;
 
-      /* HIGH-CONTRAST INK COLORS */
       --text-pure-black: #000000;
       --text-dark: #0f172a;
       --text-body: #334155;
@@ -42,7 +40,6 @@
 
     body {
       background-color: var(--bg-canvas-blue);
-      /* OVERLAY TRANSLÚCIDO PARA QUE LA FOTOGRAFÍA DE FONDO SE APRECIE CON CLARIDAD */
       background-image: 
         linear-gradient(rgba(15, 45, 95, 0.58), rgba(10, 32, 70, 0.68)),
         url('https://lh3.googleusercontent.com/d/10e6Pmgk3M3P60FsN2oVAYhExabY2UoW8');
@@ -58,7 +55,7 @@
       font-size: 16px;
     }
 
-    /* TOP HEADER: BRANDING & PROFILE */
+    /* TOP HEADER */
     header.exam-header {
       background: rgba(6, 21, 45, 0.94);
       backdrop-filter: blur(14px);
@@ -79,7 +76,6 @@
       gap: 22px;
     }
 
-    /* CAMBRIDGE LOGO ENMARCADO EN BLANCO */
     .cambridge-badge-frame {
       background: #ffffff;
       padding: 8px 18px;
@@ -97,20 +93,19 @@
       object-fit: contain;
     }
 
-    /* JM ELT SOLUTIONS BRAND */
     .jm-brand-box {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       padding-left: 20px;
       border-left: 2.5px solid #3b82f6;
     }
 
     .jm-logo-img {
-      height: 58px;
+      height: 72px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+      filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));
     }
 
     .jm-titles {
@@ -123,7 +118,7 @@
 
     .jm-title-top {
       font-family: 'Outfit', sans-serif;
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 900;
       color: #ffffff;
       letter-spacing: 1.5px;
@@ -133,7 +128,7 @@
 
     .jm-title-sub {
       font-family: 'Outfit', sans-serif;
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 800;
       color: #f59e0b;
       letter-spacing: 1.2px;
@@ -149,7 +144,6 @@
       margin-top: 2px;
     }
 
-    /* CENTER TIMER PILL */
     .header-center-cluster {
       display: flex;
       align-items: center;
@@ -170,7 +164,35 @@
       box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
     }
 
-    /* TRAINER PROFILE CARD */
+    .header-right-cluster {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-return-menu {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1.5px solid #60a5fa;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-return-menu:hover {
+      background: #2563eb;
+      border-color: #bfdbfe;
+      transform: translateY(-1px);
+    }
+
     .trainer-profile-card {
       display: flex;
       align-items: center;
@@ -229,7 +251,6 @@
 
     .writing-section.active { display: flex; }
 
-    /* TWO COLUMNS (PROMPT + EDITOR) */
     .top-workspace-grid {
       display: grid;
       grid-template-columns: 1fr 1.35fr;
@@ -241,7 +262,6 @@
       .top-workspace-grid { grid-template-columns: 1fr; }
     }
 
-    /* PROMPT CARD */
     .prompt-card {
       background: var(--surface-white);
       border: 2.5px solid var(--border-subtle);
@@ -253,7 +273,6 @@
       gap: 16px;
     }
 
-    /* CLEAN EXAM TITLE STRIP */
     .exam-main-title-block {
       display: flex;
       flex-direction: column;
@@ -318,7 +337,6 @@
       color: #000000;
     }
 
-    /* NOTEPAD CONTAINER: FRANJA VERDE ESMERALDA Y FONDO BLANCO LIMPIO */
     .notepad-container {
       background: #ffffff;
       border: 2px solid #cbd5e1;
@@ -345,13 +363,6 @@
       font-weight: 900;
       color: #064e3b;
       line-height: 1.35;
-    }
-
-    .notepad-agree-subtitle {
-      font-family: 'Outfit', sans-serif;
-      font-size: 18px;
-      font-weight: 800;
-      color: #059669;
     }
 
     .notepad-notes-header {
@@ -401,7 +412,6 @@
       color: #000000;
     }
 
-    /* PART 2: BANNER Y SELECTOR CON GLOWING DIFERENCIADO POR COLOR */
     .p2-instruction-banner {
       background: #f8fafc;
       border: 2px solid #cbd5e1;
@@ -436,7 +446,6 @@
       .p2-options-cards-grid { grid-template-columns: 1fr; }
     }
 
-    /* CARDS CON GLOWING VIBRANTE Y COLORES INDEPENDIENTES (AMBER, EMERALD, PURPLE) */
     @keyframes glowAmber {
       0% { box-shadow: 0 0 12px rgba(245, 158, 11, 0.4); border-color: #f59e0b; }
       50% { box-shadow: 0 0 24px rgba(245, 158, 11, 0.85); border-color: #d97706; }
@@ -471,7 +480,6 @@
       transform: translateY(-4px);
     }
 
-    /* CARD 1: REVIEW (AMBER GLOW) */
     .card-opt-amber {
       background: #fffbeb;
       border: 3px solid #fcd34d;
@@ -480,7 +488,6 @@
     .card-opt-amber .opt-card-label { color: #b45309; }
     .card-opt-amber .opt-card-title { color: #78350f; }
 
-    /* CARD 2: ARTICLE (EMERALD GLOW) */
     .card-opt-emerald {
       background: #f0fdf4;
       border: 3px solid #86efac;
@@ -489,7 +496,6 @@
     .card-opt-emerald .opt-card-label { color: #047857; }
     .card-opt-emerald .opt-card-title { color: #064e3b; }
 
-    /* CARD 3: REPORT (PURPLE GLOW) */
     .card-opt-purple {
       background: #faf5ff;
       border: 3px solid #d8b4fe;
@@ -521,7 +527,6 @@
       line-height: 1.4;
     }
 
-    /* RIGHT COLUMN: EDITOR STUDIO */
     .editor-card {
       background: var(--surface-white);
       border: 2.5px solid var(--border-subtle);
@@ -748,7 +753,6 @@
 
     .suite-content-pane.active { display: block; }
 
-    /* MODEL ESSAY PRESENTATION - SOLID BOLD CONTRAST */
     .model-essay-box {
       background: #f8fafc;
       border: 2px solid #cbd5e1;
@@ -796,7 +800,6 @@
     .tag-p3 { background: #d1fae5; color: #065f46; }
     .tag-conc { background: #f3e8ff; color: #6b21a8; }
 
-    /* TOOLKIT 3-COLUMN FULL-WIDTH GRID WITH MULTI-COLOR ACCENTS */
     .toolkit-super-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -816,7 +819,6 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.04);
     }
 
-    /* COLUMN 1: PURPLE ACCENT */
     .toolkit-card-purple {
       background: #faf5ff;
       border: 2px solid #e9d5ff;
@@ -840,7 +842,6 @@
       color: #6b21a8;
     }
 
-    /* COLUMN 2: EMERALD ACCENT */
     .toolkit-card-emerald {
       background: #f0fdf4;
       border: 2px solid #bbf7d0;
@@ -864,7 +865,6 @@
       color: #047857;
     }
 
-    /* COLUMN 3: AMBER ACCENT */
     .toolkit-card-amber {
       background: #fffbeb;
       border: 2px solid #fde68a;
@@ -922,7 +922,7 @@
       line-height: 1.35;
     }
 
-    /* CONTROLS ROW - CENTERED SAPPHIRE GLOW BUTTON */
+    /* CONTROLS ROW */
     .controls-bar {
       max-width: 1520px;
       width: 95%;
@@ -1004,7 +1004,7 @@
       box-shadow: 0 0 38px rgba(37, 99, 235, 1);
     }
 
-    /* FOOTER BRANDING: EXACT 3-COLUMN SEPARATION */
+    /* FOOTER BRANDING */
     footer.exam-footer {
       background: rgba(6, 21, 45, 0.98);
       border-top: 2.5px solid #1e3a8a;
@@ -1146,7 +1146,6 @@
       margin-top: 3px;
     }
 
-    /* SIREN ALERT MODAL CON MOTIVACIÓN DE FULL SCORE (GRADE A) */
     .modal-box-alarm {
       background: #ffffff;
       border: 3.5px solid #dc2626;
@@ -1190,12 +1189,11 @@
       color: #000000;
     }
 
-    /* ================= COMPREHENSIVE OFFICIAL FEEDBACK MODAL ================= */
     .modal-box-feedback {
       background: #ffffff;
       border: 3.5px solid #0f172a;
       border-radius: var(--radius-lg);
-      max-width: 1040px;
+      max-width: 1060px;
       width: 96%;
       max-height: 92vh;
       overflow-y: auto;
@@ -1256,6 +1254,15 @@
       color: #fef08a;
     }
 
+    .fb-pass-indicator {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 800;
+      margin-top: 4px;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
     .fb-tasks-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1271,7 +1278,7 @@
       background: #f8fafc;
       border: 2px solid #cbd5e1;
       border-radius: 14px;
-      padding: 20px 24px;
+      padding: 22px 24px;
       display: flex;
       flex-direction: column;
       gap: 14px;
@@ -1302,11 +1309,10 @@
       border-radius: 8px;
     }
 
-    /* 4 OFFICIAL CRITERIA TABLE (0-5 BAND BARS) */
     .fb-criteria-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .fb-crit-row {
@@ -1339,19 +1345,43 @@
       transition: width 0.6s ease;
     }
 
-    .fb-notes-box {
+    .fb-detailed-box {
       background: #ffffff;
-      border: 1.5px solid #e2e8f0;
+      border: 1.5px solid #cbd5e1;
       border-radius: 10px;
-      padding: 12px 14px;
+      padding: 14px;
       font-size: 13.5px;
-      line-height: 1.5;
-      color: #334155;
+      line-height: 1.55;
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .fb-notes-box strong {
-      color: #0b1a30;
-      font-weight: 800;
+    .fb-pill-pos {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: #065f46;
+    }
+    .fb-pill-pos strong {
+      color: #047857;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .fb-pill-neg {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: #991b1b;
+    }
+    .fb-pill-neg strong {
+      color: #b91c1c;
+      display: block;
+      margin-bottom: 2px;
     }
 
     .fb-examiner-summary-banner {
@@ -1380,19 +1410,24 @@
       color: #1e293b;
       line-height: 1.6;
     }
+
+    @media print {
+      body { background: #ffffff !important; color: #000000 !important; }
+      header.exam-header, .controls-bar, footer.exam-footer, .full-width-scaffolding-suite, .top-workspace-grid { display: none !important; }
+      .modal-veil { position: static !important; display: block !important; background: transparent !important; }
+      .modal-box-feedback { max-width: 100% !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- TOP HEADER: BRANDING & TRAINER PROFILE -->
+  <!-- TOP HEADER CON BOTÓN DIRECTO "RETURN TO MAIN MENU" -->
   <header class="exam-header">
     <div class="brand-left-cluster">
-      <!-- CAMBRIDGE ENGLISH LOGO ENMARCADO EN BLANCO -->
       <div class="cambridge-badge-frame">
         <img src="https://lh3.googleusercontent.com/d/1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg" alt="Cambridge English" class="cambridge-crest-img">
       </div>
 
-      <!-- JM ELT SOLUTIONS BRAND -->
       <div class="jm-brand-box">
         <img src="https://lh3.googleusercontent.com/d/1EksYLoHp7voak-Ka3Y3txyiGM15DMPTP" alt="JM ELT Solutions" class="jm-logo-img">
         <div class="jm-titles">
@@ -1403,35 +1438,36 @@
       </div>
     </div>
 
-    <!-- CENTER TIMER PILL -->
     <div class="header-center-cluster">
       <div class="timer-pill">
         <span>⏱️</span><span id="writingTimer">80:00</span>
       </div>
     </div>
 
-    <!-- TRAINER PROFILE (TOP-RIGHT ENLARGED) -->
-    <div class="trainer-profile-card">
-      <div class="trainer-meta">
-        <div class="trainer-name-top">Dr. Jesús Miguel Lima E.</div>
-        <div class="trainer-desc-sub">Cambridge Specialist & Trainer</div>
+    <div class="header-right-cluster">
+      <a href="./index.html" class="btn-return-menu">
+        <span>🏠</span> Return to Main Menu
+      </a>
+
+      <div class="trainer-profile-card">
+        <div class="trainer-meta">
+          <div class="trainer-name-top">Dr. Jesús Miguel Lima E.</div>
+          <div class="trainer-desc-sub">Cambridge Specialist & Trainer</div>
+        </div>
+        <img src="https://lh3.googleusercontent.com/d/1yd8aHZpgwj1mJXKaP8zldJIZAwGTiIor" alt="Dr. Jesús Miguel Lima E." class="trainer-avatar-lg">
       </div>
-      <img src="https://lh3.googleusercontent.com/d/1yd8aHZpgwj1mJXKaP8zldJIZAwGTiIor" alt="Dr. Jesús Miguel Lima E." class="trainer-avatar-lg">
     </div>
   </header>
 
   <!-- MAIN WORKSPACE -->
   <main class="writing-viewport">
 
-    <!-- ================= PART 1 SECTION ================= -->
+    <!-- ================= PART 1 SECTION (MOCK 01) ================= -->
     <section class="writing-section active" id="sectionPart1">
       
-      <!-- TOP GRID: PROMPT (LEFT) + WRITING STUDIO (RIGHT) -->
       <div class="top-workspace-grid">
         
-        <!-- PROMPT CARD -->
         <div class="prompt-card">
-          <!-- CLEAN OFFICIAL TITLE STRIP -->
           <div class="exam-main-title-block">
             <span class="exam-paper-heading">📝 B2 FIRST WRITING</span>
             <span class="exam-part-heading">Part 1</span>
@@ -1448,11 +1484,9 @@
             Write an essay using <strong>all</strong> the notes and give reasons for your point of view.
           </div>
 
-          <!-- NOTEPAD CONTAINER CON FRANJA VERDE ESMERALDA Y FONDO LIMPIO -->
           <div class="notepad-container">
             <div class="notepad-title-header">
-              <span class="notepad-quote-title">‘Life is better today than it was 100 years ago.’</span>
-              <span class="notepad-agree-subtitle">Do you agree?</span>
+              <span class="notepad-quote-title">‘Life is better today than it was 100 years ago.’ Do you agree?</span>
             </div>
             <div class="notepad-notes-header">📋 Notes • Write about:</div>
             <div class="notepad-note-item"><span class="note-num">1</span> health</div>
@@ -1460,13 +1494,11 @@
             <div class="notepad-note-item"><span class="note-num">3</span> ...(your own idea)</div>
           </div>
 
-          <!-- VERBATIM EXAM FOOTER DIRECTION -->
           <p class="exam-verbatim-footer">
             Write your <strong>essay</strong>. You must use grammatically correct sentences with accurate spelling and punctuation in a style appropriate for the situation.
           </p>
         </div>
 
-        <!-- EDITOR STUDIO CARD -->
         <div class="editor-card">
           <div class="editor-top-bar">
             <div class="editor-top-row">
@@ -1492,7 +1524,6 @@
 
       </div>
 
-      <!-- FULL-WIDTH SCAFFOLDING SUITE -->
       <div class="full-width-scaffolding-suite">
         <div class="suite-nav-bar">
           <div class="suite-title">
@@ -1509,7 +1540,6 @@
           </div>
         </div>
 
-        <!-- TAB 1: MODEL ESSAY -->
         <div class="suite-content-pane active" id="paneSuiteModelP1">
           <div class="model-essay-box">
             <div class="model-title-banner">
@@ -1518,129 +1548,65 @@
             </div>
             <p>
               <span class="annotation-tag tag-p1">Introduction</span>
-              It is frequently asserted that modern society enjoys far superior living standards compared to a century ago. While our ancestors undoubtedly led simpler and less frantic lives, substantial progress has unquestionably transformed human existence for the better.
+              It is frequently asserted that modern society enjoys far superior living standards compared to a century ago. While our ancestors undoubtedly led simpler and less frantic lives, substantial technological and social progress has unquestionably transformed human existence for the better.
             </p>
             <p>
               <span class="annotation-tag tag-p1">Point 1: Health</span>
-              <strong>First and foremost</strong>, healthcare has experienced a <strong>quantum leap</strong>. One hundred years ago, curable ailments frequently proved fatal, and life expectancy was considerably lower. Today, due to cutting-edge medical breakthroughs, systematic vaccination, and sophisticated treatments, citizens live longer, healthier lives than ever before.
+              First and foremost, healthcare has experienced an astonishing revolution. One hundred years ago, curable bacterial infections frequently proved fatal, and average life expectancy was considerably lower. Today, thanks to cutting-edge medical breakthroughs, systematic vaccination programs, and sophisticated treatments, citizens live longer, healthier lives than ever before.
             </p>
             <p>
               <span class="annotation-tag tag-p2">Point 2: Entertainment</span>
               <span class="annotation-tag tag-p3">Point 3: Working Conditions (Own Idea)</span>
-              <strong>Furthermore</strong>, access to recreational activities and personal leisure has expanded drastically. Rather than enduring monotonous routines, people can effortlessly enjoy global cinema, literature, and digital media. More importantly, automated technology has liberated ordinary workers from exhausting manual labour, ensuring regulated working hours and safer environments.
+              Furthermore, access to recreational activities and personal leisure has expanded drastically. Rather than enduring monotonous routines, people can effortlessly enjoy global cinema, literature, and digital media. More importantly, automated technology has liberated ordinary workers from exhausting manual labour, ensuring regulated working hours and far safer industrial environments.
             </p>
             <p>
               <span class="annotation-tag tag-conc">Conclusion</span>
-              <strong>Taking all these factors into account</strong>, I firmly maintain that life today is considerably more fulfilling. Although contemporary life entails certain environmental pressures, remarkable advances in medicine and working conditions render our era overwhelmingly preferable.
+              Taking all factors into account, I firmly maintain that life today is considerably more fulfilling. Although contemporary life entails certain environmental pressures, remarkable advances in medicine and working conditions render our era overwhelmingly preferable.
             </p>
           </div>
           <div style="margin-top:16px; font-size:15px; font-weight:700; color:#047857; display:flex; align-items:center; gap:8px;">
-            <span>💡</span> <strong>Examiner Insight (Grade A / Band 5):</strong> 182 words total. Includes a formal title, covers all 3 notes with clear topic sentences, integrates C1 collocations, and maintains an objective, formal register without informal contractions.
+            <span>💡</span> <strong>Examiner Insight (Grade A / Band 5):</strong> 182 words total. Formal title, covers health, entertainment, and working conditions (original point 3), sophisticated discourse connectives, and strictly objective register without informal contractions.
           </div>
         </div>
 
-        <!-- TAB 2: FULL-WIDTH TOOLKIT CON COLORES DIFERENCIADOS POR COLUMNA -->
-        <div class="suite-content-pane" id="paneSuiteToolkitP1">
+        <div class="suite-content-pane" id="paneSuiteToolkitP1" style="display:none;">
           <div class="toolkit-super-grid">
             
-            <!-- COLUMN 1: GRAMMAR (PURPLE ACCENT) -->
             <div class="toolkit-card toolkit-card-purple">
               <h4>🏛️ 6 Advanced Grammar Frames</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">1. Inversion (C1): "Hardly could our ancestors have imagined such breakthroughs."</span>
-                  <span class="item-es">Difícilmente nuestros antepasados habrían imaginado tales avances.</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">2. Passive Reporting: "It cannot be denied that modern sanitation has saved millions."</span>
-                  <span class="item-es">No se puede negar que el saneamiento moderno ha salvado a millones.</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">3. Cleft Sentence: "What has contributed most significantly to well-being is healthcare."</span>
-                  <span class="item-es">Lo que más ha contribuido al bienestar humano es el sistema de salud.</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">4. Mixed Conditional: "Had these antibiotics not been discovered, mortality would still be rampant."</span>
-                  <span class="item-es">Si no se hubieran descubierto estos antibióticos, la mortalidad aún sería alarmante.</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">5. Participle Clause: "Having mechanized heavy tasks, modern industry allows greater leisure."</span>
-                  <span class="item-es">Habiendo mecanizado las tareas pesadas, la industria permite mayor tiempo libre.</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">6. Double Comparative: "The more medical science progresses, the longer citizens thrive."</span>
-                  <span class="item-es">Cuanto más avanza la ciencia médica, más tiempo prosperan los ciudadanos.</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">1. Inversion (C1): "Hardly could our ancestors have imagined such breakthroughs."</span><span class="item-es">Difícilmente nuestros antepasados habrían imaginado tales avances.</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">2. Passive Reporting: "It cannot be denied that modern sanitation has saved millions."</span><span class="item-es">No se puede negar que el saneamiento moderno ha salvado a millones.</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">3. Cleft Sentence: "What has contributed most significantly to well-being is healthcare."</span><span class="item-es">Lo que más ha contribuido al bienestar humano es el sistema de salud.</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">4. Mixed Conditional: "Had these antibiotics not been discovered, mortality would still be rampant."</span><span class="item-es">Si no se hubieran descubierto estos antibióticos, la mortalidad aún sería alarmante.</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">5. Participle Clause: "Having mechanized heavy tasks, modern industry allows greater leisure."</span><span class="item-es">Habiendo mecanizado las tareas pesadas, la industria permite mayor tiempo libre.</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">6. Double Comparative: "The more medical science progresses, the longer citizens thrive."</span><span class="item-es">Cuanto más avanza la ciencia médica, más tiempo prosperan los ciudadanos.</span></div>
               </div>
             </div>
 
-            <!-- COLUMN 2: CONNECTORS (EMERALD ACCENT) -->
             <div class="toolkit-card toolkit-card-emerald">
               <h4>🔗 Discourse Markers & Linkers</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">First and foremost,...</span>
-                  <span class="item-es">En primerísimo lugar / Ante todo,...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">It is frequently asserted that...</span>
-                  <span class="item-es">Se afirma con frecuencia que...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">In stark contrast to the past,...</span>
-                  <span class="item-es">En marcado contraste con el pasado,...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Notwithstanding these remarkable advantages,...</span>
-                  <span class="item-es">A pesar de estas notables ventajas,...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">It is worth emphasizing that...</span>
-                  <span class="item-es">Vale la pena enfatizar que...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Taking all factors into account,...</span>
-                  <span class="item-es">Teniendo en cuenta todos los factores,...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Render our era overwhelmingly preferable</span>
-                  <span class="item-es">Hacen que nuestra era sea abrumadoramente preferible</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">First and foremost,...</span><span class="item-es">En primerísimo lugar / Ante todo,...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">It is frequently asserted that...</span><span class="item-es">Se afirma con frecuencia que...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">In stark contrast to the past,...</span><span class="item-es">En marcado contraste con el pasado,...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Notwithstanding these remarkable advantages,...</span><span class="item-es">A pesar de estas notables ventajas,...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">More importantly,...</span><span class="item-es">Más importante aún,...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Taking all factors into account,...</span><span class="item-es">Teniendo en cuenta todos los factores,...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Render our era overwhelmingly preferable</span><span class="item-es">Hacen que nuestra era sea abrumadoramente preferible</span></div>
               </div>
             </div>
 
-            <!-- COLUMN 3: PHRASAL VERBS & COLLOCATIONS (AMBER ACCENT) -->
             <div class="toolkit-card toolkit-card-amber">
               <h4>⚡ Phrasal Verbs & Collocations</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Make a quantum leap in healthcare</span>
-                  <span class="item-es">Dar un salto cualitativo en la atención médica</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Bring about far-reaching changes</span>
-                  <span class="item-es">Provocar / traer consigo cambios de gran alcance</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Pave the way for future generations</span>
-                  <span class="item-es">Allanar el camino para las futuras generaciones</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">A double-edged sword</span>
-                  <span class="item-es">Un arma de doble filo</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Phase out obsolete manual machinery</span>
-                  <span class="item-es">Eliminar gradualmente maquinaria manual obsoleta</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Wipe out infectious diseases</span>
-                  <span class="item-es">Erradicar por completo enfermedades infecciosas</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Take contemporary amenities for granted</span>
-                  <span class="item-es">Dar por sentadas las comodidades contemporáneas</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">Make a quantum leap in healthcare</span><span class="item-es">Dar un salto cualitativo en la atención médica</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Bring about far-reaching changes</span><span class="item-es">Provocar / traer consigo cambios de gran alcance</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Pave the way for future generations</span><span class="item-es">Allanar el camino para las futuras generaciones</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">A double-edged sword</span><span class="item-es">Un arma de doble filo</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Phase out obsolete manual machinery</span><span class="item-es">Eliminar gradualmente maquinaria manual obsoleta</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Wipe out infectious diseases</span><span class="item-es">Erradicar por completo enfermedades infecciosas</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Take contemporary amenities for granted</span><span class="item-es">Dar por sentadas las comodidades contemporáneas</span></div>
               </div>
             </div>
 
@@ -1650,13 +1616,11 @@
 
     </section>
 
-    <!-- ================= PART 2 SECTION ================= -->
+    <!-- ================= PART 2 SECTION (MOCK 01) ================= -->
     <section class="writing-section" id="sectionPart2">
       
-      <!-- TOP GRID: PROMPT (LEFT) + WRITING STUDIO (RIGHT) -->
       <div class="top-workspace-grid">
         
-        <!-- PROMPT CARD -->
         <div class="prompt-card">
           <div class="exam-main-title-block">
             <span class="exam-paper-heading">📝 B2 FIRST WRITING</span>
@@ -1669,7 +1633,6 @@
 
           <hr class="exam-section-divider">
 
-          <!-- BANNER ELEGANTE SIN AZUL ABUSIVO -->
           <div class="p2-instruction-banner">
             <div class="p2-instruction-text">
               <span>🎯 SELECT ONLY ONE TASK:</span>
@@ -1679,7 +1642,6 @@
             </span>
           </div>
 
-          <!-- SELECTOR DE 3 OPCIONES CON GLOWINGS VIBRANTES INDEPENDIENTES -->
           <div class="p2-options-cards-grid">
             <button type="button" class="btn-option-card card-opt-amber" id="cardOpt2" onclick="selectP2Option(2)">
               <span class="opt-card-label">✨ Question 2</span>
@@ -1701,7 +1663,6 @@
           <div id="p2PromptContainer"></div>
         </div>
 
-        <!-- EDITOR STUDIO CARD -->
         <div class="editor-card">
           <div class="editor-top-bar">
             <div class="editor-top-row">
@@ -1727,7 +1688,6 @@
 
       </div>
 
-      <!-- FULL-WIDTH SCAFFOLDING SUITE FOR PART 2 -->
       <div class="full-width-scaffolding-suite">
         <div class="suite-nav-bar">
           <div class="suite-title">
@@ -1748,7 +1708,7 @@
           <div id="p2ModelContent"></div>
         </div>
 
-        <div class="suite-content-pane" id="paneSuiteToolkitP2">
+        <div class="suite-content-pane" id="paneSuiteToolkitP2" style="display:none;">
           <div id="p2ToolkitContent"></div>
         </div>
       </div>
@@ -1757,7 +1717,7 @@
 
   </main>
 
-  <!-- CONTROLS ROW - SUBMIT BUTTON CENTERED & GLOWING IN SAPPHIRE BLUE -->
+  <!-- CONTROLS ROW -->
   <div class="controls-bar">
     <div class="btn-prev-anchor">
       <button type="button" class="btn-act btn-prev" id="btnPrevPart" style="display:none;" onclick="switchPart(1)">
@@ -1765,13 +1725,12 @@
       </button>
     </div>
 
-    <!-- CENTER GLOWING SUBMIT BUTTON -->
     <button type="button" class="btn-submit-glow" id="btnMainSubmitGlow" onclick="handleCentralSubmitClick()">
       ✨ Submit Your Essay ➔
     </button>
   </div>
 
-  <!-- FOOTER BRANDING: EXACT 3-COLUMN SEPARATION -->
+  <!-- FOOTER BRANDING -->
   <footer class="exam-footer">
     <div class="footer-left">
       © 2026 Cambridge Assessment Practice Engine
@@ -1785,7 +1744,7 @@
     </div>
   </footer>
 
-  <!-- MODAL: PRE-FLIGHT COMPREHENSIVE QUALITY AUDIT (VERTICAL VIEW) -->
+  <!-- MODAL: PRE-FLIGHT COMPREHENSIVE QUALITY AUDIT -->
   <div class="modal-veil" id="modalQualityAudit">
     <div class="modal-box-audit">
       <h3 class="audit-header-title" id="auditModalTitle">📋 Part 1 Pre-Flight Quality Audit</h3>
@@ -1793,9 +1752,7 @@
         Para asegurar un puntaje sobresaliente (Grade A / Band 5), verifica que tu producción cumpla con los estándares oficiales de Cambridge B2 First antes de avanzar:
       </p>
 
-      <div class="audit-checklist-vertical" id="auditChecklistContainer">
-        <!-- Rendered vertically -->
-      </div>
+      <div class="audit-checklist-vertical" id="auditChecklistContainer"></div>
 
       <div style="display:flex; justify-content:space-between; align-items:center; border-top:2.5px solid var(--border-subtle); padding-top:22px;">
         <button type="button" class="btn-act btn-prev" onclick="closeAuditModal()">Regresar y Editar</button>
@@ -1806,7 +1763,7 @@
     </div>
   </div>
 
-  <!-- MODAL: SIREN WARNING ALERT CON ENFOQUE A FULL SCORE / GRADE A -->
+  <!-- MODAL: SIREN WARNING ALERT -->
   <div class="modal-veil" id="modalSirenAlarm">
     <div class="modal-box-alarm">
       <div class="alarm-icon-siren">🚨</div>
@@ -1826,11 +1783,10 @@
     </div>
   </div>
 
-  <!-- ================= COMPREHENSIVE OFFICIAL FEEDBACK MODAL ================= -->
+  <!-- MODAL: DETAILED OFFICIAL FEEDBACK -->
   <div class="modal-veil" id="modalOfficialFeedback">
     <div class="modal-box-feedback">
       
-      <!-- FEEDBACK HEADER -->
       <div class="fb-header-cluster">
         <div class="fb-header-titles">
           <h2>📊 Official Examiner Evaluation Report</h2>
@@ -1839,11 +1795,10 @@
         <div class="fb-grand-score-box">
           <small>Total Writing Score</small>
           <strong id="fbGrandTotalScore">-- / 40</strong>
-          <span style="display:block; font-size:12px; font-weight:700; color:#a7f3d0;" id="fbGradeResult">Calculating...</span>
+          <span class="fb-pass-indicator" id="fbGradeResult">Evaluating...</span>
         </div>
       </div>
 
-      <!-- EXAMINER GENERAL VERDICT BANNER -->
       <div class="fb-examiner-summary-banner">
         <h4>🎓 Cambridge Examiner Diagnostic Verdict:</h4>
         <p id="fbExaminerVerdict">
@@ -1851,7 +1806,6 @@
         </p>
       </div>
 
-      <!-- 2-COLUMN TASK BREAKDOWN -->
       <div class="fb-tasks-grid">
         
         <!-- TASK 1 EVALUATION CARD -->
@@ -1862,7 +1816,6 @@
           </div>
 
           <div class="fb-criteria-list">
-            
             <div class="fb-crit-row">
               <div class="fb-crit-info">
                 <span>🎯 Content</span>
@@ -1895,18 +1848,28 @@
 
             <div class="fb-crit-row">
               <div class="fb-crit-info">
-                <span>💎 Language & Vocabulary</span>
+                <span>💎 Language & Lexicon</span>
                 <span id="fb_p1_lang">-- / 5</span>
               </div>
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p1_lang" style="width: 0%;"></div>
               </div>
             </div>
-
           </div>
 
-          <div class="fb-notes-box" id="fb_p1_notes">
-            <strong>Diagnostic Feedback:</strong> Evaluando cobertura de las 3 notas, registro formal, estructuración de 4 párrafos y riqueza léxica...
+          <div class="fb-detailed-box">
+            <div><strong>📝 General Task Feedback:</strong> <span id="fb_p1_taskFeedback">Evaluating...</span></div>
+            <div class="fb-pill-pos">
+              <strong>✅ Strengths & Good Practices:</strong>
+              <span id="fb_p1_strengths">Evaluating...</span>
+            </div>
+            <div class="fb-pill-neg">
+              <strong>⚠️ Areas for Improvement & Errors:</strong>
+              <span id="fb_p1_weaknesses">Evaluating...</span>
+            </div>
+            <div><strong>🔤 Spelling & Punctuation:</strong> <span id="fb_p1_spelling">Evaluating...</span></div>
+            <div><strong>⚡ Advanced Grammar Identified:</strong> <span id="fb_p1_grammar">Evaluating...</span></div>
+            <div><strong>💎 Vocabulary & Collocations:</strong> <span id="fb_p1_vocabulary">Evaluating...</span></div>
           </div>
         </div>
 
@@ -1918,7 +1881,6 @@
           </div>
 
           <div class="fb-criteria-list">
-            
             <div class="fb-crit-row">
               <div class="fb-crit-info">
                 <span>🎯 Content</span>
@@ -1951,27 +1913,36 @@
 
             <div class="fb-crit-row">
               <div class="fb-crit-info">
-                <span>💎 Language & Vocabulary</span>
+                <span>💎 Language & Lexicon</span>
                 <span id="fb_p2_lang">-- / 5</span>
               </div>
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p2_lang" style="width: 0%;"></div>
               </div>
             </div>
-
           </div>
 
-          <div class="fb-notes-box" id="fb_p2_notes">
-            <strong>Diagnostic Feedback:</strong> Evaluando el formato específico de género, adecuación al destinatario y precisión gramatical...
+          <div class="fb-detailed-box">
+            <div><strong>📝 General Task Feedback:</strong> <span id="fb_p2_taskFeedback">Evaluating...</span></div>
+            <div class="fb-pill-pos">
+              <strong>✅ Strengths & Good Practices:</strong>
+              <span id="fb_p2_strengths">Evaluating...</span>
+            </div>
+            <div class="fb-pill-neg">
+              <strong>⚠️ Areas for Improvement & Errors:</strong>
+              <span id="fb_p2_weaknesses">Evaluating...</span>
+            </div>
+            <div><strong>🔤 Spelling & Punctuation:</strong> <span id="fb_p2_spelling">Evaluating...</span></div>
+            <div><strong>⚡ Advanced Grammar Identified:</strong> <span id="fb_p2_grammar">Evaluating...</span></div>
+            <div><strong>💎 Vocabulary & Collocations:</strong> <span id="fb_p2_vocabulary">Evaluating...</span></div>
           </div>
         </div>
 
       </div>
 
-      <!-- FOOTER ACTIONS -->
       <div style="display:flex; justify-content:flex-end; gap:16px; border-top:2px solid #cbd5e1; padding-top:20px;">
         <button type="button" class="btn-act btn-prev" onclick="window.print()">
-          🖨️ Print / Save PDF Report
+          🖨️ Print / Save PDF Diagnostic Report
         </button>
         <button type="button" class="btn-submit-glow" style="padding:12px 36px; font-size:16.5px;" onclick="proceedToListening()">
           Proceed to Paper 3: Listening (45 mins) ➔
@@ -1982,49 +1953,57 @@
   </div>
 
   <script>
-    // PRELOADED GEMINI API KEY
-    const STORAGE_KEY_API = "fce_gemini_api_key_v1";
-    const SECURE_KEY = "AQ.Ab8RN6Ll7mlTvKhVkfcHirZqlzwycICeM-bUxPPkphU-Rmg-6w";
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw__-c06W-NwMQegRGeJRXlUOj9Lp4Gurezplw_HY2uDiCgwHswVzzPGhecSaCVT-emRg/exec";
 
-    // 80-MINUTE COUNTDOWN TIMER
+    // COUNTDOWN TIMER 80 MINUTOS
     let timeLeft = 80 * 60;
-    const timerDisplay = document.getElementById('writingTimer');
+    function updateCountdownTimer() {
+      const mins = Math.floor(timeLeft / 60);
+      const secs = timeLeft % 60;
+      const el = document.getElementById('writingTimer');
+      if (el) {
+        el.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      }
+    }
+    updateCountdownTimer();
+
     const timerInterval = setInterval(() => {
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
-        timerDisplay.textContent = "00:00";
+        const el = document.getElementById('writingTimer');
+        if (el) el.textContent = "00:00";
         alert("¡Tiempo concluido! Guardando y evaluando tus producciones escritas.");
         executeFullEvaluation();
         return;
       }
       timeLeft--;
-      const mins = Math.floor(timeLeft / 60);
-      const secs = timeLeft % 60;
-      timerDisplay.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      updateCountdownTimer();
     }, 1000);
 
-    // FULL-WIDTH SCAFFOLDING TABS TOGGLE FUNCTION
+    // FUNCIÓN DE PESTAÑAS SCAFFOLDING
     function switchFullSuiteTab(section, tabType) {
-      const isP1 = section === 'p1';
+      const isP1 = (section === 'p1');
       const btnModel = document.getElementById(isP1 ? 'btnSuiteModelP1' : 'btnSuiteModelP2');
       const btnToolkit = document.getElementById(isP1 ? 'btnSuiteToolkitP1' : 'btnSuiteToolkitP2');
       const paneModel = document.getElementById(isP1 ? 'paneSuiteModelP1' : 'paneSuiteModelP2');
       const paneToolkit = document.getElementById(isP1 ? 'paneSuiteToolkitP1' : 'paneSuiteToolkitP2');
 
+      if (!btnModel || !btnToolkit || !paneModel || !paneToolkit) return;
+
       if (tabType === 'model') {
         btnModel.classList.add('active');
         btnToolkit.classList.remove('active');
-        paneModel.classList.add('active');
-        paneToolkit.classList.remove('active');
+        paneModel.style.display = 'block';
+        paneToolkit.style.display = 'none';
       } else {
         btnModel.classList.remove('active');
         btnToolkit.classList.add('active');
-        paneModel.classList.remove('active');
-        paneToolkit.classList.add('active');
+        paneModel.style.display = 'none';
+        paneToolkit.style.display = 'block';
       }
     }
 
-    // PART 2 PROMPTS & COMPREHENSIVE DATA (NOW WITH 7+ ITEMS PER TOOLKIT CATEGORY)
+    // PART 2 PROMPTS & SCAFFOLDING DATA (MOCK 01)
     const p2Texts = { 2: "", 3: "", 4: "" };
     const P2_DATA = {
       2: {
@@ -2038,7 +2017,7 @@
             <div style="font-size:14px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:0.8px;">Notice on an English-language website called TV Gold:</div>
             <div class="notepad-title-header">
               <span class="notepad-quote-title">Reviews wanted!</span>
-              <span class="notepad-agree-subtitle">A TV documentary I learnt a lot from.</span>
+              <span style="font-size:18px; font-weight:900; color:#059669;">A TV documentary I learnt a lot from</span>
             </div>
             <p style="font-size:17px; font-weight:500; color:#334155; line-height:1.65;">
               Have you seen an interesting TV documentary recently that you learnt a lot from? Write us a review of the documentary. You should explain what the documentary was about, tell us what you learnt from it and say whether other people would find it interesting too.<br><br>
@@ -2070,7 +2049,7 @@
             </p>
           </div>
           <div style="margin-top:16px; font-size:15px; font-weight:700; color:#047857; display:flex; align-items:center; gap:8px;">
-            <span>💡</span> <strong>Examiner Insight:</strong> 178 words. Vibrant adjectives, balanced critique, precise vocabulary, and an explicit recommendation targeting a specific audience.
+            <span>💡</span> <strong>Examiner Insight (Band 5):</strong> 178 words. Vibrant adjectives, balanced critique, precise vocabulary, and an explicit recommendation targeting a specific audience.
           </div>
         `,
         toolkitHtml: `
@@ -2078,116 +2057,52 @@
             <div class="toolkit-card toolkit-card-purple">
               <h4>💎 Evocative Adjectives & Collocations</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Eye-opening revelation</span>
-                  <span class="item-es">Revelación esclarecedora / que abre los ojos</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Breathtaking cinematography</span>
-                  <span class="item-es">Cinematografía impresionante</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Utterly captivated</span>
-                  <span class="item-es">Totalmente cautivado/a</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Poignant environmental message</span>
-                  <span class="item-es">Mensaje medioambiental conmovedor</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Thought-provoking analysis</span>
-                  <span class="item-es">Análisis que invita a la reflexión profunda</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Aesthetically pleasing visuals</span>
-                  <span class="item-es">Imágenes estéticamente deslumbrantes</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Flawless narrative pacing</span>
-                  <span class="item-es">Ritmo narrativo impecable</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">Eye-opening revelation</span><span class="item-es">Revelación esclarecedora</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Breathtaking cinematography</span><span class="item-es">Cinematografía impresionante</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Utterly captivated</span><span class="item-es">Totalmente cautivado/a</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Poignant environmental message</span><span class="item-es">Mensaje medioambiental conmovedor</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Thought-provoking analysis</span><span class="item-es">Análisis que invita a la reflexión</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Aesthetically pleasing visuals</span><span class="item-es">Imágenes estéticamente deslumbrantes</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Flawless narrative pacing</span><span class="item-es">Ritmo narrativo impecable</span></div>
               </div>
             </div>
 
             <div class="toolkit-card toolkit-card-emerald">
               <h4>🎯 Critique & Recommendation Formulas</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">What struck me most was...</span>
-                  <span class="item-es">Lo que más me impactó fue...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Far from being a dry lecture,...</span>
-                  <span class="item-es">Lejos de ser una charla monótona,...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">I would wholeheartedly recommend...</span>
-                  <span class="item-es">Recomendaría de todo corazón...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Bound to leave a lasting impression</span>
-                  <span class="item-es">Destinado a dejar una huella duradera</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">It caters brilliantly to viewers who...</span>
-                  <span class="item-es">Satisface con creces a los espectadores que...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Fails to live up to the initial hype</span>
-                  <span class="item-es">No llega a cumplir con las altas expectativas iniciales</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">An absolute must-watch for anyone...</span>
-                  <span class="item-es">Una obra de obligada visualización para cualquiera...</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">What struck me most was...</span><span class="item-es">Lo que más me impactó fue...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Far from being a dry lecture,...</span><span class="item-es">Lejos de ser una charla monótona,...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">I would wholeheartedly recommend...</span><span class="item-es">Recomendaría de todo corazón...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Bound to leave a lasting impression</span><span class="item-es">Destinado a dejar una huella duradera</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">It caters brilliantly to viewers who...</span><span class="item-es">Satisface con creces a espectadores que...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Fails to live up to the initial hype</span><span class="item-es">No cumple con las altas expectativas</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">An absolute must-watch for anyone...</span><span class="item-es">De obligada visualización para cualquiera...</span></div>
               </div>
             </div>
 
             <div class="toolkit-card toolkit-card-amber">
               <h4>⚡ Narrative Transition Devices & Phrasal Verbs</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Having recently experienced...</span>
-                  <span class="item-es">Habiendo presenciado recientemente...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Shed light on lesser-known facts</span>
-                  <span class="item-es">Arrojar luz sobre hechos poco conocidos</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Masterfully combines education and entertainment</span>
-                  <span class="item-es">Combina magistralmente aprendizaje y entretenimiento</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Come across as remarkably authentic</span>
-                  <span class="item-es">Dar la impresión de ser extraordinariamente auténtico</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Draw the audience in from the outset</span>
-                  <span class="item-es">Atrapar al público desde el primer instante</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Strike a fine balance between...</span>
-                  <span class="item-es">Lograr un fino equilibrio entre...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Leave much to be desired</span>
-                  <span class="item-es">Dejar mucho que desear (para aspectos a mejorar)</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">Having recently experienced...</span><span class="item-es">Habiendo presenciado recientemente...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Shed light on lesser-known facts</span><span class="item-es">Arrojar luz sobre hechos poco conocidos</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Masterfully combines education and entertainment</span><span class="item-es">Combina magistralmente aprendizaje y entretenimiento</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Come across as remarkably authentic</span><span class="item-es">Dar la impresión de ser auténtico</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Draw the audience in from the outset</span><span class="item-es">Atrapar al público desde el inicio</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Strike a fine balance between...</span><span class="item-es">Lograr un fino equilibrio entre...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Leave much to be desired</span><span class="item-es">Dejar mucho que desear</span></div>
               </div>
             </div>
           </div>
         `,
         checklistItems: [
-          { title: "Catchy Title Included", desc: "Incluí un título atractivo que captura el espíritu de la reseña y atrae al lector." },
-          { title: "Subject Identified Clearly", desc: "Mencioné el nombre del documental, director o plataforma y su temática central en la introducción." },
-          { title: "Knowledge Acquired Detailed", desc: "Expliqué concretamente qué aprendí de la producción (datos o reflexiones nuevas)." },
-          { title: "Balanced Evaluation (Pros & Limitations)", desc: "Evalué aspectos destacables y posibles limitaciones con sentido crítico objetivo." },
-          { title: "Descriptive & Evaluative Lexicon", desc: "Usé adjetivos descriptivos avanzados (breathtaking, poignant, eye-opening, thought-provoking)." },
-          { title: "Explicit Recommendation Given", desc: "Cerré recomendando justificadamente a qué tipo de público le interesará la producción." },
-          { title: "Appropriate Semi-formal Register", desc: "Mantuve un tono profesional pero ameno sin caer en coloquialismos inapropiados." },
-          { title: "Strict Word Count Complied (140-190 Words)", desc: "Mi reseña se encuentra dentro del rango oficial sin sobrepasar el umbral de 200 palabras." },
-          { title: "Accurate Spelling and Punctuation", desc: "Revisé la ortografía y el uso de conectores y comas según la norma Cambridge." }
+          { title: "Catchy Title Included", desc: "Incluí un título atractivo que captura el espíritu de la reseña." },
+          { title: "Subject Identified Clearly", desc: "Mencioné el nombre del documental y su temática central en la introducción." },
+          { title: "Knowledge Acquired Detailed", desc: "Expliqué concretamente qué aprendí de la producción." },
+          { title: "Balanced Evaluation", desc: "Evalué aspectos destacables y posibles limitaciones con sentido crítico." },
+          { title: "Descriptive & Evaluative Lexicon", desc: "Usé adjetivos avanzados (breathtaking, poignant, eye-opening)." },
+          { title: "Explicit Recommendation Given", desc: "Cerré recomendando justificadamente a qué tipo de público le interesará." },
+          { title: "Appropriate Semi-formal Register", desc: "Mantuve un tono profesional pero ameno sin coloquialismos inapropiados." },
+          { title: "Word Count Complied (140-190 Words)", desc: "Mi reseña se encuentra dentro del rango oficial sin sobrepasar 200 palabras." }
         ]
       },
       3: {
@@ -2201,7 +2116,7 @@
             <div style="font-size:14px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:0.8px;">Announcement on an English-language travel website:</div>
             <div class="notepad-title-header">
               <span class="notepad-quote-title">ARTICLES WANTED</span>
-              <span class="notepad-agree-subtitle">A day in the city!</span>
+              <span style="font-size:18px; font-weight:900; color:#059669;">A day in the city!</span>
             </div>
             <p style="font-size:17px; font-weight:500; color:#334155; line-height:1.65;">
               We are looking for articles about how a visitor could have a great time in a city in your country in just one day.<br><br>
@@ -2242,116 +2157,52 @@
             <div class="toolkit-card toolkit-card-purple">
               <h4>🎯 Reader Hooks & Rhetorical Devices</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Have you ever imagined exploring...?</span>
-                  <span class="item-es">¿Te has imaginado alguna vez explorando...?</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Believe it or not,...</span>
-                  <span class="item-es">Lo creas o no,...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Stepping straight back into the past</span>
-                  <span class="item-es">Retroceder directamente en el tiempo</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">A day you will cherish forever</span>
-                  <span class="item-es">Un día que atesorarás por siempre</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Picture this: winding cobblestone alleys...</span>
-                  <span class="item-es">Imagínate esto: callejones serpenteantes de piedra...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">What better way to recharge than...</span>
-                  <span class="item-es">¿Qué mejor manera de recargar energías que...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Rest assured, you will not regret it</span>
-                  <span class="item-es">Ten por seguro que no te arrepentirás</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">Have you ever imagined exploring...?</span><span class="item-es">¿Te has imaginado alguna vez explorando...?</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Believe it or not,...</span><span class="item-es">Lo creas o no,...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Stepping straight back into the past</span><span class="item-es">Retroceder directamente en el tiempo</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">A day you will cherish forever</span><span class="item-es">Un día que atesorarás por siempre</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Picture this: winding cobblestone alleys...</span><span class="item-es">Imagínate esto: callejones serpenteantes...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">What better way to recharge than...</span><span class="item-es">¿Qué mejor manera de recargar energías que...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Rest assured, you will not regret it</span><span class="item-es">Ten por seguro que no te arrepentirás</span></div>
               </div>
             </div>
 
             <div class="toolkit-card toolkit-card-emerald">
               <h4>🚶 Transit & Atmosphere Collocations</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Remarkably pedestrian-friendly</span>
-                  <span class="item-es">Notablemente transitable a pie</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Readily available and reasonably priced</span>
-                  <span class="item-es">Fácilmente disponible y a precios razonables</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Towering volcanic peaks</span>
-                  <span class="item-es">Imponentes cumbres volcánicas</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Round off your day in style</span>
-                  <span class="item-es">Completar / coronar tu día con estilo</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Soak up the vibrant local atmosphere</span>
-                  <span class="item-es">Empaparse del vibrante ambiente local</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Tucked away in the historic quarter</span>
-                  <span class="item-es">Escondido / resguardado en el casco histórico</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">A bustling culinary hub</span>
-                  <span class="item-es">Un bullicioso epicentro gastronómico</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">Remarkably pedestrian-friendly</span><span class="item-es">Notablemente transitable a pie</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Readily available and reasonably priced</span><span class="item-es">Fácilmente disponible y a precios razonables</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Towering volcanic peaks</span><span class="item-es">Imponentes cumbres volcánicas</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Round off your day in style</span><span class="item-es">Completar tu día con estilo</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Soak up the vibrant local atmosphere</span><span class="item-es">Empaparse del vibrante ambiente local</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Tucked away in the historic quarter</span><span class="item-es">Escondido en el casco histórico</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">A bustling culinary hub</span><span class="item-es">Un bullicioso epicentro gastronómico</span></div>
               </div>
             </div>
 
             <div class="toolkit-card toolkit-card-amber">
               <h4>✨ Sensory & Evocative Verbs</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Duck into a traditional tavern</span>
-                  <span class="item-es">Entrar / refugiarse en una taberna tradicional</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Marvel at the majestic architecture</span>
-                  <span class="item-es">Maravillarse ante la majestuosa arquitectura</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Fall completely in love with the scenery</span>
-                  <span class="item-es">Enamorarse por completo del paisaje</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Immerse yourself in centuries of heritage</span>
-                  <span class="item-es">Sumergirse en siglos de patrimonio</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Savour mouth-watering regional delicacies</span>
-                  <span class="item-es">Saborear deliciosos manjares regionales</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Catch a panoramic sunset view</span>
-                  <span class="item-es">Apreciar una vista panorámica del atardecer</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Wander aimlessly along picturesque avenues</span>
-                  <span class="item-es">Pasear sin rumbo por avenidas pintorescas</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">Duck into a traditional tavern</span><span class="item-es">Entrar en una taberna tradicional</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Marvel at the majestic architecture</span><span class="item-es">Maravillarse ante la majestuosa arquitectura</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Fall completely in love with the scenery</span><span class="item-es">Enamorarse por completo del paisaje</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Immerse yourself in centuries of heritage</span><span class="item-es">Sumergirse en siglos de patrimonio</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Savour mouth-watering regional delicacies</span><span class="item-es">Saborear deliciosos manjares regionales</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Catch a panoramic sunset view</span><span class="item-es">Apreciar una vista panorámica del atardecer</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Wander aimlessly along picturesque avenues</span><span class="item-es">Pasear sin rumbo por avenidas pintorescas</span></div>
               </div>
             </div>
           </div>
         `,
         checklistItems: [
-          { title: "Catchy Title Included", desc: "Escribí un título llamativo y sugerente al inicio del artículo." },
-          { title: "Engaging Rhetorical Question", desc: "Inicié con una pregunta o gancho directo que interpela activamente al lector." },
-          { title: "Must-See Sights Addressed", desc: "Describí lugares concretos que el visitante debe contemplar durante su jornada." },
-          { title: "Activities & Transit Covered", desc: "Expliqué qué hacer y cómo movilizarse de forma práctica (a pie, taxi, etc.)." },
-          { title: "Vibrant & Enthusiastic Register", desc: "Mantuve un tono fresco, motivador y descriptivo apto para una web de viajes." },
-          { title: "Sensory & Visual Language Used", desc: "Utilicé vocabulario sensorial para evocar colores, sabores y ambientes." },
-          { title: "Memorable Concluding Message", desc: "Cerré con una conclusión inspiradora que invita al lector a visitar el lugar." },
-          { title: "Word Count Complied (140-190 Words)", desc: "El artículo respeta el límite estipulado de extensión sin sobrepasar 200 palabras." },
-          { title: "Accurate Spelling and Punctuation", desc: "Revisé la ortografía y el uso de signos de puntuación según las normas de Cambridge." }
+          { title: "Catchy Title Included", desc: "Escribí un título llamativo al inicio del artículo." },
+          { title: "Engaging Rhetorical Question", desc: "Inicié con una pregunta directa que interpela al lector." },
+          { title: "Must-See Sights Addressed", desc: "Describí lugares concretos que el visitante debe contemplar." },
+          { title: "Activities & Transit Covered", desc: "Expliqué qué hacer y cómo movilizarse de forma práctica." },
+          { title: "Vibrant & Enthusiastic Register", desc: "Mantuve un tono fresco y motivador apto para web de viajes." },
+          { title: "Sensory & Visual Language Used", desc: "Utilicé vocabulario sensorial para evocar colores y sabores." },
+          { title: "Memorable Concluding Message", desc: "Cerré con una conclusión inspiradora que invita a visitar el lugar." },
+          { title: "Word Count Complied (140-190 Words)", desc: "El artículo respeta el límite estipulado de extensión." }
         ]
       },
       4: {
@@ -2413,116 +2264,52 @@
             <div class="toolkit-card toolkit-card-purple">
               <h4>🏛️ Formal Headings & Opening Formulas</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">The purpose of this report is to outline...</span>
-                  <span class="item-es">El propósito de este informe es detallar...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">This report aims to assess the feasibility of...</span>
-                  <span class="item-es">Este informe tiene por objetivo evaluar la viabilidad de...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">My day-to-day duties involved...</span>
-                  <span class="item-es">Mis funciones cotidianas implicaban...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Above all, this position substantially enhanced...</span>
-                  <span class="item-es">Por encima de todo, este puesto potenció sustancialmente...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">I would unreservedly recommend...</span>
-                  <span class="item-es">Recomendaría sin reservas...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">On balance, it is evident that...</span>
-                  <span class="item-es">En balance general, resulta evidente que...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">With a view to optimizing productivity...</span>
-                  <span class="item-es">Con miras a optimizar la productividad...</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">The purpose of this report is to outline...</span><span class="item-es">El propósito de este informe es detallar...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">This report aims to assess the feasibility of...</span><span class="item-es">Este informe tiene por objetivo evaluar...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">My day-to-day duties involved...</span><span class="item-es">Mis funciones cotidianas implicaban...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Above all, this position substantially enhanced...</span><span class="item-es">Por encima de todo, este puesto potenció...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">I would unreservedly recommend...</span><span class="item-es">Recomendaría sin reservas...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">On balance, it is evident that...</span><span class="item-es">En balance general, resulta evidente que...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">With a view to optimizing productivity...</span><span class="item-es">Con miras a optimizar la productividad...</span></div>
               </div>
             </div>
 
             <div class="toolkit-card toolkit-card-emerald">
               <h4>💼 Professional Workplace Lexicon</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Transferable professional skills</span>
-                  <span class="item-es">Habilidades profesionales transferibles</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Peak trading hours</span>
-                  <span class="item-es">Horas punta / de mayor afluencia comercial</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Financial independence and autonomy</span>
-                  <span class="item-es">Independencia y autonomía económica</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Invaluable workplace exposure</span>
-                  <span class="item-es">Invaluable contacto con el entorno laboral</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Demonstrate resilience under pressure</span>
-                  <span class="item-es">Demostrar resiliencia bajo presión</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Customer satisfaction ratings</span>
-                  <span class="item-es">Índices de satisfacción de los clientes</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Supervisory duties and inventory control</span>
-                  <span class="item-es">Funciones de supervisión y control de inventario</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">Transferable professional skills</span><span class="item-es">Habilidades profesionales transferibles</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Peak trading hours</span><span class="item-es">Horas punta de mayor afluencia comercial</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Financial independence and autonomy</span><span class="item-es">Independencia y autonomía económica</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Invaluable workplace exposure</span><span class="item-es">Invaluable contacto con el entorno laboral</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Demonstrate resilience under pressure</span><span class="item-es">Demostrar resiliencia bajo presión</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Customer satisfaction ratings</span><span class="item-es">Índices de satisfacción de los clientes</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Supervisory duties and inventory control</span><span class="item-es">Funciones de supervisión y control de inventario</span></div>
               </div>
             </div>
 
             <div class="toolkit-card toolkit-card-amber">
               <h4>📊 Impersonal Structures & Passive Frames</h4>
               <div class="stacked-lexicon-list">
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Necessitating prompt problem-solving</span>
-                  <span class="item-es">Exigiendo una pronta resolución de problemas</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Provided students organize their schedules...</span>
-                  <span class="item-es">Siempre y cuando los estudiantes organicen sus horarios...</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Rigorous competence in time management</span>
-                  <span class="item-es">Rigurosa competencia en gestión del tiempo</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Offers invaluable exposure to career norms</span>
-                  <span class="item-es">Ofrece una exposición invaluable a las normas laborales</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">It was observed that punctuality proved essential</span>
-                  <span class="item-es">Se observó que la puntualidad resultó indispensable</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Adequate measures ought to be implemented</span>
-                  <span class="item-es">Deberían implementarse medidas adecuadas</span>
-                </div>
-                <div class="stacked-lexicon-item">
-                  <span class="item-en">Feedback gathered from patrons indicated that...</span>
-                  <span class="item-es">La retroalimentación recogida de los clientes indicó que...</span>
-                </div>
+                <div class="stacked-lexicon-item"><span class="item-en">Necessitating prompt problem-solving</span><span class="item-es">Exigiendo una pronta resolución de problemas</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Provided students organize their schedules...</span><span class="item-es">Siempre y cuando los estudiantes organicen sus horarios...</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Rigorous competence in time management</span><span class="item-es">Rigurosa competencia en gestión del tiempo</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Offers invaluable exposure to career norms</span><span class="item-es">Ofrece una exposición invaluable a las normas laborales</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">It was observed that punctuality proved essential</span><span class="item-es">Se observó que la puntualidad resultó indispensable</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Adequate measures ought to be implemented</span><span class="item-es">Deberían implementarse medidas adecuadas</span></div>
+                <div class="stacked-lexicon-item"><span class="item-en">Feedback gathered from patrons indicated that...</span><span class="item-es">La retroalimentación indicó que...</span></div>
               </div>
             </div>
           </div>
         `,
         checklistItems: [
-          { title: "Standard Formal Headings Used", desc: "Incluí subtítulos formales y claros (Introduction, Duties, Skills, Recommendation)." },
-          { title: "Purpose Clearly Stated", desc: "La introducción define explícitamente el objetivo del informe ('The purpose of this report is to...')." },
-          { title: "Job Description Covered", desc: "Describí con precisión las funciones, entorno y responsabilidades cotidianas del puesto." },
-          { title: "Lessons & Skills Evaluated", desc: "Expliqué qué competencias transferibles y aprendizajes prácticos adquirí." },
-          { title: "Unbiased Formal Recommendation", desc: "Cerré con una conclusión fundamentada aconsejando objetivamente a otros estudiantes." },
-          { title: "Impersonal & Formal Register", desc: "No utilicé contracciones ni modismos informales en todo el texto." },
-          { title: "Passive & Impersonal Structures Used", desc: "Integré fórmulas objetivas y construcciones pasivas propias del reporte formal." },
-          { title: "Strict Word Count Complied (140-190 Words)", desc: "El informe respeta el límite estipulado de extensión sin sobrepasar 200 palabras." },
-          { title: "Accurate Spelling and Punctuation", desc: "Revisé la ortografía y el uso de conectores y comas según la norma Cambridge." }
+          { title: "Standard Formal Headings Used", desc: "Incluí subtítulos formales y claros (Purpose, Responsibilities, Skills, Recommendation)." },
+          { title: "Purpose Clearly Stated", desc: "La introducción define explícitamente el objetivo del informe." },
+          { title: "Job Description Covered", desc: "Describí con precisión las funciones cotidianas del puesto." },
+          { title: "Lessons & Skills Evaluated", desc: "Expliqué qué competencias transferibles adquirí." },
+          { title: "Unbiased Formal Recommendation", desc: "Cerré con una conclusión fundamentada aconsejando a otros estudiantes." },
+          { title: "Impersonal & Formal Register", desc: "No utilicé contracciones ni modismos informales en el texto." },
+          { title: "Passive & Impersonal Structures Used", desc: "Integré fórmulas objetivas y construcciones pasivas." },
+          { title: "Word Count Complied (140-190 Words)", desc: "El informe respeta el límite estipulado de extensión." }
         ]
       }
     };
@@ -2575,20 +2362,7 @@
       openAuditModal(activePart);
     }
 
-    // AUDIT QUALITY CHECKLIST LOGIC
     let currentAuditStage = 1;
-
-    const PART1_AUDIT_ITEMS = [
-      { title: "Appropriate Formal Title", desc: "Incluí un título sugerente y formal para encabezar mi ensayo (recomendado para Grade A)." },
-      { title: "All 3 Notes Covered Fully", desc: "Desarrollé el punto 1 (health), el punto 2 (entertainment) y formulé mi propia idea original (ej. working conditions)." },
-      { title: "Zero Informal Contractions", desc: "Verifiqué que no haya contracciones informales (escribí 'cannot', 'do not', 'it is' en lugar de 'can't', 'don't')." },
-      { title: "Clear 4-Paragraph Structure", desc: "Organicé mi ensayo en introducción con postura, 2 párrafos de cuerpo temáticos y una conclusión sólida." },
-      { title: "At Least 2 Advanced C1 Structures", desc: "Integré estructuras avanzadas (inversión, pasiva impersonal, cleft sentence, condicional mixto o doble comparativo)." },
-      { title: "Varied Discourse Markers & Connectors", desc: "Utilicé conectores formales variados (First and foremost, Furthermore, Notwithstanding, Taking all factors into account)." },
-      { title: "Appropriate Phrasal Verbs / Lexical Collocations", desc: "Incluí léxico temático preciso (quantum leap, life expectancy, bring about, pave the way)." },
-      { title: "Strict Word Count Compliance (140-190 Words)", desc: "Mi texto se ubica dentro del límite exigido por Cambridge, sin superar el umbral tolerable de 200 palabras." },
-      { title: "Accurate Spelling and Punctuation", desc: "Revisé la ortografía y el uso adecuado de comas después de conectores discursivos." }
-    ];
 
     function openAuditModal(stage) {
       currentAuditStage = stage;
@@ -2666,7 +2440,6 @@
       }
     }
 
-    // WORD COUNT WITH MULTI-TIER WARNING & FLASH
     function updateWordCount(part) {
       const text = document.getElementById(part === 1 ? 'textPart1' : 'textPart2').value.trim();
       const count = text ? text.split(/\s+/).filter(w => w.length > 0).length : 0;
@@ -2713,40 +2486,50 @@
       }
     }
 
-    // EVALUATION WITH GEMINI API, STORAGE & FULL MODAL REPORT
     async function executeFullEvaluation() {
       clearInterval(timerInterval);
 
       const t1 = document.getElementById('textPart1').value.trim();
       const t2 = document.getElementById('textPart2').value.trim();
 
-      // Desplegar modal de feedback en estado de evaluación
+      const count1 = t1 ? t1.split(/\s+/).filter(w => w.length > 0).length : 0;
+      const count2 = t2 ? t2.split(/\s+/).filter(w => w.length > 0).length : 0;
+
+      if (count1 < 25 && count2 < 25) {
+        renderDirectZeroReport();
+        return;
+      }
+
       document.getElementById('fbGrandTotalScore').textContent = "... / 40";
-      document.getElementById('fbGradeResult').textContent = "Consultando AI Examiner oficial...";
+      document.getElementById('fbGradeResult').textContent = "Evaluando con AI Examiner...";
       document.getElementById('modalOfficialFeedback').classList.add('active');
 
       const evaluationPrompt = `
-You are a strict, authoritative Cambridge English B2 First (FCE) examiner.
-Evaluate the candidate's two writing tasks according to official Cambridge B2 criteria:
+You are a veteran, authoritative Cambridge English B2 First (FCE) Writing Team Leader and Senior Examiner with over 20 years of experience assessing international certification papers. You possess native English mastery and uphold the strictest adherence to the official Cambridge English Writing Assessment Scale.
+
+You must evaluate the candidate's two writing tasks strictly according to the 4 official Cambridge B2 criteria:
 1. Content (0 to 5)
 2. Communicative Achievement (0 to 5)
 3. Organisation (0 to 5)
 4. Language (0 to 5)
 
-CRITICAL RULES:
-- Total score per part: 0 to 20 marks. Grand Total: 0 to 40 marks.
-- Check spelling, contractions, and punctuation with strict Cambridge B2 accuracy.
+CRITICAL EXAMINER SPECIFICATIONS:
+- Minimum passing standard per task is 12 / 20 (Band 3 across all 4 criteria). Passing Paper 2 requires a grand total of at least 24 / 40.
+- Scores 18-20 per task represent Grade A (CEFR C1 level). Grade B requires 16-17 marks. Grade C requires 12-15 marks. Below 12 is a failing mark.
+- Be rigorous, completely honest and unsparingly authentic: do not inflate scores, do not offer sugar-coated praise. Highlight genuine linguistic and structural virtues, but penalize missing prompt points, register mismatches, informal contractions in essays, punctuation flaws and repetitive lexicon firmly.
+- If a candidate writes fewer than 25 words or produces nonsense, award strictly 0 marks across all 4 criteria.
 
 TASK 1 (Compulsory Essay):
 Topic: "'Life is better today than it was 100 years ago.' Do you agree?"
-Candidate text:
+Notes required: 1. health, 2. entertainment, 3. candidate's own idea.
+Candidate text (${count1} words):
 """${t1 || "(Candidate submitted nothing for Part 1)"}"""
 
-TASK 2 (${P2_DATA[activeP2Option].type}):
-Candidate text:
+TASK 2 (Selected Option: ${P2_DATA[activeP2Option].type}):
+Candidate text (${count2} words):
 """${t2 || "(Candidate submitted nothing for Part 2)"}"""
 
-Respond ONLY with a valid JSON object matching this schema:
+Respond ONLY with a valid JSON object matching this schema (do NOT use markdown, code fences or backticks):
 {
   "part1": {
     "score": 0,
@@ -2754,7 +2537,12 @@ Respond ONLY with a valid JSON object matching this schema:
     "commAch": 0,
     "org": 0,
     "lang": 0,
-    "feedback": "Diagnostic feedback for Part 1"
+    "taskFeedback": "Resumen técnico formal de la tarea",
+    "strengths": "Puntos fuertes específicos observados (lo que hizo bien el alumno)",
+    "weaknesses": "Errores concretos, omisiones o áreas de mejora",
+    "spellingAndPunctuation": "Análisis minucioso de ortografía y signos de puntuación",
+    "grammarAnalysis": "Estructuras gramaticales complejas identificadas vs faltantes",
+    "vocabularyAnalysis": "Evaluación de colocaciones, phrasal verbs y léxico temático"
   },
   "part2": {
     "score": 0,
@@ -2762,72 +2550,136 @@ Respond ONLY with a valid JSON object matching this schema:
     "commAch": 0,
     "org": 0,
     "lang": 0,
-    "feedback": "Diagnostic feedback for Part 2"
+    "taskFeedback": "Resumen técnico formal de la tarea",
+    "strengths": "Puntos fuertes específicos observados (lo que hizo bien el alumno)",
+    "weaknesses": "Errores concretos, omisiones o áreas de mejora",
+    "spellingAndPunctuation": "Análisis minucioso de ortografía y signos de puntuación",
+    "grammarAnalysis": "Estructuras gramaticales complejas identificadas vs faltantes",
+    "vocabularyAnalysis": "Evaluación de colocaciones, phrasal verbs y léxico temático"
   },
   "grandTotal": 0,
-  "examinerSummary": "Diagnostic verdict with actionable recommendations."
+  "examinerSummary": "Veredicto diagnóstico global honesto, severo y con recomendaciones estratégicas para aspirar al Grade A"
 }
 `;
 
       let reportData = null;
 
       try {
-        const apiKey = localStorage.getItem(STORAGE_KEY_API) || SECURE_KEY;
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+        const response = await fetch(APPS_SCRIPT_URL, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ contents: [{ parts: [{ text: evaluationPrompt }] }] })
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({ prompt: evaluationPrompt })
         });
 
         if (!response.ok) throw new Error("API status: " + response.statusText);
         const data = await response.json();
-        let rawText = data.candidates[0].content.parts[0].text.trim().replace(/^```json\s*/i, "").replace(/```$/, "").trim();
-        reportData = JSON.parse(rawText);
+
+        if (data.error) {
+          throw new Error("Apps Script API Error: " + data.error);
+        }
+
+        reportData = data;
       } catch (err) {
-        reportData = {
-          part1: {
-            score: 16, content: 4, commAch: 4, org: 4, lang: 4,
-            feedback: "El ensayo aborda con solidez los 3 puntos estipulados, manteniendo un registro formal adecuado y buen control léxico."
-          },
-          part2: {
-            score: 17, content: 5, commAch: 4, org: 4, lang: 4,
-            feedback: `La tarea de ${P2_DATA[activeP2Option].type} respeta el formato de género correspondiente y ofrece una estructura cohesiva sobresaliente.`
-          },
-          grandTotal: 33,
-          examinerSummary: "Desempeño consistente y meritorio que certifica competencia funcional sólida en el nivel CEFR B2 (Cambridge First)."
-        };
+        console.error("AI Examiner error via Apps Script:", err);
+        alert("Hubo un problema al conectar con el servidor de Apps Script. Intenta nuevamente.");
+        return;
       }
 
-      // Guardar sesión en localStorage
-      localStorage.setItem('fce_writing_scores_v1', JSON.stringify({
-        completed: true,
-        grandTotal: reportData.grandTotal,
-        p1Score: reportData.part1.score,
-        p2Score: reportData.part2.score,
-        task2Type: P2_DATA[activeP2Option].type,
-        t1Text: t1,
-        t2Text: t2,
-        aiDiagnostics: reportData,
-        passedWriting: (reportData.grandTotal >= 24),
-        timestamp: new Date().toLocaleDateString('en-GB')
-      }));
+      // Guardar sesión en localStorage con la clave oficial fce_writing_trainer_v1
+      try {
+        const STORAGE_KEY = "fce_writing_trainer_v1";
+        let sessionData = {};
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) sessionData = JSON.parse(raw);
+        if (!sessionData.writingScores) sessionData.writingScores = {};
+        
+        sessionData.writingScores["writing_mock_01_complete"] = {
+          completed: (reportData.grandTotal >= 24),
+          total: reportData.grandTotal,
+          p1Score: reportData.part1.score,
+          p2Score: reportData.part2.score,
+          timestamp: new Date().toLocaleDateString('en-GB')
+        };
 
-      // Renderizar datos en el Modal Oficial de Feedback
+        if (reportData.grandTotal >= 24) {
+          if (!sessionData.unlockedMocks) sessionData.unlockedMocks = ["writing_mock_01_complete"];
+          if (!sessionData.unlockedMocks.includes("writing_mock_02_complete")) {
+            sessionData.unlockedMocks.push("writing_mock_02_complete");
+          }
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(sessionData));
+      } catch (e) {
+        console.warn("Could not save session to localStorage:", e);
+      }
+
+      displayFeedbackModal(reportData);
+    }
+
+    function renderDirectZeroReport() {
+      const zeroReport = {
+        part1: {
+          score: 0, content: 0, commAch: 0, org: 0, lang: 0,
+          taskFeedback: "No se presentó texto o la redacción es inferior a 25 palabras. No es posible evaluar el contenido.",
+          strengths: "Ninguna producción evaluable detectada.",
+          weaknesses: "Omisión total de los 3 puntos guía requeridos.",
+          spellingAndPunctuation: "Sin producción suficiente para análisis ortográfico.",
+          grammarAnalysis: "Ausencia de estructuras gramaticales evaluables.",
+          vocabularyAnalysis: "Sin léxico suficiente para análisis de nivel B2."
+        },
+        part2: {
+          score: 0, content: 0, commAch: 0, org: 0, lang: 0,
+          taskFeedback: "No se presentó texto o la redacción es inferior a 25 palabras. No se cumplen los requisitos mínimos.",
+          strengths: "Ninguna producción evaluable detectada.",
+          weaknesses: "Omisión de las convenciones de género solicitadas.",
+          spellingAndPunctuation: "Sin producción suficiente para análisis ortográfico.",
+          grammarAnalysis: "Ausencia de estructuras gramaticales evaluables.",
+          vocabularyAnalysis: "Sin léxico suficiente para análisis de nivel B2."
+        },
+        grandTotal: 0,
+        examinerSummary: "La entrega no cuenta con producción escrita suficiente para ser calificada. Se requiere un mínimo de 140 palabras por tarea para aspirar al umbral aprobatorio de 12 puntos por ejercicio (24 global)."
+      };
+
+      try {
+        const STORAGE_KEY = "fce_writing_trainer_v1";
+        let sessionData = {};
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) sessionData = JSON.parse(raw);
+        if (!sessionData.writingScores) sessionData.writingScores = {};
+        sessionData.writingScores["writing_mock_01_complete"] = {
+          completed: false,
+          total: 0,
+          p1Score: 0,
+          p2Score: 0,
+          timestamp: new Date().toLocaleDateString('en-GB')
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(sessionData));
+      } catch (e) {}
+
+      displayFeedbackModal(zeroReport);
+    }
+
+    function displayFeedbackModal(reportData) {
+      document.getElementById('modalOfficialFeedback').classList.add('active');
       document.getElementById('fbGrandTotalScore').textContent = `${reportData.grandTotal} / 40`;
       
       const gradeResult = document.getElementById('fbGradeResult');
       if (reportData.grandTotal >= 36) {
         gradeResult.textContent = "🏆 GRADE A (C1 Level Demonstrated)";
-        gradeResult.style.color = "#fef08a";
+        gradeResult.style.background = "#064e3b";
+        gradeResult.style.color = "#a7f3d0";
       } else if (reportData.grandTotal >= 32) {
         gradeResult.textContent = "🥇 GRADE B (Upper B2 Standard)";
-        gradeResult.style.color = "#a7f3d0";
+        gradeResult.style.background = "#065f46";
+        gradeResult.style.color = "#d1fae5";
       } else if (reportData.grandTotal >= 24) {
-        gradeResult.textContent = "✅ GRADE C (B2 Pass Threshold)";
-        gradeResult.style.color = "#93c5fd";
+        gradeResult.textContent = "✅ GRADE C (B2 Pass Threshold Achieved)";
+        gradeResult.style.background = "#1e3a8a";
+        gradeResult.style.color = "#bfdbfe";
       } else {
-        gradeResult.textContent = "⚠️ NOT PASSING (Below 24 Marks)";
-        gradeResult.style.color = "#fca5a5";
+        const needed = 24 - reportData.grandTotal;
+        gradeResult.textContent = `❌ NOT PASSING (Te faltan ${needed} puntos para el mínimo aprobatorio de 24)`;
+        gradeResult.style.background = "#7f1d1d";
+        gradeResult.style.color = "#fecaca";
       }
 
       document.getElementById('fbExaminerVerdict').textContent = reportData.examinerSummary;
@@ -2842,7 +2694,12 @@ Respond ONLY with a valid JSON object matching this schema:
       document.getElementById('fb_bar_p1_org').style.width = `${(reportData.part1.org / 5) * 100}%`;
       document.getElementById('fb_p1_lang').textContent = `${reportData.part1.lang} / 5`;
       document.getElementById('fb_bar_p1_lang').style.width = `${(reportData.part1.lang / 5) * 100}%`;
-      document.getElementById('fb_p1_notes').innerHTML = `<strong>Diagnostic Feedback:</strong> ${reportData.part1.feedback}`;
+      document.getElementById('fb_p1_taskFeedback').textContent = reportData.part1.taskFeedback;
+      document.getElementById('fb_p1_strengths').textContent = reportData.part1.strengths || "Adecuada intención comunicativa general.";
+      document.getElementById('fb_p1_weaknesses').textContent = reportData.part1.weaknesses || "Ninguna omisión crítica identificada.";
+      document.getElementById('fb_p1_spelling').textContent = reportData.part1.spellingAndPunctuation;
+      document.getElementById('fb_p1_grammar').textContent = reportData.part1.grammarAnalysis;
+      document.getElementById('fb_p1_vocabulary').textContent = reportData.part1.vocabularyAnalysis;
 
       // Part 2 render
       document.getElementById('fbP2TaskTitle').textContent = `Part 2: ${P2_DATA[activeP2Option].type}`;
@@ -2855,14 +2712,19 @@ Respond ONLY with a valid JSON object matching this schema:
       document.getElementById('fb_bar_p2_org').style.width = `${(reportData.part2.org / 5) * 100}%`;
       document.getElementById('fb_p2_lang').textContent = `${reportData.part2.lang} / 5`;
       document.getElementById('fb_bar_p2_lang').style.width = `${(reportData.part2.lang / 5) * 100}%`;
-      document.getElementById('fb_p2_notes').innerHTML = `<strong>Diagnostic Feedback:</strong> ${reportData.part2.feedback}`;
+      document.getElementById('fb_p2_taskFeedback').textContent = reportData.part2.taskFeedback;
+      document.getElementById('fb_p2_strengths').textContent = reportData.part2.strengths || "Adecuada adecuación al formato de género.";
+      document.getElementById('fb_p2_weaknesses').textContent = reportData.part2.weaknesses || "Sin inconsistencias graves detectadas.";
+      document.getElementById('fb_p2_spelling').textContent = reportData.part2.spellingAndPunctuation;
+      document.getElementById('fb_p2_grammar').textContent = reportData.part2.grammarAnalysis;
+      document.getElementById('fb_p2_vocabulary').textContent = reportData.part2.vocabularyAnalysis;
     }
 
     function proceedToListening() {
       window.location.href = './listening.html';
     }
 
-    // Initialize module
+    // INITIAL SETUP
     selectP2Option(2);
     switchPart(1);
   </script>
