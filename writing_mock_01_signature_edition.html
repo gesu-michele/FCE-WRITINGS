@@ -1454,7 +1454,6 @@
 
   <main class="writing-viewport">
 
-    <!-- PART 1 SECTION -->
     <section class="writing-section active" id="sectionPart1">
       <div class="top-workspace-grid">
         <div class="prompt-card">
@@ -1602,7 +1601,6 @@
       </div>
     </section>
 
-    <!-- PART 2 SECTION -->
     <section class="writing-section" id="sectionPart2">
       <div class="top-workspace-grid">
         <div class="prompt-card">
@@ -1726,7 +1724,7 @@
 
   <div class="modal-veil" id="modalQualityAudit">
     <div class="modal-box-audit">
-      <h3 class="audit-header-title" id="auditModalTitle">📋 Part 1 Pre-Flight Quality Audit</h3>
+      <h3 class="audit-header-title" id="auditModalTitle">📋 Pre-Flight Quality Audit</h3>
       <p class="audit-header-subtitle" id="auditModalSubtitle">
         Para asegurar un puntaje sobresaliente (Grade A / Band 5), verifica que tu producción cumpla con los estándares oficiales de Cambridge B2 First antes de avanzar:
       </p>
@@ -2084,7 +2082,7 @@
             <div style="font-size:14px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:0.8px;">Announcement on an English-language travel website:</div>
             <div class="notepad-title-header">
               <span class="notepad-quote-title">ARTICLES WANTED</span>
-              <span class="notepad-agree-subtitle">A day in the city!</span>
+              <span style="font-size:18px; font-weight:900; color:#059669;">A day in the city!</span>
             </div>
             <p style="font-size:17px; font-weight:500; color:#334155; line-height:1.65;">
               We are looking for articles about how a visitor could have a great time in a city in your country in just one day.<br><br>
@@ -2285,95 +2283,144 @@
     let activeP2Option = 2;
 
     function selectP2Option(optId) {
-      const currentArea = document.getElementById('textPart2');
-      if (currentArea) p2Texts[activeP2Option] = currentArea.value;
+      try {
+        const currentArea = document.getElementById('textPart2');
+        if (currentArea) p2Texts[activeP2Option] = currentArea.value;
 
-      activeP2Option = optId;
+        activeP2Option = optId;
 
-      const d = P2_DATA[optId];
-      document.getElementById('p2PromptContainer').innerHTML = d.promptHtml;
-      document.getElementById('p2EditorHeading').textContent = d.title;
-      document.getElementById('p2EditorRegister').textContent = d.register;
-      document.getElementById('p2EditorCommand').textContent = d.command;
+        const d = P2_DATA[optId];
+        if (!d) return;
 
-      document.getElementById('p2ModelContent').innerHTML = d.modelHtml;
-      document.getElementById('p2ToolkitContent').innerHTML = d.toolkitHtml;
+        const p2Cont = document.getElementById('p2PromptContainer');
+        if (p2Cont) p2Cont.innerHTML = d.promptHtml;
 
-      const editor = document.getElementById('textPart2');
-      editor.placeholder = d.placeholder;
-      editor.value = p2Texts[optId] || "";
-      updateWordCount(2);
+        const headEl = document.getElementById('p2EditorHeading');
+        if (headEl) headEl.textContent = d.title;
 
-      switchFullSuiteTab('p2', 'model');
+        const regEl = document.getElementById('p2EditorRegister');
+        if (regEl) regEl.textContent = d.register;
+
+        const cmdEl = document.getElementById('p2EditorCommand');
+        if (cmdEl) cmdEl.textContent = d.command;
+
+        const modelEl = document.getElementById('p2ModelContent');
+        if (modelEl) modelEl.innerHTML = d.modelHtml;
+
+        const toolEl = document.getElementById('p2ToolkitContent');
+        if (toolEl) toolEl.innerHTML = d.toolkitHtml;
+
+        const editor = document.getElementById('textPart2');
+        if (editor) {
+          editor.placeholder = d.placeholder;
+          editor.value = p2Texts[optId] || "";
+        }
+
+        updateWordCount(2);
+        switchFullSuiteTab('p2', 'model');
+      } catch (err) {
+        console.error("Error en selectP2Option:", err);
+      }
     }
 
     function switchPart(partNum) {
-      document.getElementById('sectionPart1').classList.toggle('active', partNum === 1);
-      document.getElementById('sectionPart2').classList.toggle('active', partNum === 2);
+      const s1 = document.getElementById('sectionPart1');
+      const s2 = document.getElementById('sectionPart2');
+      if (s1 && s2) {
+        s1.classList.toggle('active', partNum === 1);
+        s2.classList.toggle('active', partNum === 2);
+      }
 
       const btnPrev = document.getElementById('btnPrevPart');
       const btnGlow = document.getElementById('btnMainSubmitGlow');
 
-      if (partNum === 1) {
-        btnPrev.style.display = 'none';
-        btnGlow.innerHTML = '✨ Submit Your Essay ➔';
-      } else {
-        btnPrev.style.display = 'inline-flex';
-        btnGlow.innerHTML = '🎯 Submit Final Writing (40 Marks) ➔';
+      if (btnPrev && btnGlow) {
+        if (partNum === 1) {
+          btnPrev.style.display = 'none';
+          btnGlow.innerHTML = '✨ Submit Your Essay ➔';
+        } else {
+          btnPrev.style.display = 'inline-flex';
+          btnGlow.innerHTML = '🎯 Submit Final Writing (40 Marks) ➔';
+        }
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function handleCentralSubmitClick() {
-      const activePart = document.getElementById('sectionPart1').classList.contains('active') ? 1 : 2;
+      const s1 = document.getElementById('sectionPart1');
+      const activePart = (s1 && s1.classList.contains('active')) ? 1 : 2;
       openAuditModal(activePart);
     }
 
     let currentAuditStage = 1;
 
+    const PART1_AUDIT_ITEMS = [
+      { title: "Appropriate Formal Title", desc: "Incluí un título sugerente y formal encabezando el ensayo sobre la vida en el pasado." },
+      { title: "All 3 Notes Covered Fully", desc: "Desarrollé la salud, el entretenimiento y propuse mi propia idea (condiciones laborales y seguridad)." },
+      { title: "Zero Informal Contractions", desc: "No utilicé contracciones informales (escribí 'cannot', 'do not', 'it is' en lugar de 'can't', 'don't')." },
+      { title: "Clear 4-Paragraph Structure", desc: "Estructuré mi texto en introducción con postura clara, 2 párrafos de cuerpo temáticos y conclusión equilibrada." },
+      { title: "At Least 2 Advanced C1 Structures", desc: "Integré estructuras avanzadas (inversión, pasiva impersonal, cleft sentence o condicional mixto)." },
+      { title: "Varied Discourse Markers & Connectors", desc: "Utilicé marcadores formales (First and foremost, Furthermore, More importantly, Taking all factors into account)." },
+      { title: "Thematic Phrasal Verbs & Collocations", desc: "Incorporé léxico sobre progreso y sociedad (quantum leap, life expectancy, bring about, pave the way)." },
+      { title: "Strict Word Count Compliance (140-190 Words)", desc: "Mi texto se ubica dentro del límite oficial exigido sin sobrepasar el umbral de 200 palabras." },
+      { title: "Accurate Spelling and Punctuation", desc: "Revisé la ortografía y el uso adecuado de comas tras conectores oracionales." }
+    ];
+
     function openAuditModal(stage) {
-      currentAuditStage = stage;
-      const modal = document.getElementById('modalQualityAudit');
-      const title = document.getElementById('auditModalTitle');
-      const subtitle = document.getElementById('auditModalSubtitle');
-      const container = document.getElementById('auditChecklistContainer');
-      const btnConfirm = document.getElementById('btnAuditConfirm');
+      try {
+        currentAuditStage = stage;
+        const modal = document.getElementById('modalQualityAudit');
+        const title = document.getElementById('auditModalTitle');
+        const subtitle = document.getElementById('auditModalSubtitle');
+        const container = document.getElementById('auditChecklistContainer');
+        const btnConfirm = document.getElementById('btnAuditConfirm');
 
-      container.innerHTML = "";
+        if (!modal || !container || !btnConfirm) return;
 
-      let items = [];
-      if (stage === 1) {
-        title.innerHTML = "📋 Part 1 Pre-Flight Quality Audit (Essay)";
-        subtitle.textContent = "Antes de pasar a la Parte 2, realiza una autoevaluación rigurosa de tu ensayo. Cada criterio es clave para asegurar una calificación sobresaliente (Grade A / Band 5):";
-        btnConfirm.textContent = "Confirmar y Continuar a Part 2 ➔";
-        items = PART1_AUDIT_ITEMS;
-      } else {
-        const d = P2_DATA[activeP2Option];
-        title.innerHTML = `📋 Part 2 Pre-Flight Quality Audit (${d.type})`;
-        subtitle.textContent = `Audita los requisitos de género de tu producción (${d.type}) antes de enviar tus dos tareas a la evaluación final:`;
-        btnConfirm.textContent = "Confirmar y Proceder a Evaluación Final ➔";
-        items = d.checklistItems;
+        container.innerHTML = "";
+
+        let items = [];
+        if (stage === 1) {
+          if (title) title.innerHTML = "📋 Part 1 Pre-Flight Quality Audit (Essay)";
+          if (subtitle) subtitle.textContent = "Antes de pasar a la Parte 2, realiza una autoevaluación rigurosa de tu ensayo. Cada criterio es clave para asegurar una calificación sobresaliente (Grade A / Band 5):";
+          btnConfirm.textContent = "Confirmar y Continuar a Part 2 ➔";
+          items = PART1_AUDIT_ITEMS;
+        } else {
+          const d = P2_DATA[activeP2Option] || P2_DATA[2];
+          if (title) title.innerHTML = `📋 Part 2 Pre-Flight Quality Audit (${d.type})`;
+          if (subtitle) subtitle.textContent = `Audita los requisitos de género de tu producción (${d.type}) antes de enviar tus dos tareas a la evaluación final:`;
+          btnConfirm.textContent = "Confirmar y Proceder a Evaluación Final ➔";
+          items = (d && d.checklistItems) ? d.checklistItems : PART1_AUDIT_ITEMS;
+        }
+
+        items.forEach((it, idx) => {
+          const row = document.createElement('label');
+          row.className = "chk-audit-row";
+          row.innerHTML = `
+            <input type="checkbox" id="auditChk_${idx}">
+            <div class="chk-audit-details">
+              <strong>${it.title}</strong>
+              <span>${it.desc}</span>
+            </div>
+          `;
+          container.appendChild(row);
+        });
+
+        modal.classList.add('active');
+      } catch (err) {
+        console.error("Error al abrir modal de auditoría:", err);
+        if (stage === 1) {
+          switchPart(2);
+        } else {
+          executeFullEvaluation();
+        }
       }
-
-      items.forEach((it, idx) => {
-        const row = document.createElement('label');
-        row.className = "chk-audit-row";
-        row.innerHTML = `
-          <input type="checkbox" id="auditChk_${idx}">
-          <div class="chk-audit-details">
-            <strong>${it.title}</strong>
-            <span>${it.desc}</span>
-          </div>
-        `;
-        container.appendChild(row);
-      });
-
-      modal.classList.add('active');
     }
 
     function closeAuditModal() {
-      document.getElementById('modalQualityAudit').classList.remove('active');
+      const modal = document.getElementById('modalQualityAudit');
+      if (modal) modal.classList.remove('active');
     }
 
     function handleAuditValidation() {
@@ -2382,7 +2429,8 @@
 
       if (!allChecked) {
         closeAuditModal();
-        document.getElementById('modalSirenAlarm').classList.add('active');
+        const siren = document.getElementById('modalSirenAlarm');
+        if (siren) siren.classList.add('active');
         return;
       }
 
@@ -2395,12 +2443,14 @@
     }
 
     function returnToEditingFromAlarm() {
-      document.getElementById('modalSirenAlarm').classList.remove('active');
+      const siren = document.getElementById('modalSirenAlarm');
+      if (siren) siren.classList.remove('active');
       openAuditModal(currentAuditStage);
     }
 
     function forceProceedFromAlarm() {
-      document.getElementById('modalSirenAlarm').classList.remove('active');
+      const siren = document.getElementById('modalSirenAlarm');
+      if (siren) siren.classList.remove('active');
       if (currentAuditStage === 1) {
         switchPart(2);
       } else {
@@ -2409,10 +2459,14 @@
     }
 
     function updateWordCount(part) {
-      const text = document.getElementById(part === 1 ? 'textPart1' : 'textPart2').value.trim();
+      const textarea = document.getElementById(part === 1 ? 'textPart1' : 'textPart2');
+      if (!textarea) return;
+      const text = textarea.value.trim();
       const count = text ? text.split(/\s+/).filter(w => w.length > 0).length : 0;
       const badge = document.getElementById(part === 1 ? 'wcPart1' : 'wcPart2');
       const banner = document.getElementById(part === 1 ? 'bannerAdvice1' : 'bannerAdvice2');
+
+      if (!badge || !banner) return;
 
       badge.className = "word-counter-badge";
       badge.textContent = `${count} words (Target: 140–190)`;
@@ -2457,8 +2511,10 @@
     async function executeFullEvaluation() {
       clearInterval(timerInterval);
 
-      const t1 = document.getElementById('textPart1').value.trim();
-      const t2 = document.getElementById('textPart2').value.trim();
+      const ta1 = document.getElementById('textPart1');
+      const ta2 = document.getElementById('textPart2');
+      const t1 = ta1 ? ta1.value.trim() : "";
+      const t2 = ta2 ? ta2.value.trim() : "";
 
       const count1 = t1 ? t1.split(/\s+/).filter(w => w.length > 0).length : 0;
       const count2 = t2 ? t2.split(/\s+/).filter(w => w.length > 0).length : 0;
@@ -2468,9 +2524,13 @@
         return;
       }
 
-      document.getElementById('fbGrandTotalScore').textContent = "... / 40";
-      document.getElementById('fbGradeResult').textContent = "Evaluando con AI Examiner...";
-      document.getElementById('modalOfficialFeedback').classList.add('active');
+      const scoreEl = document.getElementById('fbGrandTotalScore');
+      const gradeEl = document.getElementById('fbGradeResult');
+      const modalFb = document.getElementById('modalOfficialFeedback');
+
+      if (scoreEl) scoreEl.textContent = "... / 40";
+      if (gradeEl) gradeEl.textContent = "Evaluando con AI Examiner...";
+      if (modalFb) modalFb.classList.add('active');
 
       const evaluationPrompt = `
 You are a veteran, authoritative Cambridge English B2 First (FCE) Writing Team Leader and Senior Examiner with over 20 years of experience assessing international certification papers. You possess native English mastery and uphold the strictest adherence to the official Cambridge English Writing Assessment Scale.
@@ -2626,63 +2686,104 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use markdown,
     }
 
     function displayFeedbackModal(reportData) {
-      document.getElementById('modalOfficialFeedback').classList.add('active');
-      document.getElementById('fbGrandTotalScore').textContent = `${reportData.grandTotal} / 40`;
+      const modalFb = document.getElementById('modalOfficialFeedback');
+      if (modalFb) modalFb.classList.add('active');
+
+      const scoreEl = document.getElementById('fbGrandTotalScore');
+      if (scoreEl) scoreEl.textContent = `${reportData.grandTotal} / 40`;
       
       const gradeResult = document.getElementById('fbGradeResult');
-      if (reportData.grandTotal >= 36) {
-        gradeResult.textContent = "🏆 GRADE A (C1 Level Demonstrated)";
-        gradeResult.style.background = "#064e3b";
-        gradeResult.style.color = "#a7f3d0";
-      } else if (reportData.grandTotal >= 32) {
-        gradeResult.textContent = "🥇 GRADE B (Upper B2 Standard)";
-        gradeResult.style.background = "#065f46";
-        gradeResult.style.color = "#d1fae5";
-      } else if (reportData.grandTotal >= 24) {
-        gradeResult.textContent = "✅ GRADE C (B2 Pass Threshold Achieved)";
-        gradeResult.style.background = "#1e3a8a";
-        gradeResult.style.color = "#bfdbfe";
-      } else {
-        const needed = 24 - reportData.grandTotal;
-        gradeResult.textContent = `❌ NOT PASSING (Te faltan ${needed} puntos para el mínimo aprobatorio de 24)`;
-        gradeResult.style.background = "#7f1d1d";
-        gradeResult.style.color = "#fecaca";
+      if (gradeResult) {
+        if (reportData.grandTotal >= 36) {
+          gradeResult.textContent = "🏆 GRADE A (C1 Level Demonstrated)";
+          gradeResult.style.background = "#064e3b";
+          gradeResult.style.color = "#a7f3d0";
+        } else if (reportData.grandTotal >= 32) {
+          gradeResult.textContent = "🥇 GRADE B (Upper B2 Standard)";
+          gradeResult.style.background = "#065f46";
+          gradeResult.style.color = "#d1fae5";
+        } else if (reportData.grandTotal >= 24) {
+          gradeResult.textContent = "✅ GRADE C (B2 Pass Threshold Achieved)";
+          gradeResult.style.background = "#1e3a8a";
+          gradeResult.style.color = "#bfdbfe";
+        } else {
+          const needed = 24 - reportData.grandTotal;
+          gradeResult.textContent = `❌ NOT PASSING (Te faltan ${needed} puntos para el mínimo aprobatorio de 24)`;
+          gradeResult.style.background = "#7f1d1d";
+          gradeResult.style.color = "#fecaca";
+        }
       }
 
-      document.getElementById('fbExaminerVerdict').textContent = reportData.examinerSummary;
+      const verdictEl = document.getElementById('fbExaminerVerdict');
+      if (verdictEl) verdictEl.textContent = reportData.examinerSummary;
 
-      document.getElementById('fbP1Score').textContent = `${reportData.part1.score} / 20`;
-      document.getElementById('fb_p1_cont').textContent = `${reportData.part1.content} / 5`;
-      document.getElementById('fb_bar_p1_cont').style.width = `${(reportData.part1.content / 5) * 100}%`;
-      document.getElementById('fb_p1_comm').textContent = `${reportData.part1.commAch} / 5`;
-      document.getElementById('fb_bar_p1_comm').style.width = `${(reportData.part1.commAch / 5) * 100}%`;
-      document.getElementById('fb_p1_org').textContent = `${reportData.part1.org} / 5`;
-      document.getElementById('fb_bar_p1_org').style.width = `${(reportData.part1.org / 5) * 100}%`;
-      document.getElementById('fb_p1_lang').textContent = `${reportData.part1.lang} / 5`;
-      document.getElementById('fb_bar_p1_lang').style.width = `${(reportData.part1.lang / 5) * 100}%`;
-      document.getElementById('fb_p1_taskFeedback').textContent = reportData.part1.taskFeedback;
-      document.getElementById('fb_p1_strengths').textContent = reportData.part1.strengths || "Adecuada intención comunicativa general.";
-      document.getElementById('fb_p1_weaknesses').textContent = reportData.part1.weaknesses || "Ninguna omisión crítica identificada.";
-      document.getElementById('fb_p1_spelling').textContent = reportData.part1.spellingAndPunctuation;
-      document.getElementById('fb_p1_grammar').textContent = reportData.part1.grammarAnalysis;
-      document.getElementById('fb_p1_vocabulary').textContent = reportData.part1.vocabularyAnalysis;
+      // Part 1 render
+      const p1Score = document.getElementById('fbP1Score');
+      if (p1Score) p1Score.textContent = `${reportData.part1.score} / 20`;
+      const p1Cont = document.getElementById('fb_p1_cont');
+      if (p1Cont) p1Cont.textContent = `${reportData.part1.content} / 5`;
+      const p1BarCont = document.getElementById('fb_bar_p1_cont');
+      if (p1BarCont) p1BarCont.style.width = `${(reportData.part1.content / 5) * 100}%`;
+      const p1Comm = document.getElementById('fb_p1_comm');
+      if (p1Comm) p1Comm.textContent = `${reportData.part1.commAch} / 5`;
+      const p1BarComm = document.getElementById('fb_bar_p1_comm');
+      if (p1BarComm) p1BarComm.style.width = `${(reportData.part1.commAch / 5) * 100}%`;
+      const p1Org = document.getElementById('fb_p1_org');
+      if (p1Org) p1Org.textContent = `${reportData.part1.org} / 5`;
+      const p1BarOrg = document.getElementById('fb_bar_p1_org');
+      if (p1BarOrg) p1BarOrg.style.width = `${(reportData.part1.org / 5) * 100}%`;
+      const p1Lang = document.getElementById('fb_p1_lang');
+      if (p1Lang) p1Lang.textContent = `${reportData.part1.lang} / 5`;
+      const p1BarLang = document.getElementById('fb_bar_p1_lang');
+      if (p1BarLang) p1BarLang.style.width = `${(reportData.part1.lang / 5) * 100}%`;
 
-      document.getElementById('fbP2TaskTitle').textContent = `Part 2: ${P2_DATA[activeP2Option].type}`;
-      document.getElementById('fbP2Score').textContent = `${reportData.part2.score} / 20`;
-      document.getElementById('fb_p2_cont').textContent = `${reportData.part2.content} / 5`;
-      document.getElementById('fb_bar_p2_cont').style.width = `${(reportData.part2.content / 5) * 100}%`;
-      document.getElementById('fb_p2_comm').textContent = `${reportData.part2.commAch} / 5`;
-      document.getElementById('fb_bar_p2_comm').style.width = `${(reportData.part2.commAch / 5) * 100}%`;
-      document.getElementById('fb_p2_org').textContent = `${reportData.part2.org} / 5`;
-      document.getElementById('fb_bar_p2_org').style.width = `${(reportData.part2.org / 5) * 100}%`;
-      document.getElementById('fb_p2_lang').textContent = `${reportData.part2.lang} / 5`;
-      document.getElementById('fb_bar_p2_lang').style.width = `${(reportData.part2.lang / 5) * 100}%`;
-      document.getElementById('fb_p2_taskFeedback').textContent = reportData.part2.taskFeedback;
-      document.getElementById('fb_p2_strengths').textContent = reportData.part2.strengths || "Adecuada adecuación al formato de género.";
-      document.getElementById('fb_p2_weaknesses').textContent = reportData.part2.weaknesses || "Sin inconsistencias graves detectadas.";
-      document.getElementById('fb_p2_spelling').textContent = reportData.part2.spellingAndPunctuation;
-      document.getElementById('fb_p2_grammar').textContent = reportData.part2.grammarAnalysis;
-      document.getElementById('fb_p2_vocabulary').textContent = reportData.part2.vocabularyAnalysis;
+      const p1Fb = document.getElementById('fb_p1_taskFeedback');
+      if (p1Fb) p1Fb.textContent = reportData.part1.taskFeedback;
+      const p1Str = document.getElementById('fb_p1_strengths');
+      if (p1Str) p1Str.textContent = reportData.part1.strengths || "Adecuada intención comunicativa general.";
+      const p1Weak = document.getElementById('fb_p1_weaknesses');
+      if (p1Weak) p1Weak.textContent = reportData.part1.weaknesses || "Ninguna omisión crítica identificada.";
+      const p1Spell = document.getElementById('fb_p1_spelling');
+      if (p1Spell) p1Spell.textContent = reportData.part1.spellingAndPunctuation;
+      const p1Gram = document.getElementById('fb_p1_grammar');
+      if (p1Gram) p1Gram.textContent = reportData.part1.grammarAnalysis;
+      const p1Voc = document.getElementById('fb_p1_vocabulary');
+      if (p1Voc) p1Voc.textContent = reportData.part1.vocabularyAnalysis;
+
+      // Part 2 render
+      const p2Title = document.getElementById('fbP2TaskTitle');
+      if (p2Title) p2Title.textContent = `Part 2: ${P2_DATA[activeP2Option].type}`;
+      const p2Score = document.getElementById('fbP2Score');
+      if (p2Score) p2Score.textContent = `${reportData.part2.score} / 20`;
+      const p2Cont = document.getElementById('fb_p2_cont');
+      if (p2Cont) p2Cont.textContent = `${reportData.part2.content} / 5`;
+      const p2BarCont = document.getElementById('fb_bar_p2_cont');
+      if (p2BarCont) p2BarCont.style.width = `${(reportData.part2.content / 5) * 100}%`;
+      const p2Comm = document.getElementById('fb_p2_comm');
+      if (p2Comm) p2Comm.textContent = `${reportData.part2.commAch} / 5`;
+      const p2BarComm = document.getElementById('fb_bar_p2_comm');
+      if (p2BarComm) p2BarComm.style.width = `${(reportData.part2.commAch / 5) * 100}%`;
+      const p2Org = document.getElementById('fb_p2_org');
+      if (p2Org) p2Org.textContent = `${reportData.part2.org} / 5`;
+      const p2BarOrg = document.getElementById('fb_bar_p2_org');
+      if (p2BarOrg) p2BarOrg.style.width = `${(reportData.part2.org / 5) * 100}%`;
+      const p2Lang = document.getElementById('fb_p2_lang');
+      if (p2Lang) p2Lang.textContent = `${reportData.part2.lang} / 5`;
+      const p2BarLang = document.getElementById('fb_bar_p2_lang');
+      if (p2BarLang) p2BarLang.style.width = `${(reportData.part2.lang / 5) * 100}%`;
+
+      const p2Fb = document.getElementById('fb_p2_taskFeedback');
+      if (p2Fb) p2Fb.textContent = reportData.part2.taskFeedback;
+      const p2Str = document.getElementById('fb_p2_strengths');
+      if (p2Str) p2Str.textContent = reportData.part2.strengths || "Adecuada adecuación al formato de género.";
+      const p2Weak = document.getElementById('fb_p2_weaknesses');
+      if (p2Weak) p2Weak.textContent = reportData.part2.weaknesses || "Sin inconsistencias graves detectadas.";
+      const p2Spell = document.getElementById('fb_p2_spelling');
+      if (p2Spell) p2Spell.textContent = reportData.part2.spellingAndPunctuation;
+      const p2Gram = document.getElementById('fb_p2_grammar');
+      if (p2Gram) p2Gram.textContent = reportData.part2.grammarAnalysis;
+      const p2Voc = document.getElementById('fb_p2_vocabulary');
+      if (p2Voc) p2Voc.textContent = reportData.part2.vocabularyAnalysis;
     }
 
     function proceedToListening() {
