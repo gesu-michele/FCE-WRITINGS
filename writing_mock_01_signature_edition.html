@@ -1,759 +1,2468 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cambridge B2 First • Paper 2: Guided Writing Practice | JM ELT Solutions</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-canvas-blue: #1e3a8a;
-      --surface-white: #ffffff;
-      --surface-card: #f8fafc;
-      --cambridge-navy: #091e3a;
-      --cambridge-blue: #1d4ed8;
-      --cambridge-blue-vivid: #2563eb;
-      --cambridge-emerald: #059669;
-      --cambridge-purple: #7c3aed;
-      --cambridge-gold: #d97706;
-      --text-pure-black: #000000;
-      --text-dark: #0f172a;
-      --text-body: #334155;
-      --text-muted: #64748b;
-      --border-subtle: #cbd5e1;
-      --border-strong: #94a3b8;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 22px;
-      --radius-full: 9999px;
-      --shadow-card: 0 16px 36px -6px rgba(0, 0, 0, 0.28);
+!DOCTYPE html
+html lang=en
+head
+  meta charset=UTF-8 
+  meta name=viewport content=width=device-width, initial-scale=1.0 
+  titleCambridge B2 First • Paper 2 Guided Writing Practice  JM ELT Solutionstitle
+  link rel=preconnect href=[httpsfonts.googleapis.com](httpsfonts.googleapis.com)
+  link rel=preconnect href=[httpsfonts.gstatic.com](httpsfonts.gstatic.com) crossorigin
+  link href=[httpsfonts.googleapis.comcss2family=Outfitwght@500;600;700;800;900&family=Plus+Jakarta+Sanswght@400;500;600;700;800;900&family=JetBrains+Monowght@500;700;800;900&display=swap](httpsfonts.googleapis.comcss2family=Outfitwght@500;600;700;800;900&family=Plus+Jakarta+Sanswght@400;500;600;700;800;900&family=JetBrains+Monowght@500;700;800;900&display=swap) rel=stylesheet
+  style
+    root {
+      --bg-canvas-blue #1e3a8a;
+      --surface-white #ffffff;
+      --surface-card #f8fafc;
+      
+      --cambridge-navy #091e3a;
+      --cambridge-blue #1d4ed8;
+      --cambridge-blue-vivid #2563eb;
+      --cambridge-emerald #059669;
+      --cambridge-purple #7c3aed;
+      --cambridge-gold #d97706;
+
+      --text-pure-black #000000;
+      --text-dark #0f172a;
+      --text-body #334155;
+      --text-muted #64748b;
+
+      --border-subtle #cbd5e1;
+      --border-strong #94a3b8;
+
+      --radius-sm 8px;
+      --radius-md 14px;
+      --radius-lg 22px;
+      --radius-full 9999px;
+
+      --shadow-card 0 16px 36px -6px rgba(0, 0, 0, 0.28);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+     { box-sizing border-box; margin 0; padding 0; -webkit-tap-highlight-color transparent; }
+
     body {
-      background-color: var(--bg-canvas-blue);
-      background-image: 
+      background-color var(--bg-canvas-blue);
+      background-image 
         linear-gradient(rgba(15, 45, 95, 0.58), rgba(10, 32, 70, 0.68)),
-        url('https://lh3.googleusercontent.com/d/10e6Pmgk3M3P60FsN2oVAYhExabY2UoW8');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 400;
-      color: var(--text-dark);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      font-size: 16px;
+        url('[httpslh3.googleusercontent.comd10e6Pmgk3M3P60FsN2oVAYhExabY2UoW8](httpslh3.googleusercontent.comd10e6Pmgk3M3P60FsN2oVAYhExabY2UoW8)');
+      background-size cover;
+      background-position center;
+      background-attachment fixed;
+      font-family 'Plus Jakarta Sans', sans-serif;
+      font-weight 400;
+      color var(--text-dark);
+      min-height 100vh;
+      display flex;
+      flex-direction column;
+      font-size 16px;
     }
+
     header.exam-header {
-      background: rgba(6, 21, 45, 0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 3.5px solid #2563eb;
-      padding: 12px 42px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      background rgba(6, 21, 45, 0.94);
+      backdrop-filter blur(14px);
+      border-bottom 3.5px solid #2563eb;
+      padding 12px 42px;
+      display flex;
+      align-items center;
+      justify-content space-between;
+      position sticky;
+      top 0;
+      z-index 100;
+      box-shadow 0 8px 24px rgba(0, 0, 0, 0.45);
     }
-    .brand-left-cluster { display: flex; align-items: center; gap: 22px; }
+
+    .brand-left-cluster {
+      display flex;
+      align-items center;
+      gap 22px;
+    }
+
     .cambridge-badge-frame {
-      background: #ffffff;
-      padding: 8px 18px;
-      border-radius: 12px;
-      border: 2px solid #cbd5e1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      background #ffffff;
+      padding 8px 18px;
+      border-radius 12px;
+      border 2px solid #cbd5e1;
+      display inline-flex;
+      align-items center;
+      justify-content center;
+      box-shadow 0 4px 14px rgba(0, 0, 0, 0.25);
     }
-    .cambridge-crest-img { height: 52px; width: auto; object-fit: contain; }
+
+    .cambridge-crest-img {
+      height 52px;
+      width auto;
+      object-fit contain;
+    }
+
     .jm-brand-box {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      padding-left: 20px;
-      border-left: 2.5px solid #3b82f6;
+      display flex;
+      align-items center;
+      gap 18px;
+      padding-left 20px;
+      border-left 2.5px solid #3b82f6;
     }
-    .jm-logo-img { height: 72px; width: auto; object-fit: contain; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4)); }
-    .jm-titles { display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1.15; }
-    .jm-title-top { font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 900; color: #ffffff; letter-spacing: 1.5px; text-align: center; width: 100%; }
-    .jm-title-sub { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 800; color: #f59e0b; letter-spacing: 1.2px; text-transform: uppercase; }
-    .jm-title-tagline { font-size: 11px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-    .header-center-cluster { display: flex; align-items: center; }
+
+    .jm-logo-img {
+      height 72px;
+      width auto;
+      object-fit contain;
+      filter drop-shadow(0 3px 8px rgba(0,0,0,0.4));
+    }
+
+    .jm-titles {
+      display flex;
+      flex-direction column;
+      align-items center;
+      text-align center;
+      line-height 1.15;
+    }
+
+    .jm-title-top {
+      font-family 'Outfit', sans-serif;
+      font-size 28px;
+      font-weight 900;
+      color #ffffff;
+      letter-spacing 1.5px;
+      text-align center;
+      width 100%;
+    }
+
+    .jm-title-sub {
+      font-family 'Outfit', sans-serif;
+      font-size 14px;
+      font-weight 800;
+      color #f59e0b;
+      letter-spacing 1.2px;
+      text-transform uppercase;
+    }
+
+    .jm-title-tagline {
+      font-size 11px;
+      font-weight 700;
+      color #38bdf8;
+      text-transform uppercase;
+      letter-spacing 1px;
+      margin-top 2px;
+    }
+
+    .header-center-cluster {
+      display flex;
+      align-items center;
+    }
+
     .timer-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-      border: 2.5px solid #3b82f6;
-      color: #93c5fd;
-      padding: 8px 26px;
-      border-radius: var(--radius-full);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 26px;
-      font-weight: 900;
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+      display inline-flex;
+      align-items center;
+      gap 10px;
+      background linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      border 2.5px solid #3b82f6;
+      color #93c5fd;
+      padding 8px 26px;
+      border-radius var(--radius-full);
+      font-family 'JetBrains Mono', monospace;
+      font-size 26px;
+      font-weight 900;
+      box-shadow 0 0 20px rgba(59, 130, 246, 0.4);
     }
-    .header-right-cluster { display: flex; align-items: center; gap: 16px; }
+
+    .header-right-cluster {
+      display flex;
+      align-items center;
+      gap 16px;
+    }
+
     .btn-return-menu {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1.5px solid #60a5fa;
-      color: #ffffff;
-      font-family: 'Outfit', sans-serif;
-      font-size: 13.5px;
-      font-weight: 800;
-      padding: 9px 18px;
-      border-radius: var(--radius-full);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
+      background rgba(255, 255, 255, 0.1);
+      border 1.5px solid #60a5fa;
+      color #ffffff;
+      font-family 'Outfit', sans-serif;
+      font-size 13.5px;
+      font-weight 800;
+      padding 9px 18px;
+      border-radius var(--radius-full);
+      cursor pointer;
+      display inline-flex;
+      align-items center;
+      gap 8px;
+      transition all 0.2s ease;
+      text-decoration none;
     }
-    .btn-return-menu:hover { background: #2563eb; border-color: #bfdbfe; transform: translateY(-1px); }
+
+    .btn-return-menuhover {
+      background #2563eb;
+      border-color #bfdbfe;
+      transform translateY(-1px);
+    }
+
     .trainer-profile-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: rgba(15, 34, 64, 0.7);
-      border: 2px solid #3b82f6;
-      padding: 6px 18px 6px 12px;
-      border-radius: var(--radius-full);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      display flex;
+      align-items center;
+      gap 16px;
+      background rgba(15, 34, 64, 0.7);
+      border 2px solid #3b82f6;
+      padding 6px 18px 6px 12px;
+      border-radius var(--radius-full);
+      box-shadow 0 4px 16px rgba(0, 0, 0, 0.3);
     }
+
     .trainer-avatar-lg {
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      border: 3px solid #f59e0b;
-      object-fit: cover;
-      box-shadow: 0 0 16px rgba(245, 158, 11, 0.6);
+      width 62px;
+      height 62px;
+      border-radius 50%;
+      border 3px solid #f59e0b;
+      object-fit cover;
+      box-shadow 0 0 16px rgba(245, 158, 11, 0.6);
     }
-    .trainer-meta { text-align: right; }
-    .trainer-name-top { font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 800; color: #ffffff; line-height: 1.2; }
-    .trainer-desc-sub { font-size: 12px; font-weight: 700; color: #38bdf8; letter-spacing: 0.5px; }
+
+    .trainer-meta {
+      text-align right;
+    }
+
+    .trainer-name-top {
+      font-family 'Outfit', sans-serif;
+      font-size 16px;
+      font-weight 800;
+      color #ffffff;
+      line-height 1.2;
+    }
+
+    .trainer-desc-sub {
+      font-size 12px;
+      font-weight 700;
+      color #38bdf8;
+      letter-spacing 0.5px;
+    }
 
     main.writing-viewport {
-      flex: 1;
-      max-width: 1520px;
-      width: 95%;
-      margin: 24px auto 30px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+      flex 1;
+      max-width 1520px;
+      width 95%;
+      margin 24px auto 30px auto;
+      display flex;
+      flex-direction column;
+      gap 24px;
     }
-    .writing-section { display: none; flex-direction: column; gap: 24px; }
-    .writing-section.active { display: flex; }
+
+    .writing-section {
+      display none;
+      flex-direction column;
+      gap 24px;
+    }
+
+    .writing-section.active { display flex; }
+
     .top-workspace-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.35fr;
-      gap: 26px;
-      align-items: stretch;
+      display grid;
+      grid-template-columns 1fr 1.35fr;
+      gap 26px;
+      align-items stretch;
     }
-    @media (max-width: 1100px) { .top-workspace-grid { grid-template-columns: 1fr; } }
+
+    @media (max-width 1100px) {
+      .top-workspace-grid { grid-template-columns 1fr; }
+    }
+
     .prompt-card {
-      background: var(--surface-white);
-      border: 2.5px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-      box-shadow: var(--shadow-card);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      background var(--surface-white);
+      border 2.5px solid var(--border-subtle);
+      border-radius var(--radius-lg);
+      padding 32px;
+      box-shadow var(--shadow-card);
+      display flex;
+      flex-direction column;
+      gap 16px;
     }
+
     .exam-main-title-block {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      border-bottom: 2.5px solid #0f172a;
-      padding-bottom: 10px;
-      margin-bottom: 4px;
+      display flex;
+      flex-direction column;
+      gap 2px;
+      border-bottom 2.5px solid #0f172a;
+      padding-bottom 10px;
+      margin-bottom 4px;
     }
-    .exam-paper-heading { font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 900; color: #0b1a30; }
-    .exam-part-heading { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 800; color: #2563eb; text-transform: uppercase; }
-    .task-instruction-p { font-size: 17px; color: #1e293b; line-height: 1.65; }
-    .task-instruction-p strong { color: var(--text-pure-black); font-weight: 900; }
+
+    .exam-paper-heading {
+      font-family 'Outfit', sans-serif;
+      font-size 26px;
+      font-weight 900;
+      color #0b1a30;
+      letter-spacing 0.5px;
+      display flex;
+      align-items center;
+      gap 10px;
+    }
+
+    .exam-part-heading {
+      font-family 'Outfit', sans-serif;
+      font-size 18px;
+      font-weight 800;
+      color #2563eb;
+      text-transform uppercase;
+      letter-spacing 1px;
+    }
+
+    .task-instruction-p {
+      font-size 17px;
+      color #1e293b;
+      line-height 1.65;
+      font-weight 400;
+    }
+
+    .task-instruction-p strong {
+      color var(--text-pure-black);
+      font-weight 900;
+    }
+
+    .exam-section-divider {
+      border none;
+      height 2px;
+      background #e2e8f0;
+      margin 4px 0 10px 0;
+    }
+
     .context-scenario-text {
-      font-size: 17.5px;
-      color: #0f172a;
-      line-height: 1.7;
-      background: #f8fafc;
-      padding: 14px 18px;
-      border-radius: 10px;
-      border-left: 4px solid #3b82f6;
+      font-size 17.5px;
+      color #0f172a;
+      line-height 1.7;
+      font-weight 400;
+      background #f8fafc;
+      padding 14px 18px;
+      border-radius 10px;
+      border-left 4px solid #3b82f6;
     }
-    .context-scenario-text strong { font-weight: 900; color: #000000; }
+
+    .context-scenario-text strong {
+      font-weight 900;
+      color #000000;
+    }
+
     .notepad-container {
-      background: #ffffff;
-      border: 2px solid #cbd5e1;
-      border-left: 9px solid #059669;
-      border-radius: var(--radius-md);
-      padding: 24px 26px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      box-shadow: 0 8px 20px rgba(5, 150, 105, 0.08);
+      background #ffffff;
+      border 2px solid #cbd5e1;
+      border-left 9px solid #059669;
+      border-radius var(--radius-md);
+      padding 24px 26px;
+      display flex;
+      flex-direction column;
+      gap 14px;
+      box-shadow 0 8px 20px rgba(5, 150, 105, 0.08);
     }
-    .notepad-quote-title { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 900; color: #064e3b; line-height: 1.35; }
-    .notepad-notes-header { font-size: 14.5px; font-weight: 900; color: #0f172a; text-transform: uppercase; }
-    .notepad-note-item { font-size: 18px; font-weight: 500; color: #1e293b; display: flex; align-items: baseline; gap: 14px; }
+
+    .notepad-title-header {
+      display flex;
+      flex-direction column;
+      gap 6px;
+      padding-bottom 12px;
+      border-bottom 2px dashed #a7f3d0;
+    }
+
+    .notepad-quote-title {
+      font-family 'Outfit', sans-serif;
+      font-size 22px;
+      font-weight 900;
+      color #064e3b;
+      line-height 1.35;
+    }
+
+    .notepad-notes-header {
+      font-size 14.5px;
+      font-weight 900;
+      color #0f172a;
+      text-transform uppercase;
+      letter-spacing 0.8px;
+      display flex;
+      align-items center;
+      gap 8px;
+    }
+
+    .notepad-note-item {
+      font-size 18px;
+      font-weight 500;
+      color #1e293b;
+      display flex;
+      align-items baseline;
+      gap 14px;
+    }
+
     .note-num {
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 900;
-      color: #065f46;
-      background: #d1fae5;
-      width: 30px;
-      height: 30px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      font-size: 16px;
+      font-family 'JetBrains Mono', monospace;
+      font-weight 900;
+      color #065f46;
+      background #d1fae5;
+      width 30px;
+      height 30px;
+      display inline-flex;
+      align-items center;
+      justify-content center;
+      border-radius 8px;
+      font-size 16px;
     }
+
+    .exam-verbatim-footer {
+      font-size 16px;
+      color #1e293b;
+      line-height 1.6;
+      font-weight 400;
+      margin-top 6px;
+    }
+
+    .exam-verbatim-footer strong {
+      font-weight 900;
+      color #000000;
+    }
+
     .p2-instruction-banner {
-      background: #f8fafc;
-      border: 2px solid #cbd5e1;
-      border-left: 8px solid #b45309;
-      border-radius: var(--radius-md);
-      padding: 12px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background #f8fafc;
+      border 2px solid #cbd5e1;
+      border-left 8px solid #b45309;
+      border-radius var(--radius-md);
+      padding 12px 18px;
+      display flex;
+      align-items center;
+      justify-content space-between;
+      margin-bottom 4px;
     }
+
+    .p2-instruction-text {
+      font-family 'Outfit', sans-serif;
+      font-size 18px;
+      font-weight 900;
+      color #78350f;
+      display flex;
+      align-items center;
+      gap 10px;
+      letter-spacing 0.5px;
+    }
+
     .p2-options-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin: 4px 0 10px 0;
+      display grid;
+      grid-template-columns repeat(3, 1fr);
+      gap 16px;
+      margin 4px 0 10px 0;
     }
-    @media (max-width: 768px) { .p2-options-cards-grid { grid-template-columns: 1fr; } }
+
+    @media (max-width 768px) {
+      .p2-options-cards-grid { grid-template-columns 1fr; }
+    }
+
+    @keyframes glowAmber {
+      0% { box-shadow 0 0 12px rgba(245, 158, 11, 0.4); border-color #f59e0b; }
+      50% { box-shadow 0 0 24px rgba(245, 158, 11, 0.85); border-color #d97706; }
+      100% { box-shadow 0 0 12px rgba(245, 158, 11, 0.4); border-color #f59e0b; }
+    }
+
+    @keyframes glowEmerald {
+      0% { box-shadow 0 0 12px rgba(16, 185, 129, 0.4); border-color #10b981; }
+      50% { box-shadow 0 0 24px rgba(16, 185, 129, 0.85); border-color #059669; }
+      100% { box-shadow 0 0 12px rgba(16, 185, 129, 0.4); border-color #10b981; }
+    }
+
+    @keyframes glowPurple {
+      0% { box-shadow 0 0 12px rgba(139, 92, 246, 0.4); border-color #8b5cf6; }
+      50% { box-shadow 0 0 24px rgba(139, 92, 246, 0.85); border-color #7c3aed; }
+      100% { box-shadow 0 0 12px rgba(139, 92, 246, 0.4); border-color #8b5cf6; }
+    }
+
     .btn-option-card {
-      border-radius: var(--radius-md);
-      padding: 18px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      text-align: left;
+      border-radius var(--radius-md);
+      padding 18px;
+      cursor pointer;
+      display flex;
+      flex-direction column;
+      align-items flex-start;
+      gap 6px;
+      transition transform 0.2s ease, box-shadow 0.2s ease;
+      text-align left;
     }
-    .card-opt-amber { background: #fffbeb; border: 3px solid #fcd34d; }
-    .card-opt-emerald { background: #f0fdf4; border: 3px solid #86efac; }
-    .card-opt-purple { background: #faf5ff; border: 3px solid #d8b4fe; }
-    .opt-card-label { font-family: 'JetBrains Mono', monospace; font-size: 13.5px; font-weight: 900; text-transform: uppercase; }
-    .opt-card-title { font-family: 'Outfit', sans-serif; font-size: 21px; font-weight: 900; }
-    .opt-card-desc { font-size: 14px; font-weight: 600; color: #334155; line-height: 1.4; }
+
+    .btn-option-cardhover {
+      transform translateY(-4px);
+    }
+
+    .card-opt-amber {
+      background #fffbeb;
+      border 3px solid #fcd34d;
+      animation glowAmber 2.2s infinite ease-in-out;
+    }
+    .card-opt-amber .opt-card-label { color #b45309; }
+    .card-opt-amber .opt-card-title { color #78350f; }
+
+    .card-opt-emerald {
+      background #f0fdf4;
+      border 3px solid #86efac;
+      animation glowEmerald 2.2s infinite ease-in-out;
+    }
+    .card-opt-emerald .opt-card-label { color #047857; }
+    .card-opt-emerald .opt-card-title { color #064e3b; }
+
+    .card-opt-purple {
+      background #faf5ff;
+      border 3px solid #d8b4fe;
+      animation glowPurple 2.2s infinite ease-in-out;
+    }
+    .card-opt-purple .opt-card-label { color #6d28d9; }
+    .card-opt-purple .opt-card-title { color #4c1d95; }
+
+    .opt-card-label {
+      font-family 'JetBrains Mono', monospace;
+      font-size 13.5px;
+      font-weight 900;
+      text-transform uppercase;
+      display flex;
+      align-items center;
+      gap 6px;
+    }
+
+    .opt-card-title {
+      font-family 'Outfit', sans-serif;
+      font-size 21px;
+      font-weight 900;
+    }
+
+    .opt-card-desc {
+      font-size 14px;
+      font-weight 600;
+      color #334155;
+      line-height 1.4;
+    }
 
     .editor-card {
-      background: var(--surface-white);
-      border: 2.5px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 28px 32px;
-      box-shadow: var(--shadow-card);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      background var(--surface-white);
+      border 2.5px solid var(--border-subtle);
+      border-radius var(--radius-lg);
+      padding 28px 32px;
+      box-shadow var(--shadow-card);
+      display flex;
+      flex-direction column;
+      gap 16px;
     }
-    .editor-top-bar { display: flex; flex-direction: column; gap: 10px; border-bottom: 2.5px solid var(--border-subtle); padding-bottom: 14px; }
-    .editor-top-row { display: flex; align-items: flex-start; justify-content: space-between; }
-    .editor-hierarchy-cluster { display: flex; flex-direction: column; gap: 3px; }
-    .editor-eyebrow-part { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 800; color: #1d4ed8; text-transform: uppercase; }
-    .editor-main-genre-title { font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 900; color: #0b1a30; }
-    .editor-register-sub { font-size: 14.5px; font-weight: 700; color: #475569; font-style: italic; }
-    .editor-command-callout { font-size: 15.5px; font-weight: 800; color: #047857; margin-top: 4px; }
+
+    .editor-top-bar {
+      display flex;
+      flex-direction column;
+      gap 10px;
+      border-bottom 2.5px solid var(--border-subtle);
+      padding-bottom 14px;
+    }
+
+    .editor-top-row {
+      display flex;
+      align-items flex-start;
+      justify-content space-between;
+    }
+
+    .editor-hierarchy-cluster {
+      display flex;
+      flex-direction column;
+      gap 3px;
+    }
+
+    .editor-eyebrow-part {
+      font-family 'Outfit', sans-serif;
+      font-size 14px;
+      font-weight 800;
+      color #1d4ed8;
+      text-transform uppercase;
+      letter-spacing 1px;
+    }
+
+    .editor-main-genre-title {
+      font-family 'Outfit', sans-serif;
+      font-size 26px;
+      font-weight 900;
+      color #0b1a30;
+      line-height 1.15;
+    }
+
+    .editor-register-sub {
+      font-size 14.5px;
+      font-weight 700;
+      color #475569;
+      font-style italic;
+    }
+
+    .editor-command-callout {
+      font-size 15.5px;
+      font-weight 800;
+      color #047857;
+      margin-top 4px;
+      display flex;
+      align-items center;
+      gap 6px;
+    }
+
     .word-counter-badge {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 14.5px;
-      font-weight: 800;
-      padding: 8px 18px;
-      border-radius: var(--radius-full);
-      background: #fee2e2;
-      border: 2px solid #dc2626;
-      color: #991b1b;
+      font-family 'JetBrains Mono', monospace;
+      font-size 14.5px;
+      font-weight 800;
+      padding 8px 18px;
+      border-radius var(--radius-full);
+      background #fee2e2;
+      border 2px solid #dc2626;
+      color #991b1b;
+      transition all 0.25s;
     }
-    .word-counter-badge.optimal { border-color: #059669; color: #065f46; background: #d1fae5; }
-    .word-counter-badge.warning { border-color: #d97706; color: #78350f; background: #fef3c7; }
+
+    .word-counter-badge.optimal {
+      border-color #059669;
+      color #065f46;
+      background #d1fae5;
+    }
+
+    .word-counter-badge.warning {
+      border-color #d97706;
+      color #78350f;
+      background #fef3c7;
+    }
+
+    @keyframes flashDangerPulse {
+      0% {
+        box-shadow 0 0 0 0 rgba(220, 38, 38, 0.7);
+        background-color #fee2e2;
+      }
+      50% {
+        box-shadow 0 0 18px 5px rgba(220, 38, 38, 0.9);
+        background-color #dc2626;
+        color #ffffff;
+      }
+      100% {
+        box-shadow 0 0 0 0 rgba(220, 38, 38, 0.7);
+        background-color #fee2e2;
+      }
+    }
+
+    .word-counter-badge.flash-danger {
+      border-color #991b1b;
+      animation flashDangerPulse 1.2s infinite ease-in-out;
+    }
+
+    .word-advice-banner {
+      display none;
+      font-size 14px;
+      font-weight 700;
+      border-radius var(--radius-sm);
+      padding 10px 16px;
+      line-height 1.5;
+    }
+
+    .word-advice-banner.active-warning {
+      display block;
+      background #fef3c7;
+      color #92400e;
+      border 2px solid #fde68a;
+    }
+
+    .word-advice-banner.active-danger {
+      display block;
+      background #fee2e2;
+      color #991b1b;
+      border 2px solid #fca5a5;
+    }
+
     .writing-textarea {
-      width: 100%;
-      height: 480px;
-      background: #ffffff;
-      border: 2px solid var(--border-strong);
-      border-radius: var(--radius-md);
-      color: var(--text-pure-black);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 1.85;
-      padding: 22px;
-      outline: none;
-      resize: vertical;
+      width 100%;
+      height 480px;
+      background #ffffff;
+      border 2px solid var(--border-strong);
+      border-radius var(--radius-md);
+      color var(--text-pure-black);
+      font-family 'Plus Jakarta Sans', sans-serif;
+      font-size 18px;
+      font-weight 500;
+      line-height 1.85;
+      padding 22px;
+      outline none;
+      resize vertical;
+      transition all 0.2s;
+    }
+
+    .writing-textareafocus {
+      border-color var(--cambridge-blue);
+      box-shadow 0 0 0 4px rgba(29, 78, 216, 0.18);
     }
 
     .full-width-scaffolding-suite {
-      background: var(--surface-white);
-      border: 2.5px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-card);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      background var(--surface-white);
+      border 2.5px solid var(--border-subtle);
+      border-radius var(--radius-lg);
+      box-shadow var(--shadow-card);
+      overflow hidden;
+      display flex;
+      flex-direction column;
     }
+
     .suite-nav-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: linear-gradient(135deg, #091e3a 0%, #172554 100%);
-      padding: 16px 32px;
-      border-bottom: 2.5px solid #1e3a8a;
+      display flex;
+      align-items center;
+      justify-content space-between;
+      background linear-gradient(135deg, #091e3a 0%, #172554 100%);
+      padding 16px 32px;
+      border-bottom 2.5px solid #1e3a8a;
     }
-    .suite-title { font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 900; color: #ffffff; }
-    .suite-tabs-group { display: flex; gap: 12px; }
+
+    .suite-title {
+      font-family 'Outfit', sans-serif;
+      font-size 20px;
+      font-weight 900;
+      color #ffffff;
+      display flex;
+      align-items center;
+      gap 12px;
+    }
+
+    .suite-tabs-group {
+      display flex;
+      gap 12px;
+    }
+
     .suite-tab-btn {
-      font-family: 'Outfit', sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      padding: 10px 22px;
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      border: 2px solid transparent;
-      background: rgba(255, 255, 255, 0.12);
-      color: #cbd5e1;
+      font-family 'Outfit', sans-serif;
+      font-size 15px;
+      font-weight 800;
+      padding 10px 22px;
+      border-radius var(--radius-md);
+      cursor pointer;
+      display flex;
+      align-items center;
+      gap 10px;
+      border 2px solid transparent;
+      transition all 0.2s ease;
+      background rgba(255, 255, 255, 0.12);
+      color #cbd5e1;
     }
+
+    .suite-tab-btnhover {
+      background rgba(255, 255, 255, 0.22);
+      color #ffffff;
+    }
+
     .suite-tab-btn.active {
-      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
-      color: #ffffff;
-      border-color: #60a5fa;
+      background linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+      color #ffffff;
+      border-color #60a5fa;
+      box-shadow 0 4px 14px rgba(37, 99, 235, 0.35);
     }
-    .suite-content-pane { display: none; padding: 34px; background: #ffffff; }
-    .suite-content-pane.active { display: block; }
+
+    .suite-content-pane {
+      display none;
+      padding 34px;
+      background #ffffff;
+    }
+
+    .suite-content-pane.active { display block; }
+
     .model-essay-box {
-      background: #f8fafc;
-      border: 2px solid #cbd5e1;
-      border-radius: var(--radius-md);
-      padding: 28px 32px;
-      font-size: 18px;
-      line-height: 1.9;
-      color: #1e293b;
+      background #f8fafc;
+      border 2px solid #cbd5e1;
+      border-radius var(--radius-md);
+      padding 28px 32px;
+      font-size 18px;
+      font-weight 400;
+      line-height 1.9;
+      color #1e293b;
     }
-    .toolkit-super-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    @media (max-width: 1024px) { .toolkit-super-grid { grid-template-columns: 1fr; } }
-    .toolkit-card { border-radius: var(--radius-md); padding: 22px; display: flex; flex-direction: column; gap: 14px; }
-    .toolkit-card-purple { background: #faf5ff; border: 2px solid #e9d5ff; }
-    .toolkit-card-emerald { background: #f0fdf4; border: 2px solid #bbf7d0; }
-    .toolkit-card-amber { background: #fffbeb; border: 2px solid #fde68a; }
-    .stacked-lexicon-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .model-essay-box strong,
+    .model-essay-box b {
+      color #000000;
+      font-weight 900;
+    }
+
+    .model-essay-box p { margin-bottom 18px; }
+    .model-essay-box plast-child { margin-bottom 0; }
+
+    .model-title-banner {
+      font-family 'Outfit', sans-serif;
+      font-size 22px;
+      font-weight 800;
+      color #0b1a30;
+      padding-bottom 12px;
+      margin-bottom 18px;
+      border-bottom 2px solid #cbd5e1;
+    }
+
+    .annotation-tag {
+      font-size 12px;
+      font-weight 800;
+      padding 4px 10px;
+      border-radius 6px;
+      display inline-block;
+      margin-right 8px;
+      text-transform uppercase;
+      letter-spacing 0.6px;
+    }
+
+    .tag-title { background #e0e7ff; color #3730a3; }
+    .tag-p1 { background #dbeafe; color #1e40af; }
+    .tag-p2 { background #fef3c7; color #92400e; }
+    .tag-p3 { background #d1fae5; color #065f46; }
+    .tag-conc { background #f3e8ff; color #6b21a8; }
+
+    .toolkit-super-grid {
+      display grid;
+      grid-template-columns repeat(3, 1fr);
+      gap 24px;
+    }
+
+    @media (max-width 1024px) {
+      .toolkit-super-grid { grid-template-columns 1fr; }
+    }
+
+    .toolkit-card {
+      border-radius var(--radius-md);
+      padding 22px;
+      display flex;
+      flex-direction column;
+      gap 14px;
+      box-shadow 0 4px 14px rgba(0,0,0,0.04);
+    }
+
+    .toolkit-card-purple {
+      background #faf5ff;
+      border 2px solid #e9d5ff;
+    }
+    .toolkit-card-purple h4 {
+      font-family 'Outfit', sans-serif;
+      font-size 18px;
+      font-weight 900;
+      color #581c87;
+      display flex;
+      align-items center;
+      gap 10px;
+      padding-bottom 10px;
+      border-bottom 2px solid #d8b4fe;
+    }
+    .toolkit-card-purple .stacked-lexicon-item {
+      background #ffffff;
+      border 1.5px solid #e9d5ff;
+    }
+    .toolkit-card-purple .item-en {
+      color #6b21a8;
+    }
+
+    .toolkit-card-emerald {
+      background #f0fdf4;
+      border 2px solid #bbf7d0;
+    }
+    .toolkit-card-emerald h4 {
+      font-family 'Outfit', sans-serif;
+      font-size 18px;
+      font-weight 900;
+      color #065f46;
+      display flex;
+      align-items center;
+      gap 10px;
+      padding-bottom 10px;
+      border-bottom 2px solid #86efac;
+    }
+    .toolkit-card-emerald .stacked-lexicon-item {
+      background #ffffff;
+      border 1.5px solid #bbf7d0;
+    }
+    .toolkit-card-emerald .item-en {
+      color #047857;
+    }
+
+    .toolkit-card-amber {
+      background #fffbeb;
+      border 2px solid #fde68a;
+    }
+    .toolkit-card-amber h4 {
+      font-family 'Outfit', sans-serif;
+      font-size 18px;
+      font-weight 900;
+      color #78350f;
+      display flex;
+      align-items center;
+      gap 10px;
+      padding-bottom 10px;
+      border-bottom 2px solid #fcd34d;
+    }
+    .toolkit-card-amber .stacked-lexicon-item {
+      background #ffffff;
+      border 1.5px solid #fde68a;
+    }
+    .toolkit-card-amber .item-en {
+      color #b45309;
+    }
+
+    .stacked-lexicon-list {
+      display flex;
+      flex-direction column;
+      gap 12px;
+    }
+
     .stacked-lexicon-item {
-      background: #ffffff;
-      border-radius: var(--radius-sm);
-      padding: 12px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      border: 1px solid rgba(0,0,0,0.08);
+      border-radius var(--radius-sm);
+      padding 12px 14px;
+      display flex;
+      flex-direction column;
+      gap 4px;
+      transition all 0.2s ease;
     }
-    .item-en { font-size: 16px; font-weight: 900; line-height: 1.4; }
-    .item-es { font-size: 13.5px; font-weight: 500; color: #475569; font-style: italic; }
+
+    .stacked-lexicon-itemhover {
+      transform translateX(3px);
+      box-shadow 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .item-en {
+      font-size 16px;
+      font-weight 900;
+      line-height 1.4;
+    }
+
+    .item-es {
+      font-size 13.5px;
+      font-weight 500;
+      color #475569;
+      font-style italic;
+      line-height 1.35;
+    }
 
     .controls-bar {
-      max-width: 1520px;
-      width: 95%;
-      margin: 0 auto 30px auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #ffffff;
-      border: 2.5px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 22px 36px;
-      box-shadow: var(--shadow-card);
-      position: relative;
+      max-width 1520px;
+      width 95%;
+      margin 0 auto 30px auto;
+      display flex;
+      justify-content center;
+      align-items center;
+      background #ffffff;
+      border 2.5px solid var(--border-subtle);
+      border-radius var(--radius-lg);
+      padding 22px 36px;
+      box-shadow var(--shadow-card);
+      position relative;
     }
-    .btn-prev-anchor { position: absolute; left: 36px; }
+
+    .btn-prev-anchor {
+      position absolute;
+      left 36px;
+    }
+
     .btn-act {
-      font-family: 'Outfit', sans-serif;
-      font-size: 17px;
-      font-weight: 800;
-      padding: 14px 32px;
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      border: 2px solid #cbd5e1;
-      background: #f1f5f9;
-      color: #1e293b;
+      font-family 'Outfit', sans-serif;
+      font-size 17px;
+      font-weight 800;
+      padding 14px 32px;
+      border-radius var(--radius-md);
+      cursor pointer;
+      display inline-flex;
+      align-items center;
+      gap 12px;
+      border 2px solid transparent;
+      transition all 0.25s ease;
     }
+
+    .btn-prev {
+      background #f1f5f9;
+      border-color #cbd5e1;
+      color #1e293b;
+    }
+
+    .btn-prevhover { background #e2e8f0; }
+
+    @keyframes submitGlowPulse {
+      0% {
+        box-shadow 0 0 16px rgba(37, 99, 235, 0.45), 0 0 0 0 rgba(37, 99, 235, 0.7);
+        transform scale(1);
+      }
+      50% {
+        box-shadow 0 0 34px rgba(37, 99, 235, 0.9), 0 0 18px rgba(29, 78, 216, 0.8);
+        transform scale(1.03);
+      }
+      100% {
+        box-shadow 0 0 16px rgba(37, 99, 235, 0.45), 0 0 0 0 rgba(37, 99, 235, 0.7);
+        transform scale(1);
+      }
+    }
+
     .btn-submit-glow {
-      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
-      color: #ffffff;
-      border: 2.5px solid #bfdbfe;
-      font-family: 'Outfit', sans-serif;
-      font-size: 20px;
-      font-weight: 900;
-      padding: 16px 48px;
-      border-radius: var(--radius-full);
-      cursor: pointer;
+      background linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
+      color #ffffff;
+      border 2.5px solid #bfdbfe;
+      font-family 'Outfit', sans-serif;
+      font-size 20px;
+      font-weight 900;
+      padding 16px 48px;
+      border-radius var(--radius-full);
+      cursor pointer;
+      display inline-flex;
+      align-items center;
+      gap 14px;
+      letter-spacing 0.5px;
+      animation submitGlowPulse 2s infinite ease-in-out;
+      transition all 0.2s ease;
+    }
+
+    .btn-submit-glowhover {
+      animation none;
+      transform scale(1.05);
+      box-shadow 0 0 38px rgba(37, 99, 235, 1);
     }
 
     footer.exam-footer {
-      background: rgba(6, 21, 45, 0.98);
-      border-top: 2.5px solid #1e3a8a;
-      padding: 24px 48px;
-      display: grid;
-      grid-template-columns: 1fr 1.4fr 1fr;
-      align-items: center;
-      font-size: 15px;
-      color: #94a3b8;
-      margin-top: auto;
+      background rgba(6, 21, 45, 0.98);
+      border-top 2.5px solid #1e3a8a;
+      padding 24px 48px;
+      display grid;
+      grid-template-columns 1fr 1.4fr 1fr;
+      align-items center;
+      font-size 15px;
+      color #94a3b8;
+      margin-top auto;
     }
-    .footer-left { text-align: left; font-family: 'Outfit', sans-serif; font-weight: 700; color: #cbd5e1; }
-    .footer-center { text-align: center; font-weight: 600; color: #cbd5e1; }
-    .footer-right { display: flex; align-items: center; justify-content: flex-end; gap: 16px; color: #38bdf8; font-weight: 800; }
+
+    .footer-left {
+      text-align left;
+      font-family 'Outfit', sans-serif;
+      font-size 15px;
+      font-weight 700;
+      color #cbd5e1;
+    }
+
+    .footer-center {
+      text-align center;
+      font-weight 600;
+      color #cbd5e1;
+      line-height 1.4;
+    }
+
+    .footer-author-highlight {
+      color #f59e0b;
+      font-weight 900;
+      letter-spacing 0.5px;
+    }
+
+    .footer-right {
+      display flex;
+      align-items center;
+      justify-content flex-end;
+      gap 16px;
+      color #38bdf8;
+      font-family 'Outfit', sans-serif;
+      font-weight 800;
+      font-size 16px;
+      letter-spacing 0.8px;
+    }
 
     .modal-veil {
-      position: fixed;
-      inset: 0;
-      background: rgba(3, 7, 18, 0.88);
-      backdrop-filter: blur(10px);
-      display: none;
-      place-items: center;
-      z-index: 500;
-      padding: 20px;
+      position fixed;
+      inset 0;
+      background rgba(3, 7, 18, 0.88);
+      backdrop-filter blur(10px);
+      display none;
+      place-items center;
+      z-index 500;
+      padding 20px;
     }
-    .modal-veil.active { display: grid; }
+
+    .modal-veil.active { display grid; }
+
     .modal-box-audit {
-      background: #ffffff;
-      border: 3px solid #1e293b;
-      border-radius: var(--radius-lg);
-      max-width: 820px;
-      width: 100%;
-      padding: 38px 44px;
+      background #ffffff;
+      border 3px solid #1e293b;
+      border-radius var(--radius-lg);
+      max-width 820px;
+      width 100%;
+      padding 38px 44px;
+      box-shadow 0 25px 60px rgba(0,0,0,0.5);
+      text-align left;
     }
-    .audit-header-title { font-family: 'Outfit', sans-serif; font-size: 25px; font-weight: 900; color: #000000; margin-bottom: 8px; }
-    .audit-checklist-vertical { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; max-height: 480px; overflow-y: auto; }
+
+    .audit-header-title {
+      font-family 'Outfit', sans-serif;
+      font-size 25px;
+      font-weight 900;
+      color #000000;
+      display flex;
+      align-items center;
+      gap 14px;
+      margin-bottom 8px;
+    }
+
+    .audit-header-subtitle {
+      font-size 16px;
+      font-weight 500;
+      color var(--text-muted);
+      margin-bottom 24px;
+      line-height 1.5;
+    }
+
+    .audit-checklist-vertical {
+      display flex;
+      flex-direction column;
+      gap 12px;
+      margin-bottom 28px;
+      max-height 480px;
+      overflow-y auto;
+      padding-right 6px;
+    }
+
     .chk-audit-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      background: #f8fafc;
-      border: 2px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 14px 18px;
-      cursor: pointer;
+      display flex;
+      align-items flex-start;
+      gap 16px;
+      background #f8fafc;
+      border 2px solid var(--border-subtle);
+      border-radius var(--radius-md);
+      padding 14px 18px;
+      cursor pointer;
+      transition all 0.2s ease;
     }
-    .chk-audit-row input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--cambridge-blue); cursor: pointer; margin-top: 3px; }
-    .chk-audit-details strong { font-size: 16.5px; font-weight: 800; color: #0f172a; display: block; }
-    .chk-audit-details span { font-size: 14px; color: #475569; display: block; margin-top: 3px; }
+
+    .chk-audit-rowhover {
+      background #eff6ff;
+      border-color #3b82f6;
+    }
+
+    .chk-audit-row input[type=checkbox] {
+      width 22px;
+      height 22px;
+      accent-color var(--cambridge-blue);
+      cursor pointer;
+      margin-top 3px;
+    }
+
+    .chk-audit-details strong {
+      font-size 16.5px;
+      font-weight 800;
+      color #0f172a;
+      display block;
+      line-height 1.35;
+    }
+
+    .chk-audit-details span {
+      font-size 14px;
+      font-weight 500;
+      color #475569;
+      display block;
+      line-height 1.45;
+      margin-top 3px;
+    }
+
+    .modal-box-alarm {
+      background #ffffff;
+      border 3.5px solid #dc2626;
+      border-radius var(--radius-lg);
+      max-width 640px;
+      width 100%;
+      padding 40px 42px;
+      box-shadow 0 25px 60px rgba(220, 38, 38, 0.45);
+      text-align center;
+    }
+
+    .alarm-icon-siren {
+      font-size 60px;
+      margin-bottom 12px;
+      animation flashSiren 1s infinite alternate;
+    }
+
+    @keyframes flashSiren {
+      0% { transform scale(1) rotate(-8deg); }
+      100% { transform scale(1.15) rotate(8deg); }
+    }
+
+    .alarm-title {
+      font-family 'Outfit', sans-serif;
+      font-size 26px;
+      font-weight 900;
+      color #991b1b;
+      margin-bottom 14px;
+    }
+
+    .alarm-message {
+      font-size 16.5px;
+      font-weight 600;
+      color #1e293b;
+      line-height 1.65;
+      margin-bottom 26px;
+    }
+
+    .alarm-message strong {
+      font-weight 900;
+      color #000000;
+    }
 
     .modal-box-feedback {
-      background: #ffffff;
-      border: 3.5px solid #0f172a;
-      border-radius: var(--radius-lg);
-      max-width: 1060px;
-      width: 96%;
-      max-height: 92vh;
-      overflow-y: auto;
-      padding: 38px 44px;
+      background #ffffff;
+      border 3.5px solid #0f172a;
+      border-radius var(--radius-lg);
+      max-width 1120px;
+      width 96%;
+      max-height 94vh;
+      overflow-y auto;
+      padding 38px 44px;
+      box-shadow 0 30px 70px rgba(0,0,0,0.6);
+      text-align left;
     }
-    .fb-header-cluster { display: flex; align-items: center; justify-content: space-between; border-bottom: 2.5px solid #cbd5e1; padding-bottom: 16px; margin-bottom: 24px; }
+
+    .fb-header-cluster {
+      display flex;
+      align-items center;
+      justify-content space-between;
+      border-bottom 2.5px solid #cbd5e1;
+      padding-bottom 16px;
+      margin-bottom 24px;
+    }
+
+    .fb-header-titles h2 {
+      font-family 'Outfit', sans-serif;
+      font-size 28px;
+      font-weight 900;
+      color #0b1a30;
+      display flex;
+      align-items center;
+      gap 12px;
+    }
+
+    .fb-header-titles span {
+      font-size 14px;
+      font-weight 700;
+      color #2563eb;
+      text-transform uppercase;
+      letter-spacing 0.8px;
+    }
+
     .fb-grand-score-box {
-      background: linear-gradient(135deg, #091e3a 0%, #172554 100%);
-      color: #ffffff;
-      padding: 12px 24px;
-      border-radius: 12px;
-      text-align: center;
-      border: 2px solid #3b82f6;
+      background linear-gradient(135deg, #091e3a 0%, #172554 100%);
+      color #ffffff;
+      padding 12px 24px;
+      border-radius 12px;
+      text-align center;
+      border 2px solid #3b82f6;
     }
-    .fb-grand-score-box strong { font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 900; color: #fef08a; }
-    .fb-tasks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 26px; }
-    @media (max-width: 900px) { .fb-tasks-grid { grid-template-columns: 1fr; } }
-    .fb-task-card { background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; }
-    .fb-task-top-row { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-    .fb-task-badge { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 900; color: #1d4ed8; background: #dbeafe; padding: 4px 12px; border-radius: 8px; }
-    .fb-crit-row { display: flex; flex-direction: column; gap: 4px; }
-    .fb-crit-info { display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 800; color: #1e293b; }
-    .fb-crit-bar-track { height: 9px; background: #e2e8f0; border-radius: 10px; overflow: hidden; display: flex; }
-    .fb-crit-bar-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #10b981); border-radius: 10px; }
-    .fb-detailed-box { background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 14px; font-size: 13.5px; line-height: 1.55; display: flex; flex-direction: column; gap: 10px; }
-  </style>
-</head>
-<body>
 
-  <header class="exam-header">
-    <div class="brand-left-cluster">
-      <div class="cambridge-badge-frame">
-        <img src="https://lh3.googleusercontent.com/d/1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg" alt="Cambridge English" class="cambridge-crest-img">
-      </div>
-      <div class="jm-brand-box">
-        <img src="https://lh3.googleusercontent.com/d/1EksYLoHp7voak-Ka3Y3txyiGM15DMPTP" alt="JM ELT Solutions" class="jm-logo-img">
-        <div class="jm-titles">
-          <span class="jm-title-top">JM</span>
-          <span class="jm-title-sub">ELT Solutions</span>
-          <span class="jm-title-tagline">Official Exam Simulator</span>
-        </div>
-      </div>
-    </div>
-    <div class="header-center-cluster">
-      <div class="timer-pill"><span>⏱️</span><span id="writingTimer">80:00</span></div>
-    </div>
-    <div class="header-right-cluster">
-      <a href="./index.html" class="btn-return-menu"><span>🏠</span> Return to Main Menu</a>
-      <div class="trainer-profile-card">
-        <div class="trainer-meta">
-          <div class="trainer-name-top">Dr. Jesús Miguel Lima E.</div>
-          <div class="trainer-desc-sub">Cambridge Specialist & Trainer</div>
-        </div>
-        <img src="https://lh3.googleusercontent.com/d/1yd8aHZpgwj1mJXKaP8zldJIZAwGTiIor" alt="Dr. Jesús Miguel Lima E." class="trainer-avatar-lg">
-      </div>
-    </div>
-  </header>
+    .fb-grand-score-box small {
+      display block;
+      font-size 11.5px;
+      font-weight 800;
+      text-transform uppercase;
+      color #93c5fd;
+      letter-spacing 0.8px;
+    }
 
-  <main class="writing-viewport">
-    <section class="writing-section active" id="sectionPart1">
-      <div class="top-workspace-grid">
-        <div class="prompt-card">
-          <div class="exam-main-title-block">
-            <span class="exam-paper-heading">📝 B2 FIRST WRITING</span>
-            <span class="exam-part-heading">Part 1</span>
-          </div>
-          <p class="task-instruction-p">You <strong>must</strong> answer this question. Write your answer in <strong>140–190 words</strong> in an appropriate style on the separate answer sheet.</p>
-          <div class="context-scenario-text">
-            <strong>1</strong> In your English class you have been talking about life in the past. Now, your English teacher has asked you to write an essay.<br><br>
-            Write an essay using <strong>all</strong> the notes and give reasons for your point of view.
-          </div>
-          <div class="notepad-container">
-            <div class="notepad-quote-title">‘Life is better today than it was 100 years ago.’ Do you agree?</div>
-            <div class="notepad-notes-header">📋 Notes • Write about:</div>
-            <div class="notepad-note-item"><span class="note-num">1</span> health</div>
-            <div class="notepad-note-item"><span class="note-num">2</span> entertainment</div>
-            <div class="notepad-note-item"><span class="note-num">3</span> ...(your own idea)</div>
-          </div>
-        </div>
+    .fb-grand-score-box strong {
+      font-family 'JetBrains Mono', monospace;
+      font-size 32px;
+      font-weight 900;
+      color #fef08a;
+    }
 
-        <div class="editor-card">
-          <div class="editor-top-bar">
-            <div class="editor-top-row">
-              <div class="editor-hierarchy-cluster">
-                <span class="editor-eyebrow-part">📌 Part 1</span>
-                <h2 class="editor-main-genre-title">Discursive Essay</h2>
-                <span class="editor-register-sub">(Formal Register)</span>
-                <span class="editor-command-callout">✍️ Write your essay here:</span>
-              </div>
-              <span class="word-counter-badge" id="wcPart1">0 words (Target: 140–190)</span>
-            </div>
-          </div>
-          <textarea class="writing-textarea" id="textPart1" placeholder="Type your essay here..." oninput="updateWordCount(1)"></textarea>
-        </div>
-      </div>
+    .fb-pass-indicator {
+      display block;
+      font-size 12.5px;
+      font-weight 800;
+      margin-top 4px;
+      padding 3px 10px;
+      border-radius 6px;
+    }
 
-      <div class="full-width-scaffolding-suite">
-        <div class="suite-nav-bar">
-          <div class="suite-title">👑 Pedagogical Scaffolding Suite</div>
-          <div class="suite-tabs-group">
-            <button type="button" class="suite-tab-btn active" id="btnSuiteModelP1" onclick="switchFullSuiteTab('p1', 'model')">📖 Grade A Model Essay</button>
-            <button type="button" class="suite-tab-btn" id="btnSuiteToolkitP1" onclick="switchFullSuiteTab('p1', 'toolkit')">🚀 High-Scoring C1 Toolkit</button>
-          </div>
-        </div>
-        <div class="suite-content-pane active" id="paneSuiteModelP1">
-          <div class="model-essay-box">
-            <p><strong>A Century of Progress: Is Modern Life Genuinely Superior?</strong></p>
-            <p>It is frequently asserted that modern society enjoys far superior living standards compared to a century ago. While our ancestors led simpler lives, substantial technological and social progress has transformed human existence for the better.</p>
-          </div>
-        </div>
-        <div class="suite-content-pane" id="paneSuiteToolkitP1" style="display:none;">
-          <div class="toolkit-super-grid">
-            <div class="toolkit-card toolkit-card-purple"><h4>🏛️ 6 Advanced Grammar Frames</h4></div>
-            <div class="toolkit-card toolkit-card-emerald"><h4>🔗 Discourse Markers & Linkers</h4></div>
-            <div class="toolkit-card toolkit-card-amber"><h4>⚡ Phrasal Verbs & Collocations</h4></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    .fb-tasks-grid {
+      display grid;
+      grid-template-columns 1fr 1fr;
+      gap 24px;
+      margin-bottom 26px;
+    }
 
-    <section class="writing-section" id="sectionPart2">
-      <div class="top-workspace-grid">
-        <div class="prompt-card">
-          <div class="exam-main-title-block">
-            <span class="exam-paper-heading">📝 B2 FIRST WRITING</span>
-            <span class="exam-part-heading">Part 2</span>
-          </div>
-          <div class="p2-options-cards-grid">
-            <button type="button" class="btn-option-card card-opt-amber" onclick="selectP2Option(2)">
-              <span class="opt-card-label">✨ Question 2</span>
-              <span class="opt-card-title">🎬 Review</span>
-            </button>
-            <button type="button" class="btn-option-card card-opt-emerald" onclick="selectP2Option(3)">
-              <span class="opt-card-label">✨ Question 3</span>
-              <span class="opt-card-title">📰 Article</span>
-            </button>
-            <button type="button" class="btn-option-card card-opt-purple" onclick="selectP2Option(4)">
-              <span class="opt-card-label">✨ Question 4</span>
-              <span class="opt-card-title">📊 Report</span>
-            </button>
-          </div>
-          <div id="p2PromptContainer"></div>
-        </div>
+    @media (max-width 900px) {
+      .fb-tasks-grid { grid-template-columns 1fr; }
+    }
 
-        <div class="editor-card">
-          <div class="editor-top-bar">
-            <div class="editor-top-row">
-              <div class="editor-hierarchy-cluster">
-                <span class="editor-eyebrow-part">📌 Part 2</span>
-                <h2 class="editor-main-genre-title" id="p2EditorHeading">Review</h2>
-                <span class="editor-register-sub" id="p2EditorRegister">(Semi-formal & Engaging)</span>
-              </div>
-              <span class="word-counter-badge" id="wcPart2">0 words (Target: 140–190)</span>
-            </div>
-          </div>
-          <textarea class="writing-textarea" id="textPart2" placeholder="Write your selected Part 2 task here..." oninput="updateWordCount(2)"></textarea>
-        </div>
-      </div>
-    </section>
-  </main>
+    .fb-task-card {
+      background #f8fafc;
+      border 2px solid #cbd5e1;
+      border-radius 14px;
+      padding 22px 24px;
+      display flex;
+      flex-direction column;
+      gap 14px;
+    }
 
-  <div class="controls-bar">
-    <div class="btn-prev-anchor">
-      <button type="button" class="btn-act" id="btnPrevPart" style="display:none;" onclick="switchPart(1)">← Back to Part 1</button>
-    </div>
-    <button type="button" class="btn-submit-glow" id="btnMainSubmitGlow" onclick="handleCentralSubmitClick()">✨ Submit Your Essay ➔</button>
-  </div>
+    .fb-task-top-row {
+      display flex;
+      align-items center;
+      justify-content space-between;
+      border-bottom 2px solid #e2e8f0;
+      padding-bottom 10px;
+    }
 
-  <footer class="exam-footer">
-    <div class="footer-left">© 2026 Cambridge Assessment Practice Engine</div>
-    <div class="footer-center">Authored & Developed by <strong>Dr. Jesús Miguel Lima E.</strong></div>
-    <div class="footer-right"><span>JM ELT Solutions</span></div>
-  </footer>
+    .fb-task-top-row h3 {
+      font-family 'Outfit', sans-serif;
+      font-size 19px;
+      font-weight 900;
+      color #0b1a30;
+    }
 
-  <div class="modal-veil" id="modalQualityAudit">
-    <div class="modal-box-audit">
-      <h3 class="audit-header-title" id="auditModalTitle">📋 Pre-Flight Quality Audit</h3>
-      <div class="audit-checklist-vertical" id="auditChecklistContainer"></div>
-      <div style="display:flex; justify-content:space-between; margin-top:20px;">
-        <button type="button" class="btn-act" onclick="closeAuditModal()">Regresar</button>
-        <button type="button" class="btn-submit-glow" style="padding:10px 24px; font-size:16px;" onclick="handleAuditValidation()">Confirmar y Continuar ➔</button>
-      </div>
-    </div>
-  </div>
+    .fb-task-badge {
+      font-family 'JetBrains Mono', monospace;
+      font-size 18px;
+      font-weight 900;
+      color #1d4ed8;
+      background #dbeafe;
+      padding 4px 12px;
+      border-radius 8px;
+    }
 
-  <div class="modal-veil" id="modalOfficialFeedback">
-    <div class="modal-box-feedback">
-      <div class="fb-header-cluster">
-        <div>
-          <h2 style="font-size:26px; font-weight:900;">📊 Official Examiner Evaluation Report</h2>
-          <span style="font-size:14px; font-weight:700; color:#2563eb;">Cambridge B2 First • Paper 2: Writing Diagnostic</span>
-        </div>
-        <div class="fb-grand-score-box">
-          <small style="display:block; font-size:11px; text-transform:uppercase; color:#93c5fd;">Total Writing Score</small>
-          <strong id="fbGrandTotalScore">-- / 40</strong>
-          <span id="fbGradeResult" style="display:block; font-size:12px; font-weight:800; margin-top:4px;">Evaluating...</span>
-        </div>
-      </div>
+    .fb-criteria-list {
+      display flex;
+      flex-direction column;
+      gap 10px;
+    }
 
-      <div style="background:#f1f5f9; border-left:6px solid #2563eb; padding:16px; border-radius:10px; margin-bottom:24px;">
-        <h4 style="font-size:16px; font-weight:900; color:#1e3a8a; margin-bottom:4px;">🎓 Cambridge Examiner Verdict:</h4>
-        <p id="fbExaminerVerdict" style="font-size:15px; color:#1e293b; line-height:1.6;">Evaluando...</p>
-      </div>
+    .fb-crit-row {
+      display flex;
+      flex-direction column;
+      gap 4px;
+    }
 
-      <div class="fb-tasks-grid">
-        <div class="fb-task-card">
-          <div class="fb-task-top-row">
-            <h3 style="font-size:18px; font-weight:900;">Part 1: Discursive Essay</h3>
-            <span class="fb-task-badge" id="fbP1Score">-- / 20</span>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:8px;">
-            <div class="fb-crit-row"><div class="fb-crit-info"><span>Content</span><span id="fb_p1_cont">-- / 5</span></div><div class="fb-crit-bar-track"><div class="fb-crit-bar-fill" id="fb_bar_p1_cont" style="width:0%;"></div></div></div>
-            <div class="fb-crit-row"><div class="fb-crit-info"><span>Communicative Achievement</span><span id="fb_p1_comm">-- / 5</span></div><div class="fb-crit-bar-track"><div class="fb-crit-bar-fill" id="fb_bar_p1_comm" style="width:0%;"></div></div></div>
-            <div class="fb-crit-row"><div class="fb-crit-info"><span>Organisation</span><span id="fb_p1_org">-- / 5</span></div><div class="fb-crit-bar-track"><div class="fb-crit-bar-fill" id="fb_bar_p1_org" style="width:0%;"></div></div></div>
-            <div class="fb-crit-row"><div class="fb-crit-info"><span>Language</span><span id="fb_p1_lang">-- / 5</span></div><div class="fb-crit-bar-track"><div class="fb-crit-bar-fill" id="fb_bar_p1_lang" style="width:0%;"></div></div></div>
-          </div>
-          <div class="fb-detailed-box">
-            <div><strong>Task Feedback:</strong> <span id="fb_p1_taskFeedback"></span></div>
-            <div><strong>Strengths:</strong> <span id="fb_p1_strengths"></span></div>
-            <div><strong>Areas for Improvement:</strong> <span id="fb_p1_weaknesses"></span></div>
-          </div>
-        </div>
+    .fb-crit-info {
+      display flex;
+      align-items center;
+      justify-content space-between;
+      font-size 14px;
+      font-weight 800;
+      color #1e293b;
+    }
 
-        <div class="fb-task-card">
-          <div class="fb-task-top-row">
-            <h3 style="font-size:18px; font-weight:900;" id="fbP2TaskTitle">Part 2: Selected Task</h3>
-            <span class="fb-task-badge" id="fbP2Score">-- / 20</span>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:8px;">
-            <div class="fb-crit-row"><div class="fb-crit-info"><span>Content</span><span id="fb_p2_cont">-- / 5</span></div><div class="fb-crit-bar-track"><div class="fb-crit-bar-fill" id="fb_bar_p2_cont" style="width:0%;"></div></div></div>
-            <div class="fb-crit-row"><div class="fb-crit-info"><span>Communicative Achievement</span><span id="fb_p2_comm">-- / 5</span></div><div class="fb-crit-bar-track"><div class="fb-crit-bar-fill" id="fb_bar_p2_comm" style="width:0%;"></div></div></div>
-            <div class="fb-crit-row"><div class="fb-crit-info"><span>Organisation</span><span id="fb_p2_org">-- / 5</span></div><div class="fb-crit-bar-track"><div class="fb-crit-bar-fill" id="fb_bar_p2_org" style="width:0%;"></div></div></div>
-            <div class="fb-crit-row"><div class="fb-crit-info"><span>Language</span><span id="fb_p2_lang">-- / 5</span></div><div class="fb-crit-bar-track"><div class="fb-crit-bar-fill" id="fb_bar_p2_lang" style="width:0%;"></div></div></div>
-          </div>
-          <div class="fb-detailed-box">
-            <div><strong>Task Feedback:</strong> <span id="fb_p2_taskFeedback"></span></div>
-            <div><strong>Strengths:</strong> <span id="fb_p2_strengths"></span></div>
-            <div><strong>Areas for Improvement:</strong> <span id="fb_p2_weaknesses"></span></div>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <button type="button" class="btn-act" onclick="location.reload()">Nuevo Intento</button>
-      </div>
-    </div>
-  </div>
+    .fb-crit-bar-track {
+      height 9px;
+      background #e2e8f0;
+      border-radius 10px;
+      overflow hidden;
+      display flex;
+    }
 
-  <script>
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz3ludY3aLDiLluQytc9zyZq8IGHTqG9yb0V2Q8Ef0H41vIZ2vDfKGu2rhVLYaZuM8ZQg/exec";
+    .fb-crit-bar-fill {
+      height 100%;
+      background linear-gradient(90deg, #2563eb, #10b981);
+      border-radius 10px;
+      transition width 0.6s ease;
+    }
 
-    let timeLeft = 80 * 60;
-    setInterval(() => {
-      if (timeLeft <= 0) return;
-      timeLeft--;
-      const m = Math.floor(timeLeft / 60);
-      const s = timeLeft % 60;
+    .fb-detailed-box {
+      background #ffffff;
+      border 1.5px solid #cbd5e1;
+      border-radius 10px;
+      padding 16px;
+      font-size 14px;
+      line-height 1.6;
+      color #1e293b;
+      display flex;
+      flex-direction column;
+      gap 12px;
+    }
+
+    .fb-pill-pos {
+      background #ecfdf5;
+      border-left 4px solid #10b981;
+      padding 10px 14px;
+      border-radius 6px;
+      color #065f46;
+    }
+    .fb-pill-pos strong {
+      color #047857;
+      display block;
+      margin-bottom 3px;
+    }
+
+    .fb-pill-neg {
+      background #fef2f2;
+      border-left 4px solid #ef4444;
+      padding 10px 14px;
+      border-radius 6px;
+      color #991b1b;
+    }
+    .fb-pill-neg strong {
+      color #b91c1c;
+      display block;
+      margin-bottom 3px;
+    }
+
+    .fb-evidence-box {
+      background #fffbeb;
+      border 1.5px solid #fde68a;
+      border-left 5px solid #f59e0b;
+      border-radius 8px;
+      padding 12px 14px;
+      display flex;
+      flex-direction column;
+      gap 6px;
+      font-size 13.5px;
+    }
+    .fb-evidence-box strong {
+      color #92400e;
+      font-size 14px;
+    }
+    .fb-evidence-quote {
+      font-style italic;
+      color #78350f;
+      background rgba(254, 243, 199, 0.6);
+      padding 4px 8px;
+      border-radius 4px;
+    }
+    .fb-evidence-fix {
+      color #065f46;
+      font-weight 700;
+    }
+
+    .fb-examiner-summary-banner {
+      background linear-gradient(145deg, #eff6ff 0%, #f0fdf4 100%);
+      border 2px solid #93c5fd;
+      border-left 8px solid #2563eb;
+      border-radius 12px;
+      padding 18px 22px;
+      margin-bottom 26px;
+    }
+
+    .fb-examiner-summary-banner h4 {
+      font-family 'Outfit', sans-serif;
+      font-size 17px;
+      font-weight 900;
+      color #1e3a8a;
+      margin-bottom 6px;
+      display flex;
+      align-items center;
+      gap 8px;
+    }
+
+    .fb-examiner-summary-banner p {
+      font-size 15.5px;
+      font-weight 600;
+      color #1e293b;
+      line-height 1.65;
+    }
+
+    @media print {
+      body { background #ffffff !important; color #000000 !important; }
+      header.exam-header, .controls-bar, footer.exam-footer, .full-width-scaffolding-suite, .top-workspace-grid { display none !important; }
+      .modal-veil { position static !important; display block !important; background transparent !important; }
+      .modal-box-feedback { max-width 100% !important; border none !important; box-shadow none !important; padding 0 !important; }
+    }
+  style
+head
+body
+
+  header class=exam-header
+    div class=brand-left-cluster
+      div class=cambridge-badge-frame
+        img src=[httpslh3.googleusercontent.comd1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg](httpslh3.googleusercontent.comd1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg) alt=Cambridge English class=cambridge-crest-img
+      div
+
+      div class=jm-brand-box
+        img src=[httpslh3.googleusercontent.comd1EksYLoHp7voak-Ka3Y3txyiGM15DMPTP](httpslh3.googleusercontent.comd1EksYLoHp7voak-Ka3Y3txyiGM15DMPTP) alt=JM ELT Solutions class=jm-logo-img
+        div class=jm-titles
+          span class=jm-title-topJMspan
+          span class=jm-title-subELT Solutionsspan
+          span class=jm-title-taglineOfficial Exam Simulatorspan
+        div
+      div
+    div
+
+    div class=header-center-cluster
+      div class=timer-pill
+        span⏱️spanspan id=writingTimer8000span
+      div
+    div
+
+    div class=header-right-cluster
+      a href=.index.html class=btn-return-menu
+        span🏠span Return to Main Menu
+      a
+
+      div class=trainer-profile-card
+        div class=trainer-meta
+          div class=trainer-name-topDr. Jesús Miguel Lima E.div
+          div class=trainer-desc-subCambridge Specialist & Trainerdiv
+        div
+        img src=[httpslh3.googleusercontent.comd1yd8aHZpgwj1mJXKaP8zldJIZAwGTiIor](httpslh3.googleusercontent.comd1yd8aHZpgwj1mJXKaP8zldJIZAwGTiIor) alt=Dr. Jesús Miguel Lima E. class=trainer-avatar-lg
+      div
+    div
+  header
+
+  main class=writing-viewport
+
+    section class=writing-section active id=sectionPart1
+      div class=top-workspace-grid
+        div class=prompt-card
+          div class=exam-main-title-block
+            span class=exam-paper-heading📝 B2 FIRST WRITINGspan
+            span class=exam-part-headingPart 1span
+          div
+
+          p class=task-instruction-p
+            You strongmuststrong answer this question. Write your answer in strong140–190 wordsstrong in an appropriate style on the separate answer sheet.
+          p
+
+          hr class=exam-section-divider
+
+          div class=context-scenario-text
+            strong1strong In your English class you have been talking about life in the past. Now, your English teacher has asked you to write an essay.brbr
+            Write an essay using strongallstrong the notes and give reasons for your point of view.
+          div
+
+          div class=notepad-container
+            div class=notepad-title-header
+              span class=notepad-quote-title‘Life is better today than it was 100 years ago.’ Do you agreespan
+            div
+            div class=notepad-notes-header📋 Notes • Write aboutdiv
+            div class=notepad-note-itemspan class=note-num1span healthdiv
+            div class=notepad-note-itemspan class=note-num2span entertainmentdiv
+            div class=notepad-note-itemspan class=note-num3span ...(your own idea)div
+          div
+
+          p class=exam-verbatim-footer
+            Write your strongessaystrong. You must use grammatically correct sentences with accurate spelling and punctuation in a style appropriate for the situation.
+          p
+        div
+
+        div class=editor-card
+          div class=editor-top-bar
+            div class=editor-top-row
+              div class=editor-hierarchy-cluster
+                span class=editor-eyebrow-part📌 Part 1span
+                h2 class=editor-main-genre-titleDiscursive Essayh2
+                span class=editor-register-sub(Formal Register)span
+                span class=editor-command-callout✍️ Write your essay herespan
+              div
+              span class=word-counter-badge id=wcPart10 words (Target 140–190)span
+            div
+            div class=word-advice-banner id=bannerAdvice1div
+          div
+
+          textarea 
+            class=writing-textarea 
+            id=textPart1 
+            placeholder=Type your essay here... You may begin with a formal title on the first line (e.g. A Century of Progress Is Modern Life Genuinely Superior). Organize your ideas into 4 distinct paragraphs with clear topic sentences and formal transition linkers.
+            spellcheck=false
+            oninput=updateWordCount(1)
+          textarea
+        div
+      div
+
+      div class=full-width-scaffolding-suite
+        div class=suite-nav-bar
+          div class=suite-title
+            span👑 Pedagogical Scaffolding Suitespan
+            span style=font-size13px; font-weight700; color#38bdf8; text-transformuppercase; letter-spacing0.8px;• Grade A  C1 Benchmark Toolkitspan
+          div
+          div class=suite-tabs-group
+            button type=button class=suite-tab-btn active id=btnSuiteModelP1 onclick=switchFullSuiteTab('p1', 'model')
+              📖 Grade A Model Essay
+            button
+            button type=button class=suite-tab-btn id=btnSuiteToolkitP1 onclick=switchFullSuiteTab('p1', 'toolkit')
+              🚀 High-Scoring C1 Toolkit
+            button
+          div
+        div
+
+        div class=suite-content-pane active id=paneSuiteModelP1
+          div class=model-essay-box
+            div class=model-title-banner
+              span class=annotation-tag tag-titleRecommended Titlespan
+              strongA Century of Progress Is Modern Life Genuinely Superiorstrong
+            div
+            p
+              span class=annotation-tag tag-p1Introductionspan
+              It is frequently asserted that modern society enjoys far superior living standards compared to a century ago. While our ancestors undoubtedly led simpler and less frantic lives, substantial technological and social progress has unquestionably transformed human existence for the better.
+            p
+            p
+              span class=annotation-tag tag-p1Point 1 Healthspan
+              First and foremost, healthcare has experienced an astonishing revolution. One hundred years ago, curable bacterial infections frequently proved fatal, and average life expectancy was considerably lower. Today, thanks to cutting-edge medical breakthroughs, systematic vaccination programs, and sophisticated treatments, citizens live longer, healthier lives than ever before.
+            p
+            p
+              span class=annotation-tag tag-p2Point 2 Entertainmentspan
+              span class=annotation-tag tag-p3Point 3 Working Conditions (Own Idea)span
+              Furthermore, access to recreational activities and personal leisure has expanded drastically. Rather than enduring monotonous routines, people can effortlessly enjoy global cinema, literature, and digital media. More importantly, automated technology has liberated ordinary workers from exhausting manual labour, ensuring regulated working hours and far safer industrial environments.
+            p
+            p
+              span class=annotation-tag tag-concConclusionspan
+              Taking all factors into account, I firmly maintain that life today is considerably more fulfilling. Although contemporary life entails certain environmental pressures, remarkable advances in medicine and working conditions render our era overwhelmingly preferable.
+            p
+          div
+          div style=margin-top16px; font-size15px; font-weight700; color#047857; displayflex; align-itemscenter; gap8px;
+            span💡span strongExaminer Insight (Grade A  Band 5)strong 182 words total. Formal title, covers health, entertainment, and working conditions (original point 3), sophisticated discourse connectives, and strictly objective register without informal contractions.
+          div
+        div
+
+        div class=suite-content-pane id=paneSuiteToolkitP1 style=displaynone;
+          div class=toolkit-super-grid
+            div class=toolkit-card toolkit-card-purple
+              h4🏛️ 6 Advanced Grammar Framesh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-en1. Inversion (C1) Hardly could our ancestors have imagined such breakthroughs.spanspan class=item-esDifícilmente nuestros antepasados habrían imaginado tales avances.spandiv
+                div class=stacked-lexicon-itemspan class=item-en2. Passive Reporting It cannot be denied that modern sanitation has saved millions.spanspan class=item-esNo se puede negar que el saneamiento moderno ha salvado a millones.spandiv
+                div class=stacked-lexicon-itemspan class=item-en3. Cleft Sentence What has contributed most significantly to well-being is healthcare.spanspan class=item-esLo que más ha contribuido al bienestar humano es el sistema de salud.spandiv
+                div class=stacked-lexicon-itemspan class=item-en4. Mixed Conditional Had these antibiotics not been discovered, mortality would still be rampant.spanspan class=item-esSi no se hubieran descubierto estos antibióticos, la mortalidad aún sería alarmante.spandiv
+                div class=stacked-lexicon-itemspan class=item-en5. Participle Clause Having mechanized heavy tasks, modern industry allows greater leisure.spanspan class=item-esHabiendo mecanizado las tareas pesadas, la industria permite mayor tiempo libre.spandiv
+                div class=stacked-lexicon-itemspan class=item-en6. Double Comparative The more medical science progresses, the longer citizens thrive.spanspan class=item-esCuanto más avanza la ciencia médica, más tiempo prosperan los ciudadanos.spandiv
+              div
+            div
+
+            div class=toolkit-card toolkit-card-emerald
+              h4🔗 Discourse Markers & Linkersh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enFirst and foremost,...spanspan class=item-esEn primerísimo lugar  Ante todo,...spandiv
+                div class=stacked-lexicon-itemspan class=item-enIt is frequently asserted that...spanspan class=item-esSe afirma con frecuencia que...spandiv
+                div class=stacked-lexicon-itemspan class=item-enIn stark contrast to the past,...spanspan class=item-esEn marcado contraste con el pasado,...spandiv
+                div class=stacked-lexicon-itemspan class=item-enNotwithstanding these remarkable advantages,...spanspan class=item-esA pesar de estas notables ventajas,...spandiv
+                div class=stacked-lexicon-itemspan class=item-enMore importantly,...spanspan class=item-esMás importante aún,...spandiv
+                div class=stacked-lexicon-itemspan class=item-enTaking all factors into account,...spanspan class=item-esTeniendo en cuenta todos los factores,...spandiv
+                div class=stacked-lexicon-itemspan class=item-enRender our era overwhelmingly preferablespanspan class=item-esHacen que nuestra era sea abrumadoramente preferiblespandiv
+              div
+            div
+
+            div class=toolkit-card toolkit-card-amber
+              h4⚡ Phrasal Verbs & Collocationsh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enMake a quantum leap in healthcarespanspan class=item-esDar un salto cualitativo en la atención médicaspandiv
+                div class=stacked-lexicon-itemspan class=item-enBring about far-reaching changesspanspan class=item-esProvocar  traer consigo cambios de gran alcancespandiv
+                div class=stacked-lexicon-itemspan class=item-enPave the way for future generationsspanspan class=item-esAllanar el camino para las futuras generacionesspandiv
+                div class=stacked-lexicon-itemspan class=item-enA double-edged swordspanspan class=item-esUn arma de doble filospandiv
+                div class=stacked-lexicon-itemspan class=item-enPhase out obsolete manual machineryspanspan class=item-esEliminar gradualmente maquinaria manual obsoletaspandiv
+                div class=stacked-lexicon-itemspan class=item-enWipe out infectious diseasesspanspan class=item-esErradicar por completo enfermedades infecciosasspandiv
+                div class=stacked-lexicon-itemspan class=item-enTake contemporary amenities for grantedspanspan class=item-esDar por sentadas las comodidades contemporáneasspandiv
+              div
+            div
+          div
+        div
+      div
+    section
+
+    section class=writing-section id=sectionPart2
+      div class=top-workspace-grid
+        div class=prompt-card
+          div class=exam-main-title-block
+            span class=exam-paper-heading📝 B2 FIRST WRITINGspan
+            span class=exam-part-headingPart 2span
+          div
+
+          p class=task-instruction-p
+            Write an answer to strongonestrong of the questions strong2–4strong in this part. Write your answer in strong140–190 wordsstrong in an appropriate style on the separate answer sheet. Put the question number in the box at the top of the answer sheet.
+          p
+
+          hr class=exam-section-divider
+
+          div class=p2-instruction-banner
+            div class=p2-instruction-text
+              span🎯 SELECT ONLY ONE TASKspan
+            div
+            span style=font-size13px; font-weight800; color#92400e; text-transformuppercase; letter-spacing0.6px;
+              ⚡ Pick an option below to load its workspace
+            span
+          div
+
+          div class=p2-options-cards-grid
+            button type=button class=btn-option-card card-opt-amber id=cardOpt2 onclick=selectP2Option(2)
+              span class=opt-card-label✨ Question 2span
+              span class=opt-card-title🎬 Reviewspan
+              span class=opt-card-descA TV documentary I learnt a lot fromspan
+            button
+            button type=button class=btn-option-card card-opt-emerald id=cardOpt3 onclick=selectP2Option(3)
+              span class=opt-card-label✨ Question 3span
+              span class=opt-card-title📰 Articlespan
+              span class=opt-card-descA day in the city!span
+            button
+            button type=button class=btn-option-card card-opt-purple id=cardOpt4 onclick=selectP2Option(4)
+              span class=opt-card-label✨ Question 4span
+              span class=opt-card-title📊 Reportspan
+              span class=opt-card-descPart-time or holiday jobspan
+            button
+          div
+
+          div id=p2PromptContainerdiv
+        div
+
+        div class=editor-card
+          div class=editor-top-bar
+            div class=editor-top-row
+              div class=editor-hierarchy-cluster
+                span class=editor-eyebrow-part📌 Part 2span
+                h2 class=editor-main-genre-title id=p2EditorHeadingReviewh2
+                span class=editor-register-sub id=p2EditorRegister(Semi-formal & Engaging)span
+                span class=editor-command-callout id=p2EditorCommand✍️ Write your review herespan
+              div
+              span class=word-counter-badge id=wcPart20 words (Target 140–190)span
+            div
+            div class=word-advice-banner id=bannerAdvice2div
+          div
+
+          textarea 
+            class=writing-textarea 
+            id=textPart2 
+            placeholder=Click here and begin typing your selected Part 2 task...
+            spellcheck=false
+            oninput=updateWordCount(2)
+          textarea
+        div
+      div
+
+      div class=full-width-scaffolding-suite
+        div class=suite-nav-bar
+          div class=suite-title
+            span👑 Pedagogical Scaffolding Suitespan
+            span style=font-size13px; font-weight700; color#38bdf8; text-transformuppercase; letter-spacing0.8px;• Part 2 Genre Benchmarkspan
+          div
+          div class=suite-tabs-group
+            button type=button class=suite-tab-btn active id=btnSuiteModelP2 onclick=switchFullSuiteTab('p2', 'model')
+              📖 Grade A Model Task
+            button
+            button type=button class=suite-tab-btn id=btnSuiteToolkitP2 onclick=switchFullSuiteTab('p2', 'toolkit')
+              🚀 High-Scoring C1 Toolkit
+            button
+          div
+        div
+
+        div class=suite-content-pane active id=paneSuiteModelP2
+          div id=p2ModelContentdiv
+        div
+
+        div class=suite-content-pane id=paneSuiteToolkitP2
+          div id=p2ToolkitContentdiv
+        div
+      div
+    section
+
+  main
+
+  div class=controls-bar
+    div class=btn-prev-anchor
+      button type=button class=btn-act btn-prev id=btnPrevPart style=displaynone; onclick=switchPart(1)
+        ← Back to Part 1
+      button
+    div
+
+    button type=button class=btn-submit-glow id=btnMainSubmitGlow onclick=handleCentralSubmitClick()
+      ✨ Submit Your Essay ➔
+    button
+  div
+
+  footer class=exam-footer
+    div class=footer-left
+      © 2026 Cambridge Assessment Practice Engine
+    div
+    div class=footer-center
+      All Rights Reserved • Authored & Developed by strong class=footer-author-highlightDr. Jesús Miguel Lima E.strong
+    div
+    div class=footer-right
+      img src=[httpslh3.googleusercontent.comd1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg](httpslh3.googleusercontent.comd1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg) alt=Cambridge English style=height28px; widthauto; background#fff; padding2px 6px; border-radius4px;
+      spanJM ELT Solutionsspan
+    div
+  footer
+
+  div class=modal-veil id=modalQualityAudit
+    div class=modal-box-audit
+      h3 class=audit-header-title id=auditModalTitle📋 Pre-Flight Quality Audith3
+      p class=audit-header-subtitle id=auditModalSubtitle
+        Para asegurar un puntaje sobresaliente (Grade A  Band 5), verifica que tu producción cumpla con los estándares oficiales de Cambridge B2 First antes de avanzar
+      p
+
+      div class=audit-checklist-vertical id=auditChecklistContainerdiv
+
+      div style=displayflex; justify-contentspace-between; align-itemscenter; border-top2.5px solid var(--border-subtle); padding-top22px;
+        button type=button class=btn-act btn-prev onclick=closeAuditModal()Regresar y Editarbutton
+        button type=button class=btn-submit-glow style=padding12px 30px; font-size16px; id=btnAuditConfirm onclick=handleAuditValidation()
+          Confirmar y Continuar ➔
+        button
+      div
+    div
+  div
+
+  div class=modal-veil id=modalSirenAlarm
+    div class=modal-box-alarm
+      div class=alarm-icon-siren🚨div
+      h3 class=alarm-title¡ATENCIÓN AUDITORÍA INCOMPLETA!h3
+      p class=alarm-message id=alarmMessageText
+        Te sugerimos regresar y strongcompletar todos los cambios requeridosstrong para que tu checklist esté 100% verificado y puedas obtener un strongFull Score (2020 Marks)strong asegurando tu strongGrade Astrong oficial de Cambridge.brbr
+        ⚠️ De omitir algún criterio de este checklist, strongno obtendrás Full Marksstrong y pondrás en riesgo alcanzar la calificación máxima esperada.
+      p
+      div style=displayflex; justify-contentcenter; gap16px;
+        button type=button class=btn-submit-glow style=background#059669; padding12px 28px; font-size16px; onclick=returnToEditingFromAlarm()
+          ⏪ Regresar y Asegurar Full Marks
+        button
+        button type=button class=btn-act btn-prev style=color#b91c1c; border-color#f87171; onclick=forceProceedFromAlarm()
+          ⚠️ Continuar de todos modos
+        button
+      div
+    div
+  div
+
+  div class=modal-veil id=modalOfficialFeedback
+    div class=modal-box-feedback
+      div class=fb-header-cluster
+        div class=fb-header-titles
+          h2📊 Official Examiner Evaluation Reporth2
+          spanCambridge B2 First (FCE) • Paper 2 Writing Diagnosticspan
+        div
+        div class=fb-grand-score-box
+          smallTotal Writing Scoresmall
+          strong id=fbGrandTotalScore--  40strong
+          span class=fb-pass-indicator id=fbGradeResultEvaluating...span
+        div
+      div
+
+      div class=fb-examiner-summary-banner
+        h4🎓 Cambridge Examiner Diagnostic Verdicth4
+        p id=fbExaminerVerdict
+          Analizando el desempeño general del candidato según los descriptores canónicos de la rúbrica oficial de Cambridge Assessment...
+        p
+      div
+
+      div class=fb-tasks-grid
+        div class=fb-task-card
+          div class=fb-task-top-row
+            h3Part 1 Discursive Essayh3
+            span class=fb-task-badge id=fbP1Score--  20span
+          div
+
+          div class=fb-criteria-list
+            div class=fb-crit-row
+              div class=fb-crit-info
+                span🎯 Contentspan
+                span id=fb_p1_cont--  5span
+              div
+              div class=fb-crit-bar-track
+                div class=fb-crit-bar-fill id=fb_bar_p1_cont style=width 0%;div
+              div
+            div
+
+            div class=fb-crit-row
+              div class=fb-crit-info
+                span📢 Communicative Achievementspan
+                span id=fb_p1_comm--  5span
+              div
+              div class=fb-crit-bar-track
+                div class=fb-crit-bar-fill id=fb_bar_p1_comm style=width 0%;div
+              div
+            div
+
+            div class=fb-crit-row
+              div class=fb-crit-info
+                span🧩 Organisationspan
+                span id=fb_p1_org--  5span
+              div
+              div class=fb-crit-bar-track
+                div class=fb-crit-bar-fill id=fb_bar_p1_org style=width 0%;div
+              div
+            div
+
+            div class=fb-crit-row
+              div class=fb-crit-info
+                span💎 Language & Lexiconspan
+                span id=fb_p1_lang--  5span
+              div
+              div class=fb-crit-bar-track
+                div class=fb-crit-bar-fill id=fb_bar_p1_lang style=width 0%;div
+              div
+            div
+          div
+
+          div class=fb-detailed-box
+            divstrong📝 General Task Feedbackstrong span id=fb_p1_taskFeedbackEvaluating...spandiv
+            div class=fb-pill-pos
+              strong✅ Strengths & Good Practicesstrong
+              span id=fb_p1_strengthsEvaluating...span
+            div
+            div class=fb-pill-neg
+              strong⚠️ Areas for Improvement & Errorsstrong
+              span id=fb_p1_weaknessesEvaluating...span
+            div
+            div id=fb_p1_evidenceBlockdiv
+            divstrong🔤 Spelling & Punctuationstrong span id=fb_p1_spellingEvaluating...spandiv
+            divstrong⚡ Advanced Grammar Identifiedstrong span id=fb_p1_grammarEvaluating...spandiv
+            divstrong💎 Vocabulary & Collocationsstrong span id=fb_p1_vocabularyEvaluating...spandiv
+          div
+        div
+
+        div class=fb-task-card
+          div class=fb-task-top-row
+            h3 id=fbP2TaskTitlePart 2 Selected Taskh3
+            span class=fb-task-badge id=fbP2Score--  20span
+          div
+
+          div class=fb-criteria-list
+            div class=fb-crit-row
+              div class=fb-crit-info
+                span🎯 Contentspan
+                span id=fb_p2_cont--  5span
+              div
+              div class=fb-crit-bar-track
+                div class=fb-crit-bar-fill id=fb_bar_p2_cont style=width 0%;div
+              div
+            div
+
+            div class=fb-crit-row
+              div class=fb-crit-info
+                span📢 Communicative Achievementspan
+                span id=fb_p2_comm--  5span
+              div
+              div class=fb-crit-bar-track
+                div class=fb-crit-bar-fill id=fb_bar_p2_comm style=width 0%;div
+              div
+            div
+
+            div class=fb-crit-row
+              div class=fb-crit-info
+                span🧩 Organisationspan
+                span id=fb_p2_org--  5span
+              div
+              div class=fb-crit-bar-track
+                div class=fb-crit-bar-fill id=fb_bar_p2_org style=width 0%;div
+              div
+            div
+
+            div class=fb-crit-row
+              div class=fb-crit-info
+                span💎 Language & Lexiconspan
+                span id=fb_p2_lang--  5span
+              div
+              div class=fb-crit-bar-track
+                div class=fb-crit-bar-fill id=fb_bar_p2_lang style=width 0%;div
+              div
+            div
+          div
+
+          div class=fb-detailed-box
+            divstrong📝 General Task Feedbackstrong span id=fb_p2_taskFeedbackEvaluating...spandiv
+            div class=fb-pill-pos
+              strong✅ Strengths & Good Practicesstrong
+              span id=fb_p2_strengthsEvaluating...span
+            div
+            div class=fb-pill-neg
+              strong⚠️ Areas for Improvement & Errorsstrong
+              span id=fb_p2_weaknessesEvaluating...span
+            div
+            div id=fb_p2_evidenceBlockdiv
+            divstrong🔤 Spelling & Punctuationstrong span id=fb_p2_spellingEvaluating...spandiv
+            divstrong⚡ Advanced Grammar Identifiedstrong span id=fb_p2_grammarEvaluating...spandiv
+            divstrong💎 Vocabulary & Collocationsstrong span id=fb_p2_vocabularyEvaluating...spandiv
+          div
+        div
+      div
+
+      div style=displayflex; justify-contentflex-end; gap16px; border-top2px solid #cbd5e1; padding-top20px;
+        button type=button class=btn-act btn-prev onclick=window.print()
+          🖨️ Print  Save PDF Diagnostic Report
+        button
+        button type=button class=btn-submit-glow style=padding12px 36px; font-size16.5px; onclick=proceedToListening()
+          Proceed to Paper 3 Listening (45 mins) ➔
+        button
+      div
+    div
+  div
+
+  script
+    const APPS_SCRIPT_URL = [httpsscript.google.commacrossAKfycbz3ludY3aLDiLluQytc9zyZq8IGHTqG9yb0V2Q8Ef0H41vIZ2vDfKGu2rhVLYaZuM8ZQgexec](httpsscript.google.commacrossAKfycbz3ludY3aLDiLluQytc9zyZq8IGHTqG9yb0V2Q8Ef0H41vIZ2vDfKGu2rhVLYaZuM8ZQgexec);
+
+    let timeLeft = 80  60;
+    function updateCountdownTimer() {
+      const mins = Math.floor(timeLeft  60);
+      const secs = timeLeft % 60;
       const el = document.getElementById('writingTimer');
-      if (el) el.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      if (el) {
+        el.textContent = `${String(mins).padStart(2, '0')}${String(secs).padStart(2, '0')}`;
+      }
+    }
+    updateCountdownTimer();
+
+    const timerInterval = setInterval(() = {
+      if (timeLeft = 0) {
+        clearInterval(timerInterval);
+        const el = document.getElementById('writingTimer');
+        if (el) el.textContent = 0000;
+        alert(¡Tiempo concluido! Guardando y evaluando tus producciones escritas.);
+        executeFullEvaluation();
+        return;
+      }
+      timeLeft--;
+      updateCountdownTimer();
     }, 1000);
 
-    const P2_DATA = {
-      2: { type: "Review", title: "Review", register: "(Semi-formal & Engaging)" },
-      3: { type: "Article", title: "Article", register: "(Engaging & Interactive)" },
-      4: { type: "Report", title: "Report", register: "(Formal with Headings)" }
-    };
-    let activeP2Option = 2;
+    function switchFullSuiteTab(section, tabType) {
+      const isP1 = (section === 'p1');
+      const btnModel = document.getElementById(isP1  'btnSuiteModelP1'  'btnSuiteModelP2');
+      const btnToolkit = document.getElementById(isP1  'btnSuiteToolkitP1'  'btnSuiteToolkitP2');
+      const paneModel = document.getElementById(isP1  'paneSuiteModelP1'  'paneSuiteModelP2');
+      const paneToolkit = document.getElementById(isP1  'paneSuiteToolkitP1'  'paneSuiteToolkitP2');
 
-    function selectP2Option(id) {
-      activeP2Option = id;
-      const d = P2_DATA[id];
-      document.getElementById('p2EditorHeading').textContent = d.title;
-      document.getElementById('p2EditorRegister').textContent = d.register;
+      if (!btnModel  !btnToolkit  !paneModel  !paneToolkit) return;
+
+      if (tabType === 'model') {
+        btnModel.classList.add('active');
+        btnToolkit.classList.remove('active');
+        paneModel.style.display = 'block';
+        paneToolkit.style.display = 'none';
+      } else {
+        btnModel.classList.remove('active');
+        btnToolkit.classList.add('active');
+        paneModel.style.display = 'none';
+        paneToolkit.style.display = 'block';
+      }
     }
 
-    function switchPart(part) {
-      document.getElementById('sectionPart1').classList.toggle('active', part === 1);
-      document.getElementById('sectionPart2').classList.toggle('active', part === 2);
-      document.getElementById('btnPrevPart').style.display = (part === 1) ? 'none' : 'inline-flex';
-      document.getElementById('btnMainSubmitGlow').innerHTML = (part === 1) ? '✨ Submit Your Essay ➔' : '🎯 Submit Final Writing (40 Marks) ➔';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    const p2Texts = { 2 , 3 , 4  };
+    const P2_DATA = {
+      2 {
+        type Review,
+        title Review,
+        register (Semi-formal & Engaging),
+        command ✍️ Write your review here,
+        placeholder Write your review here. Remember to include an engaging title. Identify the documentary, explain what it covered, detail what you learnt from it, and explain why others would find it interesting...,
+        promptHtml `
+          div class=notepad-container
+            div style=font-size14px; font-weight800; color#38bdf8; text-transformuppercase; letter-spacing0.8px;Notice on an English-language website called TV Golddiv
+            div class=notepad-title-header
+              span class=notepad-quote-titleReviews wanted!span
+              span style=font-size18px; font-weight900; color#059669;A TV documentary I learnt a lot fromspan
+            div
+            p style=font-size17px; font-weight500; color#334155; line-height1.65;
+              Have you seen an interesting TV documentary recently that you learnt a lot from Write us a review of the documentary. You should explain what the documentary was about, tell us what you learnt from it and say whether other people would find it interesting too.brbr
+              emThe best reviews will be posted on the website next month.em
+            p
+          div
+        `,
+        modelHtml `
+          div class=model-essay-box
+            div class=model-title-banner
+              span class=annotation-tag tag-titleEngaging Titlespan
+              strongOur Planet An Eye-Opening Revelationstrong
+            div
+            p
+              span class=annotation-tag tag-p1Hook & Identificationspan
+              Having recently watched David Attenborough’s breathtaking documentary series emOur Planetem on Netflix, I found myself utterly captivated by its sheer visual grandeur and poignant environmental message.
+            p
+            p
+              span class=annotation-tag tag-p2Summary & Knowledge Acquiredspan
+              The documentary meticulously explores how fragile ecosystems across all seven continents are adapting to unprecedented climate challenges. What struck me most was the vivid depiction of Arctic ice melt. I learnt that the rapid retreat of sea ice not only imperils polar bears but fundamentally disrupts global marine food chains, an alarming reality I had never fully grasped before.
+            p
+            p
+              span class=annotation-tag tag-p3Evaluation & Balancespan
+              The series masterfully combines awe-inspiring cinematography with a scientifically rigorous yet accessible narrative. Far from being a dry lecture, it balances heartbreaking ecological realities with uplifting conservation success stories.
+            p
+            p
+              span class=annotation-tag tag-concRecommendationspan
+              I would wholeheartedly recommend emOur Planetem to anyone fascinated by natural history or concerned about the future of our biosphere. It is an unforgettable production that is bound to leave a lasting impression.
+            p
+          div
+          div style=margin-top16px; font-size15px; font-weight700; color#047857; displayflex; align-itemscenter; gap8px;
+            span💡span strongExaminer Insight (Band 5)strong 178 words. Vibrant adjectives, balanced critique, precise vocabulary, and an explicit recommendation targeting a specific audience.
+          div
+        `,
+        toolkitHtml `
+          div class=toolkit-super-grid
+            div class=toolkit-card toolkit-card-purple
+              h4💎 Evocative Adjectives & Collocationsh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enEye-opening revelationspanspan class=item-esRevelación esclarecedoraspandiv
+                div class=stacked-lexicon-itemspan class=item-enBreathtaking cinematographyspanspan class=item-esCinematografía impresionantespandiv
+                div class=stacked-lexicon-itemspan class=item-enUtterly captivatedspanspan class=item-esTotalmente cautivadoaspandiv
+                div class=stacked-lexicon-itemspan class=item-enPoignant environmental messagespanspan class=item-esMensaje medioambiental conmovedorspandiv
+                div class=stacked-lexicon-itemspan class=item-enThought-provoking analysisspanspan class=item-esAnálisis que invita a la reflexiónspandiv
+                div class=stacked-lexicon-itemspan class=item-enAesthetically pleasing visualsspanspan class=item-esImágenes estéticamente deslumbrantesspandiv
+                div class=stacked-lexicon-itemspan class=item-enFlawless narrative pacingspanspan class=item-esRitmo narrativo impecablespandiv
+              div
+            div
+
+            div class=toolkit-card toolkit-card-emerald
+              h4🎯 Critique & Recommendation Formulash4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enWhat struck me most was...spanspan class=item-esLo que más me impactó fue...spandiv
+                div class=stacked-lexicon-itemspan class=item-enFar from being a dry lecture,...spanspan class=item-esLejos de ser una charla monótona,...spandiv
+                div class=stacked-lexicon-itemspan class=item-enI would wholeheartedly recommend...spanspan class=item-esRecomendaría de todo corazón...spandiv
+                div class=stacked-lexicon-itemspan class=item-enBound to leave a lasting impressionspanspan class=item-esDestinado a dejar una huella duraderaspandiv
+                div class=stacked-lexicon-itemspan class=item-enIt caters brilliantly to viewers who...spanspan class=item-esSatisface con creces a espectadores que...spandiv
+                div class=stacked-lexicon-itemspan class=item-enFails to live up to the initial hypespanspan class=item-esNo cumple con las altas expectativasspandiv
+                div class=stacked-lexicon-itemspan class=item-enAn absolute must-watch for anyone...spanspan class=item-esDe obligada visualización para cualquiera...spandiv
+              div
+            div
+
+            div class=toolkit-card toolkit-card-amber
+              h4⚡ Narrative Transition Devices & Phrasal Verbsh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enHaving recently experienced...spanspan class=item-esHabiendo presenciado recientemente...spandiv
+                div class=stacked-lexicon-itemspan class=item-enShed light on lesser-known factsspanspan class=item-esArrojar luz sobre hechos poco conocidosspandiv
+                div class=stacked-lexicon-itemspan class=item-enMasterfully combines education and entertainmentspanspan class=item-esCombina magistralmente aprendizaje y entretenimientospandiv
+                div class=stacked-lexicon-itemspan class=item-enCome across as remarkably authenticspanspan class=item-esDar la impresión de ser auténticospandiv
+                div class=stacked-lexicon-itemspan class=item-enDraw the audience in from the outsetspanspan class=item-esAtrapar al público desde el iniciospandiv
+                div class=stacked-lexicon-itemspan class=item-enStrike a fine balance between...spanspan class=item-esLograr un fino equilibrio entre...spandiv
+                div class=stacked-lexicon-itemspan class=item-enLeave much to be desiredspanspan class=item-esDejar mucho que desearspandiv
+              div
+            div
+          div
+        `,
+        checklistItems [
+          { title Catchy Title Included, desc Incluí un título atractivo que captura el espíritu de la reseña. },
+          { title Subject Identified Clearly, desc Mencioné el nombre del documental y su temática central en la introducción. },
+          { title Knowledge Acquired Detailed, desc Expliqué concretamente qué aprendí de la producción. },
+          { title Balanced Evaluation, desc Evalué aspectos destacables y posibles limitaciones con sentido crítico. },
+          { title Descriptive & Evaluative Lexicon, desc Usé adjetivos avanzados (breathtaking, poignant, eye-opening). },
+          { title Explicit Recommendation Given, desc Cerré recomendando justificadamente a qué tipo de público le interesará. },
+          { title Appropriate Semi-formal Register, desc Mantuve un tono profesional pero ameno sin coloquialismos inapropiados. },
+          { title Word Count Complied (140-190 Words), desc Mi reseña se encuentra dentro del rango oficial sin sobrepasar 200 palabras. }
+        ]
+      },
+      3 {
+        type Article,
+        title Article,
+        register (Engaging & Interactive),
+        command ✍️ Write your article here,
+        placeholder Write your article here. Hook the reader with a catchy title and opening question. Describe activities, sights, suggest how to travel around, and explain how to make the most of one day...,
+        promptHtml `
+          div class=notepad-container
+            div style=font-size14px; font-weight800; color#38bdf8; text-transformuppercase; letter-spacing0.8px;Announcement on an English-language travel websitediv
+            div class=notepad-title-header
+              span class=notepad-quote-titleARTICLES WANTEDspan
+              span style=font-size18px; font-weight900; color#059669;A day in the city!span
+            div
+            p style=font-size17px; font-weight500; color#334155; line-height1.65;
+              We are looking for articles about how a visitor could have a great time in a city in your country in just one day.brbr
+              Write us an article telling us what a visitor can do, what they can see and how they can travel around.brbr
+              emThe best articles will be posted on our website.em
+            p
+          div
+        `,
+        modelHtml `
+          div class=model-essay-box
+            div class=model-title-banner
+              span class=annotation-tag tag-titleInviting Titlespan
+              strongTwenty-Four Unforgettable Hours in Arequipastrong
+            div
+            p
+              span class=annotation-tag tag-p1Rhetorical Hookspan
+              Have you ever imagined exploring an architectural wonderland framed by towering volcanic peaks in just a single day Believe it or not, 24 hours in Peru’s breathtaking White City is all you need to fall completely in love.
+            p
+            p
+              span class=annotation-tag tag-p2Sights & Activitiesspan
+              Start your morning in the historic citadel of Santa Catalina Monastery, where walking through tranquil cobalt-blue cloisters feels like stepping straight back into the sixteenth century. Afterwards, make your way to the Plaza de Armas to admire the majestic twin-towered Cathedral, constructed entirely from luminous volcanic sillar stone.
+            p
+            p
+              span class=annotation-tag tag-p3Transit & Gastronomyspan
+              Getting around couldn't be simpler the historic quarter is remarkably pedestrian-friendly, while authorized city taxis are readily available for longer rides. By midday, duck into a traditional empicanteríaem to savour an authentic emrocoto rellenoem.
+            p
+            p
+              span class=annotation-tag tag-concFinal Flourishspan
+              Round off your day at the Yanahuara scenic viewpoint watching sunset hues illuminate the majestic Misti volcano. Pack your walking shoes and prepare for a day you will cherish forever!
+            p
+          div
+          div style=margin-top16px; font-size15px; font-weight700; color#047857; displayflex; align-itemscenter; gap8px;
+            span💡span strongExaminer Insight (Band 5)strong 183 words. Direct engagement with the reader, vivid sensory descriptions, clear transit recommendations, and flawless communicative achievement.
+          div
+        `,
+        toolkitHtml `
+          div class=toolkit-super-grid
+            div class=toolkit-card toolkit-card-purple
+              h4🎯 Reader Hooks & Rhetorical Devicesh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enHave you ever imagined exploring...spanspan class=item-es¿Te has imaginado alguna vez explorando...spandiv
+                div class=stacked-lexicon-itemspan class=item-enBelieve it or not,...spanspan class=item-esLo creas o no,...spandiv
+                div class=stacked-lexicon-itemspan class=item-enStepping straight back into the pastspanspan class=item-esRetroceder directamente en el tiempospandiv
+                div class=stacked-lexicon-itemspan class=item-enA day you will cherish foreverspanspan class=item-esUn día que atesorarás por siemprespandiv
+                div class=stacked-lexicon-itemspan class=item-enPicture this winding cobblestone alleys...spanspan class=item-esImagínate esto callejones serpenteantes...spandiv
+                div class=stacked-lexicon-itemspan class=item-enWhat better way to recharge than...spanspan class=item-es¿Qué mejor manera de recargar energías que...spandiv
+                div class=stacked-lexicon-itemspan class=item-enRest assured, you will not regret itspanspan class=item-esTen por seguro que no te arrepentirásspandiv
+              div
+            div
+
+            div class=toolkit-card toolkit-card-emerald
+              h4🚶 Transit & Atmosphere Collocationsh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enRemarkably pedestrian-friendlyspanspan class=item-esNotablemente transitable a piespandiv
+                div class=stacked-lexicon-itemspan class=item-enReadily available and reasonably pricedspanspan class=item-esFácilmente disponible y a precios razonablesspandiv
+                div class=stacked-lexicon-itemspan class=item-enTowering volcanic peaksspanspan class=item-esImponentes cumbres volcánicasspandiv
+                div class=stacked-lexicon-itemspan class=item-enRound off your day in stylespanspan class=item-esCompletar tu día con estilospandiv
+                div class=stacked-lexicon-itemspan class=item-enSoak up the vibrant local atmospherespanspan class=item-esEmpaparse del vibrante ambiente localspandiv
+                div class=stacked-lexicon-itemspan class=item-enTucked away in the historic quarterspanspan class=item-esEscondido en el casco históricospandiv
+                div class=stacked-lexicon-itemspan class=item-enA bustling culinary hubspanspan class=item-esUn bullicioso epicentro gastronómicospandiv
+              div
+            div
+
+            div class=toolkit-card toolkit-card-amber
+              h4✨ Sensory & Evocative Verbsh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enDuck into a traditional tavernspanspan class=item-esEntrar en una taberna tradicionalspandiv
+                div class=stacked-lexicon-itemspan class=item-enMarvel at the majestic architecturespanspan class=item-esMaravillarse ante la majestuosa arquitecturaspandiv
+                div class=stacked-lexicon-itemspan class=item-enFall completely in love with the sceneryspanspan class=item-esEnamorarse por completo del paisajespandiv
+                div class=stacked-lexicon-itemspan class=item-enImmerse yourself in centuries of heritagespanspan class=item-esSumergirse en siglos de patrimoniospandiv
+                div class=stacked-lexicon-itemspan class=item-enSavour mouth-watering regional delicaciesspanspan class=item-esSaborear deliciosos manjares regionalesspandiv
+                div class=stacked-lexicon-itemspan class=item-enCatch a panoramic sunset viewspanspan class=item-esApreciar una vista panorámica del atardecerspandiv
+                div class=stacked-lexicon-itemspan class=item-enWander aimlessly along picturesque avenuesspanspan class=item-esPasear sin rumbo por avenidas pintorescasspandiv
+              div
+            div
+          div
+        `,
+        checklistItems [
+          { title Catchy Title Included, desc Escribí un título llamativo al inicio del artículo. },
+          { title Engaging Rhetorical Question, desc Inicié con una pregunta directa que interpela al lector. },
+          { title Must-See Sights Addressed, desc Describí lugares concretos que el visitante debe contemplar. },
+          { title Activities & Transit Covered, desc Expliqué qué hacer y cómo movilizarse de forma práctica. },
+          { title Vibrant & Enthusiastic Register, desc Mantuve un tono fresco y motivador apto para web de viajes. },
+          { title Sensory & Visual Language Used, desc Utilicé vocabulario sensorial para evocar colores y sabores. },
+          { title Memorable Concluding Message, desc Cerré con una conclusión inspiradora que invita a visitar el lugar. },
+          { title Word Count Complied (140-190 Words), desc El artículo respeta el límite estipulado de extensión. }
+        ]
+      },
+      4 {
+        type Report,
+        title Report,
+        register (Formal with Headings),
+        command ✍️ Write your report here,
+        placeholder Write your report here. Use clear formal headings (e.g. Introduction, Work Responsibilities, Skills Acquired, Conclusion and Recommendation) and maintain an objective register...,
+        promptHtml `
+          div class=notepad-container
+            div style=font-size14px; font-weight800; color#38bdf8; text-transformuppercase; letter-spacing0.8px;Task from your English teacherdiv
+            div class=notepad-title-header
+              span class=notepad-quote-titleReport on a part-time or holiday jobspan
+            div
+            p style=font-size17px; font-weight500; color#334155; line-height1.65; margin-bottom12px;
+              Your English teacher has asked you to write a report on a part-time or holiday job that you have done. The report will appear in the college English-language magazine.
+            p
+            div style=font-size16.5px; font-weight600; color#0f172a; line-height1.8;
+              In your report, you shouldbr
+              • strongdescribe the jobstrongbr
+              • strongexplain what you learnt from itstrongbr
+              • strongsay whether you would recommend other students to do it.strong
+            div
+          div
+        `,
+        modelHtml `
+          div class=model-essay-box
+            div class=model-title-banner
+              span class=annotation-tag tag-titleReport Titlespan
+              strongReport on Seasonal Employment Experiencestrong
+            div
+            p
+              span class=annotation-tag tag-p1Introductionspan
+              strongPurpose of Reportstrongbr
+              The purpose of this report is to outline my experience as a part-time retail assistant at an independent bookstore during the summer break, evaluate the practical skills acquired, and determine whether such work is recommendable to fellow students.
+            p
+            p
+              span class=annotation-tag tag-p2Responsibilitiesspan
+              strongJob Responsibilitiesstrongbr
+              My day-to-day duties involved cataloguing deliveries, advising customers on literature selections, and processing electronic payments during peak weekend hours. The working environment was fast-paced, necessitating prompt problem-solving and stamina.
+            p
+            p
+              span class=annotation-tag tag-p3Evaluationspan
+              strongSkills Acquiredstrongbr
+              Above all, this position substantially enhanced my interpersonal communication and patience when assisting demanding patrons. Furthermore, I developed rigorous competence in time management, having balanced twenty weekly work hours with personal academic revision.
+            p
+            p
+              span class=annotation-tag tag-concRecommendationspan
+              strongConclusion & Recommendationstrongbr
+              In conclusion, seasonal employment in customer service offers invaluable exposure to workplace expectations. Provided students organize their study schedules conscientiously, I would unreservedly recommend this role as an enriching avenue for achieving financial independence and transferable skills.
+            p
+          div
+          div style=margin-top16px; font-size15px; font-weight700; color#047857; displayflex; align-itemscenter; gap8px;
+            span💡span strongExaminer Insight (Band 5)strong 177 words. Strict formal register, standardized report headings, passive structures, and clear, evidence-based recommendations.
+          div
+        `,
+        toolkitHtml `
+          div class=toolkit-super-grid
+            div class=toolkit-card toolkit-card-purple
+              h4🏛️ Formal Headings & Opening Formulash4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enThe purpose of this report is to outline...spanspan class=item-esEl propósito de este informe es detallar...spandiv
+                div class=stacked-lexicon-itemspan class=item-enThis report aims to assess the feasibility of...spanspan class=item-esEste informe tiene por objetivo evaluar...spandiv
+                div class=stacked-lexicon-itemspan class=item-enMy day-to-day duties involved...spanspan class=item-esMis funciones cotidianas implicaban...spandiv
+                div class=stacked-lexicon-itemspan class=item-enAbove all, this position substantially enhanced...spanspan class=item-esPor encima de todo, este puesto potenció...spandiv
+                div class=stacked-lexicon-itemspan class=item-enI would unreservedly recommend...spanspan class=item-esRecomendaría sin reservas...spandiv
+                div class=stacked-lexicon-itemspan class=item-enOn balance, it is evident that...spanspan class=item-esEn balance general, resulta evidente que...spandiv
+                div class=stacked-lexicon-itemspan class=item-enWith a view to optimizing productivity...spanspan class=item-esCon miras a optimizar la productividad...spandiv
+              div
+            div
+
+            div class=toolkit-card toolkit-card-emerald
+              h4💼 Professional Workplace Lexiconh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enTransferable professional skillsspanspan class=item-esHabilidades profesionales transferiblesspandiv
+                div class=stacked-lexicon-itemspan class=item-enPeak trading hoursspanspan class=item-esHoras punta de mayor afluencia comercialspandiv
+                div class=stacked-lexicon-itemspan class=item-enFinancial independence and autonomyspanspan class=item-esIndependencia y autonomía económicaspandiv
+                div class=stacked-lexicon-itemspan class=item-enInvaluable workplace exposurespanspan class=item-esInvaluable contacto con el entorno laboralspandiv
+                div class=stacked-lexicon-itemspan class=item-enDemonstrate resilience under pressurespanspan class=item-esDemostrar resiliencia bajo presiónspandiv
+                div class=stacked-lexicon-itemspan class=item-enCustomer satisfaction ratingsspanspan class=item-esÍndices de satisfacción de los clientesspandiv
+                div class=stacked-lexicon-itemspan class=item-enSupervisory duties and inventory controlspanspan class=item-esFunciones de supervisión y control de inventariospandiv
+              div
+            div
+
+            div class=toolkit-card toolkit-card-amber
+              h4📊 Impersonal Structures & Passive Framesh4
+              div class=stacked-lexicon-list
+                div class=stacked-lexicon-itemspan class=item-enNecessitating prompt problem-solvingspanspan class=item-esExigiendo una pronta resolución de problemasspandiv
+                div class=stacked-lexicon-itemspan class=item-enProvided students organize their schedules...spanspan class=item-esSiempre y cuando los estudiantes organicen sus horarios...spandiv
+                div class=stacked-lexicon-itemspan class=item-enRigorous competence in time managementspanspan class=item-esRigurosa competencia en gestión del tiempospandiv
+                div class=stacked-lexicon-itemspan class=item-enOffers invaluable exposure to career normsspanspan class=item-esOfrece una exposición invaluable a las normas laboralesspandiv
+                div class=stacked-lexicon-itemspan class=item-enIt was observed that punctuality proved essentialspanspan class=item-esSe observó que la puntualidad resultó indispensablespandiv
+                div class=stacked-lexicon-itemspan class=item-enAdequate measures ought to be implementedspanspan class=item-esDeberían implementarse medidas adecuadasspandiv
+                div class=stacked-lexicon-itemspan class=item-enFeedback gathered from patrons indicated that...spanspan class=item-esLa retroalimentación indicó que...spandiv
+              div
+            div
+          div
+        `,
+        checklistItems [
+          { title Standard Formal Headings Used, desc Incluí subtítulos formales y claros (Purpose, Responsibilities, Skills, Recommendation). },
+          { title Purpose Clearly Stated, desc La introducción define explícitamente el objetivo del informe. },
+          { title Job Description Covered, desc Describí con precisión las funciones cotidianas del puesto. },
+          { title Lessons & Skills Evaluated, desc Expliqué qué competencias transferibles adquirí. },
+          { title Unbiased Formal Recommendation, desc Cerré con una conclusión fundamentada aconsejando a otros estudiantes. },
+          { title Impersonal & Formal Register, desc No utilicé contracciones ni modismos informales en el texto. },
+          { title Passive & Impersonal Structures Used, desc Integré fórmulas objetivas y construcciones pasivas. },
+          { title Word Count Complied (140-190 Words), desc El informe respeta el límite estipulado de extensión. }
+        ]
+      }
+    };
+
+    let activeP2Option = 2;
+
+    function selectP2Option(optId) {
+      try {
+        const currentArea = document.getElementById('textPart2');
+        if (currentArea) p2Texts[activeP2Option] = currentArea.value;
+
+        activeP2Option = optId;
+
+        const d = P2_DATA[optId];
+        if (!d) return;
+
+        const p2Cont = document.getElementById('p2PromptContainer');
+        if (p2Cont) p2Cont.innerHTML = d.promptHtml;
+
+        const headEl = document.getElementById('p2EditorHeading');
+        if (headEl) headEl.textContent = d.title;
+
+        const regEl = document.getElementById('p2EditorRegister');
+        if (regEl) regEl.textContent = d.register;
+
+        const cmdEl = document.getElementById('p2EditorCommand');
+        if (cmdEl) cmdEl.textContent = d.command;
+
+        const modelEl = document.getElementById('p2ModelContent');
+        if (modelEl) modelEl.innerHTML = d.modelHtml;
+
+        const toolEl = document.getElementById('p2ToolkitContent');
+        if (toolEl) toolEl.innerHTML = d.toolkitHtml;
+
+        const editor = document.getElementById('textPart2');
+        if (editor) {
+          editor.placeholder = d.placeholder;
+          editor.value = p2Texts[optId]  ;
+        }
+
+        updateWordCount(2);
+        switchFullSuiteTab('p2', 'model');
+      } catch (err) {
+        console.error(Error en selectP2Option, err);
+      }
+    }
+
+    function switchPart(partNum) {
+      const s1 = document.getElementById('sectionPart1');
+      const s2 = document.getElementById('sectionPart2');
+      if (s1 && s2) {
+        s1.classList.toggle('active', partNum === 1);
+        s2.classList.toggle('active', partNum === 2);
+      }
+
+      const btnPrev = document.getElementById('btnPrevPart');
+      const btnGlow = document.getElementById('btnMainSubmitGlow');
+
+      if (btnPrev && btnGlow) {
+        if (partNum === 1) {
+          btnPrev.style.display = 'none';
+          btnGlow.innerHTML = '✨ Submit Your Essay ➔';
+        } else {
+          btnPrev.style.display = 'inline-flex';
+          btnGlow.innerHTML = '🎯 Submit Final Writing (40 Marks) ➔';
+        }
+      }
+
+      window.scrollTo({ top 0, behavior 'smooth' });
     }
 
     function handleCentralSubmitClick() {
-      const isP1 = document.getElementById('sectionPart1').classList.contains('active');
-      openAuditModal(isP1 ? 1 : 2);
+      const s1 = document.getElementById('sectionPart1');
+      const activePart = (s1 && s1.classList.contains('active'))  1  2;
+      openAuditModal(activePart);
     }
 
     let currentAuditStage = 1;
+
+    const PART1_AUDIT_ITEMS = [
+      { title Appropriate Formal Title, desc Incluí un título sugerente y formal encabezando el ensayo sobre la vida en el pasado. },
+      { title All 3 Notes Covered Fully, desc Desarrollé la salud, el entretenimiento y propuse mi propia idea (condiciones laborales y seguridad). },
+      { title Zero Informal Contractions, desc No utilicé contracciones informales (escribí 'cannot', 'do not', 'it is' en lugar de 'can't', 'don't'). },
+      { title Clear 4-Paragraph Structure, desc Estructuré mi texto en introducción con postura clara, 2 párrafos de cuerpo temáticos y conclusión equilibrada. },
+      { title At Least 2 Advanced C1 Structures, desc Integré estructuras avanzadas (inversión, pasiva impersonal, cleft sentence o condicional mixto). },
+      { title Varied Discourse Markers & Connectors, desc Utilicé marcadores formales (First and foremost, Furthermore, More importantly, Taking all factors into account). },
+      { title Thematic Phrasal Verbs & Collocations, desc Incorporé léxico sobre progreso y sociedad (quantum leap, life expectancy, bring about, pave the way). },
+      { title Strict Word Count Compliance (140-190 Words), desc Mi texto se ubica dentro del límite oficial exigido sin sobrepasar el umbral de 200 palabras. },
+      { title Accurate Spelling and Punctuation, desc Revisé la ortografía y el uso adecuado de comas tras conectores oracionales. }
+    ];
+
     function openAuditModal(stage) {
-      currentAuditStage = stage;
-      const container = document.getElementById('auditChecklistContainer');
-      container.innerHTML = `
-        <label class="chk-audit-row"><input type="checkbox" checked><div class="chk-audit-details"><strong>Estructura y Extensión</strong><span>Cumple los límites formales de Cambridge.</span></div></label>
-        <label class="chk-audit-row"><input type="checkbox" checked><div class="chk-audit-details"><strong>Registro Oficial</strong><span>Vocabulario y gramática adecuados al formato.</span></div></label>
-      `;
-      document.getElementById('modalQualityAudit').classList.add('active');
+      try {
+        currentAuditStage = stage;
+        const modal = document.getElementById('modalQualityAudit');
+        const title = document.getElementById('auditModalTitle');
+        const subtitle = document.getElementById('auditModalSubtitle');
+        const container = document.getElementById('auditChecklistContainer');
+        const btnConfirm = document.getElementById('btnAuditConfirm');
+
+        if (!modal  !container  !btnConfirm) return;
+
+        container.innerHTML = ;
+
+        let items = [];
+        if (stage === 1) {
+          if (title) title.innerHTML = 📋 Part 1 Pre-Flight Quality Audit (Essay);
+          if (subtitle) subtitle.textContent = Antes de pasar a la Parte 2, realiza una autoevaluación rigurosa de tu ensayo. Cada criterio es clave para asegurar una calificación sobresaliente (Grade A  Band 5);
+          btnConfirm.textContent = Confirmar y Continuar a Part 2 ➔;
+          items = PART1_AUDIT_ITEMS;
+        } else {
+          const d = P2_DATA[activeP2Option]  P2_DATA[2];
+          if (title) title.innerHTML = `📋 Part 2 Pre-Flight Quality Audit (${d.type})`;
+          if (subtitle) subtitle.textContent = `Audita los requisitos de género de tu producción (${d.type}) antes de enviar tus dos tareas a la evaluación final`;
+          btnConfirm.textContent = Confirmar y Proceder a Evaluación Final ➔;
+          items = (d && d.checklistItems)  d.checklistItems  PART1_AUDIT_ITEMS;
+        }
+
+        items.forEach((it, idx) = {
+          const row = document.createElement('label');
+          row.className = chk-audit-row;
+          row.innerHTML = `
+            input type=checkbox id=auditChk_${idx}
+            div class=chk-audit-details
+              strong${it.title}strong
+              span${it.desc}span
+            div
+          `;
+          container.appendChild(row);
+        });
+
+        modal.classList.add('active');
+      } catch (err) {
+        console.error(Error al abrir modal de auditoría, err);
+        if (stage === 1) {
+          switchPart(2);
+        } else {
+          executeFullEvaluation();
+        }
+      }
     }
 
     function closeAuditModal() {
-      document.getElementById('modalQualityAudit').classList.remove('active');
+      const modal = document.getElementById('modalQualityAudit');
+      if (modal) modal.classList.remove('active');
     }
 
     function handleAuditValidation() {
+      const checkboxes = document.querySelectorAll('#auditChecklistContainer input[type=checkbox]');
+      const allChecked = Array.from(checkboxes).every(c = c.checked);
+
+      if (!allChecked) {
+        closeAuditModal();
+        const siren = document.getElementById('modalSirenAlarm');
+        if (siren) siren.classList.add('active');
+        return;
+      }
+
       closeAuditModal();
       if (currentAuditStage === 1) {
         switchPart(2);
@@ -762,97 +2471,352 @@
       }
     }
 
-    function updateWordCount(part) {
-      const txt = document.getElementById(part === 1 ? 'textPart1' : 'textPart2').value.trim();
-      const count = txt ? txt.split(/\s+/).filter(w => w.length > 0).length : 0;
-      const badge = document.getElementById(part === 1 ? 'wcPart1' : 'wcPart2');
-      if (badge) badge.textContent = `${count} words (Target: 140–190)`;
+    function returnToEditingFromAlarm() {
+      const siren = document.getElementById('modalSirenAlarm');
+      if (siren) siren.classList.remove('active');
+      openAuditModal(currentAuditStage);
     }
 
-    function switchFullSuiteTab(sec, tab) {
-      const isP1 = (sec === 'p1');
-      document.getElementById(isP1 ? 'btnSuiteModelP1' : 'btnSuiteModelP2')?.classList.toggle('active', tab === 'model');
-      document.getElementById(isP1 ? 'btnSuiteToolkitP1' : 'btnSuiteToolkitP2')?.classList.toggle('active', tab === 'toolkit');
-      document.getElementById(isP1 ? 'paneSuiteModelP1' : 'paneSuiteModelP2').style.display = (tab === 'model') ? 'block' : 'none';
-      document.getElementById(isP1 ? 'paneSuiteToolkitP1' : 'paneSuiteToolkitP2').style.display = (tab === 'toolkit') ? 'block' : 'none';
+    function forceProceedFromAlarm() {
+      const siren = document.getElementById('modalSirenAlarm');
+      if (siren) siren.classList.remove('active');
+      if (currentAuditStage === 1) {
+        switchPart(2);
+      } else {
+        executeFullEvaluation();
+      }
+    }
+
+    function updateWordCount(part) {
+      const textarea = document.getElementById(part === 1  'textPart1'  'textPart2');
+      if (!textarea) return;
+      const text = textarea.value.trim();
+      const count = text  text.split(s+).filter(w = w.length  0).length  0;
+      const badge = document.getElementById(part === 1  'wcPart1'  'wcPart2');
+      const banner = document.getElementById(part === 1  'bannerAdvice1'  'bannerAdvice2');
+
+      if (!badge  !banner) return;
+
+      badge.className = word-counter-badge;
+      badge.textContent = `${count} words (Target 140–190)`;
+      banner.className = word-advice-banner;
+      banner.innerHTML = ;
+
+      if (count === 0) {
+        badge.style.background = #f1f5f9;
+        badge.style.borderColor = #cbd5e1;
+        badge.style.color = #64748b;
+      } else if (count  120) {
+        badge.style.background = #fee2e2;
+        badge.style.borderColor = #dc2626;
+        badge.style.color = #991b1b;
+      } else if (count = 120 && count  140) {
+        badge.classList.add('warning');
+        badge.style.background = ;
+        badge.style.borderColor = ;
+        badge.style.color = ;
+      } else if (count = 140 && count = 190) {
+        badge.classList.add('optimal');
+        badge.style.background = ;
+        badge.style.borderColor = ;
+        badge.style.color = ;
+      } else if (count  190 && count = 200) {
+        badge.classList.add('warning');
+        badge.style.background = ;
+        badge.style.borderColor = ;
+        badge.style.color = ;
+        banner.classList.add('active-warning');
+        banner.innerHTML = ⚠️ strongAtentostrong Has excedido la cantidad máxima de palabras. Recuerda que el margen tolerable es de solo 10 palabras más (hasta 200).;
+      } else {
+        badge.classList.add('flash-danger');
+        badge.style.background = ;
+        badge.style.borderColor = ;
+        badge.style.color = ;
+        banner.classList.add('active-danger');
+        banner.innerHTML = 🚨 strongLímite superadostrong Has superado las 10 palabras extra permitidas. Te sugerimos que no escribas más para no ser penalizado en organización y concisión.;
+      }
     }
 
     async function executeFullEvaluation() {
-      const t1 = document.getElementById('textPart1').value.trim();
-      const t2 = document.getElementById('textPart2').value.trim();
+      clearInterval(timerInterval);
 
-      document.getElementById('fbGrandTotalScore').textContent = "... / 40";
-      document.getElementById('fbGradeResult').textContent = "Evaluando con AI Examiner...";
-      document.getElementById('modalOfficialFeedback').classList.add('active');
+      const ta1 = document.getElementById('textPart1');
+      const ta2 = document.getElementById('textPart2');
+      const t1 = ta1  ta1.value.trim()  ;
+      const t2 = ta2  ta2.value.trim()  ;
+
+      const count1 = t1  t1.split(s+).filter(w = w.length  0).length  0;
+      const count2 = t2  t2.split(s+).filter(w = w.length  0).length  0;
+
+      if (count1  25 && count2  25) {
+        renderDirectZeroReport();
+        return;
+      }
+
+      const scoreEl = document.getElementById('fbGrandTotalScore');
+      const gradeEl = document.getElementById('fbGradeResult');
+      const modalFb = document.getElementById('modalOfficialFeedback');
+
+      if (scoreEl) scoreEl.textContent = ...  40;
+      if (gradeEl) {
+        gradeEl.textContent = Evaluando con AI Examiner...;
+        gradeEl.style.background = #1e3a8a;
+        gradeEl.style.color = #bfdbfe;
+      }
+      if (modalFb) modalFb.classList.add('active');
 
       const evaluationPrompt = `
-You are an authoritative Cambridge B2 First writing examiner. Evaluate these tasks strictly according to Cambridge scale (0 to 5 per criterion: Content, Communicative Achievement, Organisation, Language).
-Part 1 (Essay): """${t1}"""
-Part 2 (${P2_DATA[activeP2Option].type}): """${t2}"""
+You are a veteran Cambridge English B2 First Writing Team Leader and Senior Examiner with extensive examining experience. Evaluate the following two tasks strictly according to the 4 canonical Cambridge criteria (0 to 5 marks each Content, Communicative Achievement, Organisation, Language).
 
-Return ONLY a valid JSON object matching this schema:
+CRITICAL STANDARDS
+- Minimum pass mark per task is 12  20. Total pass mark is 24  40.
+- Scoring Scale Grade A (36-40), Grade B (32-35), Grade C (24-31). Below 24 is categorized strictly as Insufficient score to pass the test.
+- For every weakness identified, you MUST provide explicit TEXTUAL EVIDENCE directly quoting the student's text, explain the technical linguistic reason for the defect, and provide an advanced C1 formulationupgrade suggestion.
+
+PART 1 (Essay) Topic 'Life is better today than it was 100 years ago.' Do you agree Notes 1. health, 2. entertainment, 3. own idea.
+Candidate Essay (${count1} words)
+${t1  (No text provided)}
+
+PART 2 (${P2_DATA[activeP2Option].type})
+Candidate Task (${count2} words)
+${t2  (No text provided)}
+
+Respond ONLY with a valid JSON object matching this schema (do NOT use code fences or backticks)
 {
-  "part1": {"score": 0, "content": 0, "commAch": 0, "org": 0, "lang": 0, "taskFeedback": "", "strengths": "", "weaknesses": ""},
-  "part2": {"score": 0, "content": 0, "commAch": 0, "org": 0, "lang": 0, "taskFeedback": "", "strengths": "", "weaknesses": ""},
-  "grandTotal": 0,
-  "examinerSummary": ""
+  part1 {
+    score 0,
+    content 0,
+    commAch 0,
+    org 0,
+    lang 0,
+    taskFeedback Resumen técnico formal,
+    strengths Puntos fuertes concretos observados,
+    weaknesses Errores concretos y áreas de mejora,
+    evidenceQuote Cita textual exacta con error del alumno,
+    evidenceIssue Explicación técnica de por qué falla,
+    evidenceUpgrade Propuesta de reformulación avanzada C1 sugerida,
+    spellingAndPunctuation Detalle de ortografía y puntuación,
+    grammarAnalysis Estructuras complejas identificadas vs faltantes,
+    vocabularyAnalysis Evaluación de colocaciones y léxico B2C1
+  },
+  part2 {
+    score 0,
+    content 0,
+    commAch 0,
+    org 0,
+    lang 0,
+    taskFeedback Resumen técnico formal,
+    strengths Puntos fuertes concretos observados,
+    weaknesses Errores concretos y áreas de mejora,
+    evidenceQuote Cita textual exacta con error del alumno,
+    evidenceIssue Explicación técnica de por qué falla,
+    evidenceUpgrade Propuesta de reformulación avanzada C1 sugerida,
+    spellingAndPunctuation Detalle de ortografía y puntuación,
+    grammarAnalysis Estructuras complejas identificadas vs faltantes,
+    vocabularyAnalysis Evaluación de colocaciones y léxico B2C1
+  },
+  grandTotal 0,
+  examinerSummary Veredicto diagnóstico global honesto, severo y con recomendaciones estratégicas para aspirar al Grade A
 }
 `;
 
+      let reportData = null;
+
       try {
         const response = await fetch(APPS_SCRIPT_URL, {
-          method: "POST",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify({ prompt: evaluationPrompt }),
-          redirect: "follow"
+          method POST,
+          headers { Content-Type textplain;charset=utf-8 },
+          body JSON.stringify({
+            prompt evaluationPrompt,
+            mockTitle Mock 01 - Signature Edition,
+            p2Type P2_DATA[activeP2Option].type,
+            t1Text t1,
+            t2Text t2
+          })
         });
 
         const raw = await response.text();
         const data = JSON.parse(raw);
 
         if (data.error) {
-          throw new Error("Respuesta del evaluador: " + data.error);
+          throw new Error(Apps Script API Error  + data.error);
         }
 
-        displayFeedbackModal(data);
+        reportData = data;
       } catch (err) {
-        alert("DIAGNÓSTICO DEL SISTEMA:\n\n" + err.message);
+        console.error(AI Examiner error via Apps Script, err);
+        alert(DIAGNÓSTICO DEL SISTEMAnn + err.message);
+        return;
       }
+
+      displayFeedbackModal(reportData);
     }
 
-    function displayFeedbackModal(data) {
-      document.getElementById('fbGrandTotalScore').textContent = `${data.grandTotal} / 40`;
-      document.getElementById('fbGradeResult').textContent = data.grandTotal >= 24 ? "APROBADO" : "DESAPROBADO";
-      document.getElementById('fbExaminerVerdict').textContent = data.examinerSummary;
+    function renderDirectZeroReport() {
+      const zeroReport = {
+        part1 {
+          score 0, content 0, commAch 0, org 0, lang 0,
+          taskFeedback No se presentó texto o la redacción es inferior a 25 palabras. No es posible evaluar el contenido.,
+          strengths Ninguna producción evaluable detectada.,
+          weaknesses Omisión total de los 3 puntos guía requeridos.,
+          evidenceQuote NA,
+          evidenceIssue Ausencia de producción escrita.,
+          evidenceUpgrade Redactar un ensayo completo de 140–190 palabras.,
+          spellingAndPunctuation Sin producción suficiente.,
+          grammarAnalysis Ausencia de estructuras gramaticales evaluables.,
+          vocabularyAnalysis Sin léxico suficiente para análisis de nivel B2.
+        },
+        part2 {
+          score 0, content 0, commAch 0, org 0, lang 0,
+          taskFeedback No se presentó texto o la redacción es inferior a 25 palabras. No se cumplen los requisitos mínimos.,
+          strengths Ninguna producción evaluable detectada.,
+          weaknesses Omisión de las convenciones de género solicitadas.,
+          evidenceQuote NA,
+          evidenceIssue Ausencia de producción escrita.,
+          evidenceUpgrade Completar la tarea de género elegida.,
+          spellingAndPunctuation Sin producción suficiente.,
+          grammarAnalysis Ausencia de estructuras gramaticales evaluables.,
+          vocabularyAnalysis Sin léxico suficiente para análisis de nivel B2.
+        },
+        grandTotal 0,
+        examinerSummary La entrega no cuenta con producción escrita suficiente para ser calificada. Se requiere un mínimo de 140 palabras por tarea para aspirar al umbral aprobatorio de 12 puntos por ejercicio (24 global).
+      };
 
-      document.getElementById('fbP1Score').textContent = `${data.part1.score} / 20`;
-      document.getElementById('fb_p1_cont').textContent = `${data.part1.content} / 5`;
-      document.getElementById('fb_bar_p1_cont').style.width = `${(data.part1.content / 5) * 100}%`;
-      document.getElementById('fb_p1_comm').textContent = `${data.part1.commAch} / 5`;
-      document.getElementById('fb_bar_p1_comm').style.width = `${(data.part1.commAch / 5) * 100}%`;
-      document.getElementById('fb_p1_org').textContent = `${data.part1.org} / 5`;
-      document.getElementById('fb_bar_p1_org').style.width = `${(data.part1.org / 5) * 100}%`;
-      document.getElementById('fb_p1_lang').textContent = `${data.part1.lang} / 5`;
-      document.getElementById('fb_bar_p1_lang').style.width = `${(data.part1.lang / 5) * 100}%`;
-      document.getElementById('fb_p1_taskFeedback').textContent = data.part1.taskFeedback;
-      document.getElementById('fb_p1_strengths').textContent = data.part1.strengths;
-      document.getElementById('fb_p1_weaknesses').textContent = data.part1.weaknesses;
-
-      document.getElementById('fbP2Score').textContent = `${data.part2.score} / 20`;
-      document.getElementById('fb_p2_cont').textContent = `${data.part2.content} / 5`;
-      document.getElementById('fb_bar_p2_cont').style.width = `${(data.part2.content / 5) * 100}%`;
-      document.getElementById('fb_p2_comm').textContent = `${data.part2.commAch} / 5`;
-      document.getElementById('fb_bar_p2_comm').style.width = `${(data.part2.commAch / 5) * 100}%`;
-      document.getElementById('fb_p2_org').textContent = `${data.part2.org} / 5`;
-      document.getElementById('fb_bar_p2_org').style.width = `${(data.part2.org / 5) * 100}%`;
-      document.getElementById('fb_p2_lang').textContent = `${data.part2.lang} / 5`;
-      document.getElementById('fb_bar_p2_lang').style.width = `${(data.part2.lang / 5) * 100}%`;
-      document.getElementById('fb_p2_taskFeedback').textContent = data.part2.taskFeedback;
-      document.getElementById('fb_p2_strengths').textContent = data.part2.strengths;
-      document.getElementById('fb_p2_weaknesses').textContent = data.part2.weaknesses;
+      displayFeedbackModal(zeroReport);
     }
 
+    function displayFeedbackModal(reportData) {
+      const modalFb = document.getElementById('modalOfficialFeedback');
+      if (modalFb) modalFb.classList.add('active');
+
+      const scoreEl = document.getElementById('fbGrandTotalScore');
+      if (scoreEl) scoreEl.textContent = `${reportData.grandTotal}  40`;
+      
+      const gradeResult = document.getElementById('fbGradeResult');
+      if (gradeResult) {
+        if (reportData.grandTotal = 36) {
+          gradeResult.textContent = 🏆 PASS WITH DISTINCTION (Grade A  C1 Level);
+          gradeResult.style.background = #064e3b;
+          gradeResult.style.color = #a7f3d0;
+        } else if (reportData.grandTotal = 32) {
+          gradeResult.textContent = 🥇 PASS WITH MERIT (Grade B  Upper B2);
+          gradeResult.style.background = #065f46;
+          gradeResult.style.color = #d1fae5;
+        } else if (reportData.grandTotal = 24) {
+          gradeResult.textContent = ✅ PASS (Grade C  B2 Standard Threshold);
+          gradeResult.style.background = #1e3a8a;
+          gradeResult.style.color = #bfdbfe;
+        } else {
+          gradeResult.textContent = ⚠️ INSUFFICIENT SCORE TO PASS THE TEST;
+          gradeResult.style.background = #7f1d1d;
+          gradeResult.style.color = #fecaca;
+        }
+      }
+
+      const verdictEl = document.getElementById('fbExaminerVerdict');
+      if (verdictEl) verdictEl.textContent = reportData.examinerSummary;
+
+       Part 1 render
+      const p1Score = document.getElementById('fbP1Score');
+      if (p1Score) p1Score.textContent = `${reportData.part1.score}  20`;
+      const p1Cont = document.getElementById('fb_p1_cont');
+      if (p1Cont) p1Cont.textContent = `${reportData.part1.content}  5`;
+      const p1BarCont = document.getElementById('fb_bar_p1_cont');
+      if (p1BarCont) p1BarCont.style.width = `${(reportData.part1.content  5)  100}%`;
+      const p1Comm = document.getElementById('fb_p1_comm');
+      if (p1Comm) p1Comm.textContent = `${reportData.part1.commAch}  5`;
+      const p1BarComm = document.getElementById('fb_bar_p1_comm');
+      if (p1BarComm) p1BarComm.style.width = `${(reportData.part1.commAch  5)  100}%`;
+      const p1Org = document.getElementById('fb_p1_org');
+      if (p1Org) p1Org.textContent = `${reportData.part1.org}  5`;
+      const p1BarOrg = document.getElementById('fb_bar_p1_org');
+      if (p1BarOrg) p1BarOrg.style.width = `${(reportData.part1.org  5)  100}%`;
+      const p1Lang = document.getElementById('fb_p1_lang');
+      if (p1Lang) p1Lang.textContent = `${reportData.part1.lang}  5`;
+      const p1BarLang = document.getElementById('fb_bar_p1_lang');
+      if (p1BarLang) p1BarLang.style.width = `${(reportData.part1.lang  5)  100}%`;
+
+      const p1Fb = document.getElementById('fb_p1_taskFeedback');
+      if (p1Fb) p1Fb.textContent = reportData.part1.taskFeedback;
+      const p1Str = document.getElementById('fb_p1_strengths');
+      if (p1Str) p1Str.textContent = reportData.part1.strengths  Adecuada intención comunicativa general.;
+      const p1Weak = document.getElementById('fb_p1_weaknesses');
+      if (p1Weak) p1Weak.textContent = reportData.part1.weaknesses  Ninguna omisión crítica identificada.;
+      
+      const p1Ev = document.getElementById('fb_p1_evidenceBlock');
+      if (p1Ev && reportData.part1.evidenceQuote) {
+        p1Ev.innerHTML = `
+          div class=fb-evidence-box
+            strong🔍 Evidencia Textual Directa Identificadastrong
+            divEscribiste span class=fb-evidence-quote${reportData.part1.evidenceQuote}spandiv
+            divDiagnóstico ${reportData.part1.evidenceIssue}div
+            div class=fb-evidence-fix🚀 Sugerencia C1 ${reportData.part1.evidenceUpgrade}div
+          div
+        `;
+      }
+
+      const p1Spell = document.getElementById('fb_p1_spelling');
+      if (p1Spell) p1Spell.textContent = reportData.part1.spellingAndPunctuation;
+      const p1Gram = document.getElementById('fb_p1_grammar');
+      if (p1Gram) p1Gram.textContent = reportData.part1.grammarAnalysis;
+      const p1Voc = document.getElementById('fb_p1_vocabulary');
+      if (p1Voc) p1Voc.textContent = reportData.part1.vocabularyAnalysis;
+
+       Part 2 render
+      const p2Title = document.getElementById('fbP2TaskTitle');
+      if (p2Title) p2Title.textContent = `Part 2 ${P2_DATA[activeP2Option].type}`;
+      const p2Score = document.getElementById('fbP2Score');
+      if (p2Score) p2Score.textContent = `${reportData.part2.score}  20`;
+      const p2Cont = document.getElementById('fb_p2_cont');
+      if (p2Cont) p2Cont.textContent = `${reportData.part2.content}  5`;
+      const p2BarCont = document.getElementById('fb_bar_p2_cont');
+      if (p2BarCont) p2BarCont.style.width = `${(reportData.part2.content  5)  100}%`;
+      const p2Comm = document.getElementById('fb_p2_comm');
+      if (p2Comm) p2Comm.textContent = `${reportData.part2.commAch}  5`;
+      const p2BarComm = document.getElementById('fb_bar_p2_comm');
+      if (p2BarComm) p2BarComm.style.width = `${(reportData.part2.commAch  5)  100}%`;
+      const p2Org = document.getElementById('fb_p2_org');
+      if (p2Org) p2Org.textContent = `${reportData.part2.org}  5`;
+      const p2BarOrg = document.getElementById('fb_bar_p2_org');
+      if (p2BarOrg) p2BarOrg.style.width = `${(reportData.part2.org  5)  100}%`;
+      const p2Lang = document.getElementById('fb_p2_lang');
+      if (p2Lang) p2Lang.textContent = `${reportData.part2.lang}  5`;
+      const p2BarLang = document.getElementById('fb_bar_p2_lang');
+      if (p2BarLang) p2BarLang.style.width = `${(reportData.part2.lang  5)  100}%`;
+
+      const p2Fb = document.getElementById('fb_p2_taskFeedback');
+      if (p2Fb) p2Fb.textContent = reportData.part2.taskFeedback;
+      const p2Str = document.getElementById('fb_p2_strengths');
+      if (p2Str) p2Str.textContent = reportData.part2.strengths  Adecuada adecuación al formato de género.;
+      const p2Weak = document.getElementById('fb_p2_weaknesses');
+      if (p2Weak) p2Weak.textContent = reportData.part2.weaknesses  Sin inconsistencias graves detectadas.;
+
+      const p2Ev = document.getElementById('fb_p2_evidenceBlock');
+      if (p2Ev && reportData.part2.evidenceQuote) {
+        p2Ev.innerHTML = `
+          div class=fb-evidence-box
+            strong🔍 Evidencia Textual Directa Identificadastrong
+            divEscribiste span class=fb-evidence-quote${reportData.part2.evidenceQuote}spandiv
+            divDiagnóstico ${reportData.part2.evidenceIssue}div
+            div class=fb-evidence-fix🚀 Sugerencia C1 ${reportData.part2.evidenceUpgrade}div
+          div
+        `;
+      }
+
+      const p2Spell = document.getElementById('fb_p2_spelling');
+      if (p2Spell) p2Spell.textContent = reportData.part2.spellingAndPunctuation;
+      const p2Gram = document.getElementById('fb_p2_grammar');
+      if (p2Gram) p2Gram.textContent = reportData.part2.grammarAnalysis;
+      const p2Voc = document.getElementById('fb_p2_vocabulary');
+      if (p2Voc) p2Voc.textContent = reportData.part2.vocabularyAnalysis;
+    }
+
+    function proceedToListening() {
+      window.location.href = '.listening.html';
+    }
+
+    selectP2Option(2);
     switchPart(1);
-  </script>
-</body>
-</html>
+  script
+body
+html
