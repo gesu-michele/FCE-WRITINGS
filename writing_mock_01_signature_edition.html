@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cambridge B2 First • Paper 2: Guided Writing Practice | JM ELT Solutions</title>
-  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-  <link href="[https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800;900&display=swap](https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800;900&display=swap)" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-canvas-blue: #1e3a8a;
@@ -35,7 +35,7 @@
       background-color: var(--bg-canvas-blue);
       background-image: 
         linear-gradient(rgba(15, 45, 95, 0.58), rgba(10, 32, 70, 0.68)),
-        url('[https://lh3.googleusercontent.com/d/10e6Pmgk3M3P60FsN2oVAYhExabY2UoW8](https://lh3.googleusercontent.com/d/10e6Pmgk3M3P60FsN2oVAYhExabY2UoW8)');
+        url('https://lh3.googleusercontent.com/d/10e6Pmgk3M3P60FsN2oVAYhExabY2UoW8');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -446,6 +446,16 @@
     .chk-audit-details strong { font-size: 16.5px; font-weight: 800; color: #0f172a; display: block; }
     .chk-audit-details span { font-size: 14px; color: #475569; display: block; margin-top: 3px; }
 
+    .modal-box-alarm {
+      background: #ffffff;
+      border: 3.5px solid #dc2626;
+      border-radius: var(--radius-lg);
+      max-width: 640px;
+      width: 100%;
+      padding: 40px 42px;
+      text-align: center;
+    }
+
     .modal-box-feedback {
       background: #ffffff;
       border: 3.5px solid #0f172a;
@@ -483,10 +493,10 @@
   <header class="exam-header">
     <div class="brand-left-cluster">
       <div class="cambridge-badge-frame">
-        <img src="[https://lh3.googleusercontent.com/d/1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg](https://lh3.googleusercontent.com/d/1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg)" alt="Cambridge English" class="cambridge-crest-img">
+        <img src="https://lh3.googleusercontent.com/d/1sd7nJwtvyEzuKaK5YTxKARFjM7dS8TGg" alt="Cambridge English" class="cambridge-crest-img">
       </div>
       <div class="jm-brand-box">
-        <img src="[https://lh3.googleusercontent.com/d/1EksYLoHp7voak-Ka3Y3txyiGM15DMPTP](https://lh3.googleusercontent.com/d/1EksYLoHp7voak-Ka3Y3txyiGM15DMPTP)" alt="JM ELT Solutions" class="jm-logo-img">
+        <img src="https://lh3.googleusercontent.com/d/1EksYLoHp7voak-Ka3Y3txyiGM15DMPTP" alt="JM ELT Solutions" class="jm-logo-img">
         <div class="jm-titles">
           <span class="jm-title-top">JM</span>
           <span class="jm-title-sub">ELT Solutions</span>
@@ -504,7 +514,7 @@
           <div class="trainer-name-top">Dr. Jesús Miguel Lima E.</div>
           <div class="trainer-desc-sub">Cambridge Specialist & Trainer</div>
         </div>
-        <img src="[https://lh3.googleusercontent.com/d/1yd8aHZpgwj1mJXKaP8zldJIZAwGTiIor](https://lh3.googleusercontent.com/d/1yd8aHZpgwj1mJXKaP8zldJIZAwGTiIor)" alt="Dr. Jesús Miguel Lima E." class="trainer-avatar-lg">
+        <img src="https://lh3.googleusercontent.com/d/1yd8aHZpgwj1mJXKaP8zldJIZAwGTiIor" alt="Dr. Jesús Miguel Lima E." class="trainer-avatar-lg">
       </div>
     </div>
   </header>
@@ -699,7 +709,8 @@
   </div>
 
   <script>
-    const APPS_SCRIPT_URL = "[https://script.google.com/macros/s/AKfycbw__-c06W-NwMQegRGeJRXlUOj9Lp4Gurezplw_HY2uDiCgwHswVzzPGhecSaCVT-emRg/exec](https://script.google.com/macros/s/AKfycbw__-c06W-NwMQegRGeJRXlUOj9Lp4Gurezplw_HY2uDiCgwHswVzzPGhecSaCVT-emRg/exec)";
+    // Conexión directa a Google Gemini API (sin intermediarios de Apps Script)
+    const GEMINI_API_KEY = "AQ.Ab8RN6L0QiXV_lgMUfgRJUH2ROM9ikbtdTDSlyB9wkxfekbNgQ";
 
     let timeLeft = 80 * 60;
     setInterval(() => {
@@ -790,7 +801,7 @@ You are an authoritative Cambridge B2 First writing examiner. Evaluate these tas
 Part 1 (Essay): """${t1}"""
 Part 2 (${P2_DATA[activeP2Option].type}): """${t2}"""
 
-Return ONLY a valid JSON object matching:
+Return ONLY a valid JSON object matching this schema:
 {
   "part1": {"score": 0, "content": 0, "commAch": 0, "org": 0, "lang": 0, "taskFeedback": "", "strengths": "", "weaknesses": ""},
   "part2": {"score": 0, "content": 0, "commAch": 0, "org": 0, "lang": 0, "taskFeedback": "", "strengths": "", "weaknesses": ""},
@@ -800,21 +811,32 @@ Return ONLY a valid JSON object matching:
 `;
 
       try {
-        const response = await fetch(APPS_SCRIPT_URL, {
+        const endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + GEMINI_API_KEY;
+
+        const response = await fetch(endpoint, {
           method: "POST",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify({ prompt: evaluationPrompt }),
-          redirect: "follow"
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: evaluationPrompt }] }],
+            generationConfig: {
+              temperature: 0.2,
+              responseMimeType: "application/json"
+            }
+          })
         });
 
-        const raw = await response.text();
-        const data = JSON.parse(raw);
+        const resJson = await response.json();
 
-        if (data.error) {
-          throw new Error("Respuesta de Gemini: " + data.error);
+        if (resJson.error) {
+          throw new Error("Google Gemini API: " + resJson.error.message);
         }
 
-        displayFeedbackModal(data);
+        const rawText = resJson.candidates[0].content.parts[0].text;
+        const reportData = JSON.parse(rawText);
+
+        displayFeedbackModal(reportData);
       } catch (err) {
         alert("DIAGNÓSTICO DEL SISTEMA:\n\n" + err.message);
       }
