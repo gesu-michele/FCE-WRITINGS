@@ -770,6 +770,58 @@
     .alarm-message { font-size: 16.5px; font-weight: 600; color: #1e293b; line-height: 1.65; margin-bottom: 26px; }
     .alarm-message strong { font-weight: 900; color: #000000; }
 
+    /* LOADING WAIT OVERLAY */
+    .modal-box-wait {
+      background: #ffffff;
+      border: 3.5px solid #2563eb;
+      border-radius: var(--radius-lg);
+      max-width: 620px;
+      width: 100%;
+      padding: 44px 38px;
+      text-align: center;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .spinner-disc {
+      width: 64px;
+      height: 64px;
+      border: 6px solid #dbeafe;
+      border-top-color: #2563eb;
+      border-radius: 50%;
+      animation: spinRound 0.9s infinite linear;
+    }
+    @keyframes spinRound {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .wait-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: #0b1a30;
+    }
+    .wait-message {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .wait-highlight-warning {
+      background: #fffbeb;
+      border: 2px solid #fde68a;
+      border-left: 6px solid #d97706;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #92400e;
+      text-align: left;
+      width: 100%;
+    }
+
     .modal-box-feedback {
       background: #ffffff;
       border: 3.5px solid #0f172a;
@@ -882,6 +934,61 @@
     }
     .fb-examiner-summary-banner p { font-size: 15.5px; font-weight: 600; color: #1e293b; line-height: 1.65; }
 
+    /* ACTION BUTTONS GROUP */
+    .fb-nav-controls-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 2px solid #cbd5e1;
+      padding-top: 22px;
+      margin-top: 8px;
+      gap: 16px;
+    }
+    .btn-fb-action {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+    }
+    .btn-fb-return {
+      background: #f1f5f9;
+      color: #1e293b;
+      border-color: #cbd5e1;
+    }
+    .btn-fb-return:hover {
+      background: #e2e8f0;
+      transform: translateY(-2px);
+    }
+    .btn-fb-print {
+      background: #ffffff;
+      color: #0f172a;
+      border-color: #94a3b8;
+    }
+    .btn-fb-print:hover {
+      background: #f8fafc;
+      border-color: #3b82f6;
+      color: #2563eb;
+    }
+    .btn-fb-next {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+      color: #ffffff;
+      border-color: #60a5fa;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    }
+    .btn-fb-next:hover {
+      background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+    }
+
     /* PRINT DIRECTIVE: ISOLATES ONLY THE FEEDBACK REPORT */
     @media print {
       body {
@@ -894,6 +1001,7 @@
       footer.exam-footer,
       #modalQualityAudit,
       #modalSirenAlarm,
+      #modalEvaluatingWait,
       .print-exclude {
         display: none !important;
       }
@@ -1253,6 +1361,21 @@
     </div>
   </div>
 
+  <!-- LOADING / EVALUATING MODAL OVERLAY -->
+  <div class="modal-veil" id="modalEvaluatingWait">
+    <div class="modal-box-wait">
+      <div class="spinner-disc"></div>
+      <h3 class="wait-title">🎓 AI Examiner Evaluation in Progress...</h3>
+      <p class="wait-message">
+        Please wait. Do not close or refresh this page. The Cambridge AI Examiner is thoroughly evaluating your submissions against the canonical Cambridge Assessment Scale to generate your official diagnostic report.
+      </p>
+      <div class="wait-highlight-warning">
+        ⚠️ <strong>ATTENTION:</strong> Generating deep qualitative feedback, criteria breakdown, and textual citations takes approximately 10 to 15 seconds. Please keep this browser window open.
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFICIAL FEEDBACK MODAL -->
   <div class="modal-veil" id="modalOfficialFeedback">
     <div class="modal-box-feedback">
       <div class="fb-header-cluster">
@@ -1414,13 +1537,16 @@
         </div>
       </div>
 
-      <div style="display:flex; justify-content:flex-end; gap:16px; border-top:2px solid #cbd5e1; padding-top:20px;" class="print-exclude">
-        <button type="button" class="btn-act btn-prev" onclick="printReportDirectly()">
-          🖨️ Print / Save PDF Diagnostic Report
+      <div class="fb-nav-controls-group print-exclude">
+        <a href="./index.html" class="btn-fb-action btn-fb-return">
+          <span>🏠</span> Return to Main Menu
+        </a>
+        <button type="button" class="btn-fb-action btn-fb-print" onclick="printReportDirectly()">
+          <span>🖨️</span> Print / Save PDF Diagnostic
         </button>
-        <button type="button" class="btn-submit-glow" style="padding:12px 36px; font-size:16.5px;" onclick="proceedToListening()">
-          Proceed to Paper 3: Listening (45 mins) ➔
-        </button>
+        <a href="./writing_mock_02.html" class="btn-fb-action btn-fb-next">
+          <span>🎯</span> Proceed to Writing Mock 02 ➔
+        </a>
       </div>
     </div>
   </div>
@@ -2064,17 +2190,9 @@
         return;
       }
 
-      const scoreEl = document.getElementById('fbGrandTotalScore');
-      const gradeEl = document.getElementById('fbGradeResult');
-      const modalFb = document.getElementById('modalOfficialFeedback');
-
-      if (scoreEl) scoreEl.textContent = "... / 40";
-      if (gradeEl) {
-        gradeEl.textContent = "Evaluating with Cambridge AI Examiner...";
-        gradeEl.style.background = "#1e3a8a";
-        gradeEl.style.color = "#bfdbfe";
-      }
-      if (modalFb) modalFb.classList.add('active');
+      // DISPLAY LOADING WAIT OVERLAY FIRST
+      const waitOverlay = document.getElementById('modalEvaluatingWait');
+      if (waitOverlay) waitOverlay.classList.add('active');
 
       const evaluationPrompt = `
 You are a veteran Cambridge English B2 First Writing Team Leader and Senior Examiner with extensive examining experience. Evaluate the following two tasks strictly according to the 4 canonical Cambridge criteria (0 to 5 marks each: Content, Communicative Achievement, Organisation, Language).
@@ -2156,11 +2274,14 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use code fenc
 
         reportData = data;
       } catch (err) {
+        if (waitOverlay) waitOverlay.classList.remove('active');
         console.error("AI Examiner error via Apps Script:", err);
         alert("SYSTEM DIAGNOSTIC:\n\n" + err.message);
         return;
       }
 
+      // HIDE LOADING WAIT OVERLAY AND RENDER REPORT
+      if (waitOverlay) waitOverlay.classList.remove('active');
       displayFeedbackModal(reportData);
     }
 
@@ -2323,10 +2444,6 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use code fenc
 
     function printReportDirectly() {
       window.print();
-    }
-
-    function proceedToListening() {
-      window.location.href = './listening.html';
     }
 
     selectP2Option(2);
