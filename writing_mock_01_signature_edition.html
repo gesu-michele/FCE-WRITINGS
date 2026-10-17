@@ -822,6 +822,16 @@
     .fb-crit-info { display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 800; color: #1e293b; }
     .fb-crit-bar-track { height: 9px; background: #e2e8f0; border-radius: 10px; overflow: hidden; display: flex; }
     .fb-crit-bar-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #10b981); border-radius: 10px; transition: width 0.6s ease; }
+    .fb-rubric-descriptor {
+      font-size: 12.5px;
+      color: #334155;
+      background: #f1f5f9;
+      border-left: 3px solid #2563eb;
+      padding: 6px 10px;
+      border-radius: 4px;
+      line-height: 1.45;
+      margin-top: 3px;
+    }
     .fb-detailed-box {
       background: #ffffff;
       border: 1.5px solid #cbd5e1;
@@ -871,11 +881,44 @@
       gap: 8px;
     }
     .fb-examiner-summary-banner p { font-size: 15.5px; font-weight: 600; color: #1e293b; line-height: 1.65; }
+
+    /* PRINT DIRECTIVE: ISOLATES ONLY THE FEEDBACK REPORT */
     @media print {
-      body { background: #ffffff !important; color: #000000 !important; }
-      header.exam-header, .controls-bar, footer.exam-footer, .full-width-scaffolding-suite, .top-workspace-grid { display: none !important; }
-      .modal-veil { position: static !important; display: block !important; background: transparent !important; }
-      .modal-box-feedback { max-width: 100% !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      header.exam-header,
+      main.writing-viewport,
+      .controls-bar,
+      footer.exam-footer,
+      #modalQualityAudit,
+      #modalSirenAlarm,
+      .print-exclude {
+        display: none !important;
+      }
+      .modal-veil#modalOfficialFeedback {
+        position: static !important;
+        display: block !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        padding: 0 !important;
+        z-index: 1 !important;
+      }
+      .modal-box-feedback {
+        max-width: 100% !important;
+        width: 100% !important;
+        border: 2px solid #0f172a !important;
+        box-shadow: none !important;
+        padding: 20px !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+      .fb-tasks-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+      }
     }
   </style>
 </head>
@@ -1177,15 +1220,15 @@
     <div class="modal-box-audit">
       <h3 class="audit-header-title" id="auditModalTitle">📋 Pre-Flight Quality Audit</h3>
       <p class="audit-header-subtitle" id="auditModalSubtitle">
-        Para asegurar un puntaje sobresaliente (Grade A / Band 5), verifica que tu producción cumpla con los estándares oficiales de Cambridge B2 First antes de avanzar:
+        To ensure an outstanding score (Grade A / Band 5), verify that your work strictly complies with official Cambridge B2 First specifications before proceeding:
       </p>
 
       <div class="audit-checklist-vertical" id="auditChecklistContainer"></div>
 
       <div style="display:flex; justify-content:space-between; align-items:center; border-top:2.5px solid var(--border-subtle); padding-top:22px;">
-        <button type="button" class="btn-act btn-prev" onclick="closeAuditModal()">Regresar y Editar</button>
+        <button type="button" class="btn-act btn-prev" onclick="closeAuditModal()">Return & Edit</button>
         <button type="button" class="btn-submit-glow" style="padding:12px 30px; font-size:16px;" id="btnAuditConfirm" onclick="handleAuditValidation()">
-          Confirmar y Continuar ➔
+          Confirm & Continue ➔
         </button>
       </div>
     </div>
@@ -1194,17 +1237,17 @@
   <div class="modal-veil" id="modalSirenAlarm">
     <div class="modal-box-alarm">
       <div class="alarm-icon-siren">🚨</div>
-      <h3 class="alarm-title">¡ATENCIÓN: AUDITORÍA INCOMPLETA!</h3>
+      <h3 class="alarm-title">ATTENTION: INCOMPLETE AUDIT!</h3>
       <p class="alarm-message" id="alarmMessageText">
-        Te sugerimos regresar y <strong>completar todos los cambios requeridos</strong> para que tu checklist esté 100% verificado y puedas obtener un <strong>Full Score (20/20 Marks)</strong> asegurando tu <strong>Grade A</strong> oficial de Cambridge.<br><br>
-        ⚠️ De omitir algún criterio de este checklist, <strong>no obtendrás Full Marks</strong> y pondrás en riesgo alcanzar la calificación máxima esperada.
+        We strongly recommend returning and <strong>completing all required checkpoints</strong> so that your checklist is 100% verified to secure <strong>Full Marks (20/20)</strong> and achieve your official Cambridge <strong>Grade A</strong>.<br><br>
+        ⚠️ Omitting any criterion will forfeit Full Marks and jeopardize your target score.
       </p>
       <div style="display:flex; justify-content:center; gap:16px;">
         <button type="button" class="btn-submit-glow" style="background:#059669; padding:12px 28px; font-size:16px;" onclick="returnToEditingFromAlarm()">
-          ⏪ Regresar y Asegurar Full Marks
+          ⏪ Return & Secure Full Marks
         </button>
         <button type="button" class="btn-act btn-prev" style="color:#b91c1c; border-color:#f87171;" onclick="forceProceedFromAlarm()">
-          ⚠️ Continuar de todos modos
+          ⚠️ Proceed Anyway
         </button>
       </div>
     </div>
@@ -1227,7 +1270,7 @@
       <div class="fb-examiner-summary-banner">
         <h4>🎓 Cambridge Examiner Diagnostic Verdict:</h4>
         <p id="fbExaminerVerdict">
-          Analizando el desempeño general del candidato según los descriptores canónicos de la rúbrica oficial de Cambridge Assessment...
+          Evaluating overall candidate performance according to official Cambridge Assessment scale descriptors...
         </p>
       </div>
 
@@ -1247,6 +1290,7 @@
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p1_cont" style="width: 0%;"></div>
               </div>
+              <div class="fb-rubric-descriptor" id="fb_desc_p1_cont">Descriptor loading...</div>
             </div>
 
             <div class="fb-crit-row">
@@ -1257,6 +1301,7 @@
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p1_comm" style="width: 0%;"></div>
               </div>
+              <div class="fb-rubric-descriptor" id="fb_desc_p1_comm">Descriptor loading...</div>
             </div>
 
             <div class="fb-crit-row">
@@ -1267,6 +1312,7 @@
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p1_org" style="width: 0%;"></div>
               </div>
+              <div class="fb-rubric-descriptor" id="fb_desc_p1_org">Descriptor loading...</div>
             </div>
 
             <div class="fb-crit-row">
@@ -1277,6 +1323,7 @@
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p1_lang" style="width: 0%;"></div>
               </div>
+              <div class="fb-rubric-descriptor" id="fb_desc_p1_lang">Descriptor loading...</div>
             </div>
           </div>
 
@@ -1312,6 +1359,7 @@
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p2_cont" style="width: 0%;"></div>
               </div>
+              <div class="fb-rubric-descriptor" id="fb_desc_p2_cont">Descriptor loading...</div>
             </div>
 
             <div class="fb-crit-row">
@@ -1322,6 +1370,7 @@
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p2_comm" style="width: 0%;"></div>
               </div>
+              <div class="fb-rubric-descriptor" id="fb_desc_p2_comm">Descriptor loading...</div>
             </div>
 
             <div class="fb-crit-row">
@@ -1332,6 +1381,7 @@
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p2_org" style="width: 0%;"></div>
               </div>
+              <div class="fb-rubric-descriptor" id="fb_desc_p2_org">Descriptor loading...</div>
             </div>
 
             <div class="fb-crit-row">
@@ -1342,6 +1392,7 @@
               <div class="fb-crit-bar-track">
                 <div class="fb-crit-bar-fill" id="fb_bar_p2_lang" style="width: 0%;"></div>
               </div>
+              <div class="fb-rubric-descriptor" id="fb_desc_p2_lang">Descriptor loading...</div>
             </div>
           </div>
 
@@ -1363,8 +1414,8 @@
         </div>
       </div>
 
-      <div style="display:flex; justify-content:flex-end; gap:16px; border-top:2px solid #cbd5e1; padding-top:20px;">
-        <button type="button" class="btn-act btn-prev" onclick="window.print()">
+      <div style="display:flex; justify-content:flex-end; gap:16px; border-top:2px solid #cbd5e1; padding-top:20px;" class="print-exclude">
+        <button type="button" class="btn-act btn-prev" onclick="printReportDirectly()">
           🖨️ Print / Save PDF Diagnostic Report
         </button>
         <button type="button" class="btn-submit-glow" style="padding:12px 36px; font-size:16.5px;" onclick="proceedToListening()">
@@ -1375,8 +1426,7 @@
   </div>
 
   <script>
-    // PEGA AQUÍ LA URL EXACTA QUE OBTUVISTE EN EL PASO 1 (TERMINADA EN /exec)
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz3ludY3aLDiLluQytc9zyZq8IGHTqG9yb0V2Q8Ef0H41vIZ2vDfKGu2rhVLYaZuM8ZQg/exec";
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxijZHo5F3fE9VKpZHFWTbg1RDGCaURa3_HNRxeB-ZXGW0EeaqsKh-bg8inLcO8Af3YyQ/exec";
 
     let timeLeft = 80 * 60;
     function updateCountdownTimer() {
@@ -1394,7 +1444,7 @@
         clearInterval(timerInterval);
         const el = document.getElementById('writingTimer');
         if (el) el.textContent = "00:00";
-        alert("¡Tiempo concluido! Guardando y evaluando tus producciones escritas.");
+        alert("Time is up! Submitting and evaluating your writing tasks.");
         executeFullEvaluation();
         return;
       }
@@ -1515,14 +1565,14 @@
           </div>
         `,
         checklistItems: [
-          { title: "Catchy Title Included", desc: "Incluí un título atractivo que captura el espíritu de la reseña." },
-          { title: "Subject Identified Clearly", desc: "Mencioné el nombre del documental y su temática central en la introducción." },
-          { title: "Knowledge Acquired Detailed", desc: "Expliqué concretamente qué aprendí de la producción." },
-          { title: "Balanced Evaluation", desc: "Evalué aspectos destacables y posibles limitaciones con sentido crítico." },
-          { title: "Descriptive & Evaluative Lexicon", desc: "Usé adjetivos avanzados (breathtaking, poignant, eye-opening)." },
-          { title: "Explicit Recommendation Given", desc: "Cerré recomendando justificadamente a qué tipo de público le interesará." },
-          { title: "Appropriate Semi-formal Register", desc: "Mantuve un tono profesional pero ameno sin coloquialismos inapropiados." },
-          { title: "Word Count Complied (140-190 Words)", desc: "Mi reseña se encuentra dentro del rango oficial sin sobrepasar 200 palabras." }
+          { title: "Catchy Title Included", desc: "Added an engaging title capturing the core essence of the review." },
+          { title: "Subject Identified Clearly", desc: "Named the TV documentary and outlined its central premise in paragraph 1." },
+          { title: "Knowledge Acquired Detailed", desc: "Clearly detailed what was learnt from the production with specific examples." },
+          { title: "Balanced Evaluation", desc: "Critiqued strengths and potential shortcomings with objective judgment." },
+          { title: "Descriptive & Evaluative Lexicon", desc: "Employed evocative C1 adjectives (breathtaking, poignant, eye-opening)." },
+          { title: "Explicit Recommendation Given", desc: "Concluded with a justified recommendation tailored to a specific audience." },
+          { title: "Appropriate Semi-formal Register", desc: "Maintained an engaging, professional tone avoiding inappropriate slang." },
+          { title: "Word Count Complied (140-190 Words)", desc: "Production sits squarely within the official word boundary." }
         ]
       },
       3: {
@@ -1615,14 +1665,14 @@
           </div>
         `,
         checklistItems: [
-          { title: "Catchy Title Included", desc: "Escribí un título llamativo al inicio del artículo." },
-          { title: "Engaging Rhetorical Question", desc: "Inicié con una pregunta directa que interpela al lector." },
-          { title: "Must-See Sights Addressed", desc: "Describí lugares concretos que el visitante debe contemplar." },
-          { title: "Activities & Transit Covered", desc: "Expliqué qué hacer y cómo movilizarse de forma práctica." },
-          { title: "Vibrant & Enthusiastic Register", desc: "Mantuve un tono fresco y motivador apto para web de viajes." },
-          { title: "Sensory & Visual Language Used", desc: "Utilicé vocabulario sensorial para evocar colores y sabores." },
-          { title: "Memorable Concluding Message", desc: "Cerré con una conclusión inspiradora que invita a visitar el lugar." },
-          { title: "Word Count Complied (140-190 Words)", desc: "El artículo respeta el límite estipulado de extensión." }
+          { title: "Catchy Title Included", desc: "Crafted a magnetic headline at the very top of the article." },
+          { title: "Engaging Rhetorical Question", desc: "Hooked the audience with a direct question addressing the reader." },
+          { title: "Must-See Sights Addressed", desc: "Vividly described tangible highlights that a traveler must witness." },
+          { title: "Activities & Transit Covered", desc: "Provided practical advice on activities and navigating the city." },
+          { title: "Vibrant & Enthusiastic Register", desc: "Maintained a fresh, motivating tone suited for a travel magazine." },
+          { title: "Sensory & Visual Language Used", desc: "Integrated sensory vocabulary evoking colors, flavors, and sights." },
+          { title: "Memorable Concluding Message", desc: "Closed with an inspiring final remark encouraging readers to explore." },
+          { title: "Word Count Complied (140-190 Words)", desc: "Strictly complied with the 140–190 word threshold." }
         ]
       },
       4: {
@@ -1722,14 +1772,14 @@
           </div>
         `,
         checklistItems: [
-          { title: "Standard Formal Headings Used", desc: "Incluí subtítulos formales y claros (Purpose, Responsibilities, Skills, Recommendation)." },
-          { title: "Purpose Clearly Stated", desc: "La introducción define explícitamente el objetivo del informe." },
-          { title: "Job Description Covered", desc: "Describí con precisión las funciones cotidianas del puesto." },
-          { title: "Lessons & Skills Evaluated", desc: "Expliqué qué competencias transferibles adquirí." },
-          { title: "Unbiased Formal Recommendation", desc: "Cerré con una conclusión fundamentada aconsejando a otros estudiantes." },
-          { title: "Impersonal & Formal Register", desc: "No utilicé contracciones ni modismos informales en el texto." },
-          { title: "Passive & Impersonal Structures Used", desc: "Integré fórmulas objetivas y construcciones pasivas." },
-          { title: "Word Count Complied (140-190 Words)", desc: "El informe respeta el límite estipulado de extensión." }
+          { title: "Standard Formal Headings Used", desc: "Used explicit headings (e.g. Purpose, Responsibilities, Skills, Recommendation)." },
+          { title: "Purpose Clearly Stated", desc: "The introduction explicitly defines the objective of the report." },
+          { title: "Job Description Covered", desc: "Accurately detailed day-to-day work responsibilities." },
+          { title: "Lessons & Skills Evaluated", desc: "Analyzed transferable workplace competence and professional growth." },
+          { title: "Unbiased Formal Recommendation", desc: "Concluded with a justified, evidence-based recommendation for students." },
+          { title: "Impersonal & Formal Register", desc: "Zero informal contractions or conversational idioms used throughout." },
+          { title: "Passive & Impersonal Structures Used", desc: "Incorporated objective syntax and passive voice structures." },
+          { title: "Word Count Complied (140-190 Words)", desc: "Report strictly complies with official word limits." }
         ]
       }
     };
@@ -1773,7 +1823,7 @@
         updateWordCount(2);
         switchFullSuiteTab('p2', 'model');
       } catch (err) {
-        console.error("Error en selectP2Option:", err);
+        console.error("Error in selectP2Option:", err);
       }
     }
 
@@ -1810,15 +1860,15 @@
     let currentAuditStage = 1;
 
     const PART1_AUDIT_ITEMS = [
-      { title: "Appropriate Formal Title", desc: "Incluí un título sugerente y formal encabezando el ensayo sobre la vida en el pasado." },
-      { title: "All 3 Notes Covered Fully", desc: "Desarrollé la salud, el entretenimiento y propuse mi propia idea (condiciones laborales y seguridad)." },
-      { title: "Zero Informal Contractions", desc: "No utilicé contracciones informales (escribí 'cannot', 'do not', 'it is' en lugar de 'can't', 'don't')." },
-      { title: "Clear 4-Paragraph Structure", desc: "Estructuré mi texto en introducción con postura clara, 2 párrafos de cuerpo temáticos y conclusión equilibrada." },
-      { title: "At Least 2 Advanced C1 Structures", desc: "Integré estructuras avanzadas (inversión, pasiva impersonal, cleft sentence o condicional mixto)." },
-      { title: "Varied Discourse Markers & Connectors", desc: "Utilicé marcadores formales (First and foremost, Furthermore, More importantly, Taking all factors into account)." },
-      { title: "Thematic Phrasal Verbs & Collocations", desc: "Incorporé léxico sobre progreso y sociedad (quantum leap, life expectancy, bring about, pave the way)." },
-      { title: "Strict Word Count Compliance (140-190 Words)", desc: "Mi texto se ubica dentro del límite oficial exigido sin sobrepasar el umbral de 200 palabras." },
-      { title: "Accurate Spelling and Punctuation", desc: "Revisé la ortografía y el uso adecuado de comas tras conectores oracionales." }
+      { title: "Appropriate Formal Title", desc: "Included an engaging, formal title heading the discursive essay." },
+      { title: "All 3 Notes Covered Fully", desc: "Developed health, entertainment, and introduced a pertinent own idea." },
+      { title: "Zero Informal Contractions", desc: "Used strictly uncontracted forms ('cannot', 'do not', 'it is' instead of 'can't', 'don't')." },
+      { title: "Clear 4-Paragraph Structure", desc: "Structured into introduction with clear thesis, 2 balanced body paragraphs, and objective conclusion." },
+      { title: "At Least 2 Advanced C1 Structures", desc: "Integrated inversion, passive reporting, cleft sentences, or mixed conditionals." },
+      { title: "Varied Discourse Markers & Connectors", desc: "Employed sophisticated linkers (First and foremost, Furthermore, Taking all factors into account)." },
+      { title: "Thematic Phrasal Verbs & Collocations", desc: "Used precise lexical items (quantum leap, life expectancy, bring about, pave the way)." },
+      { title: "Strict Word Count Compliance (140-190 Words)", desc: "Production sits squarely within the 140–190 word threshold without exceeding 200." },
+      { title: "Accurate Spelling and Punctuation", desc: "Checked comma usage after introductory connectors and formal punctuation." }
     ];
 
     function openAuditModal(stage) {
@@ -1837,14 +1887,14 @@
         let items = [];
         if (stage === 1) {
           if (title) title.innerHTML = "📋 Part 1 Pre-Flight Quality Audit (Essay)";
-          if (subtitle) subtitle.textContent = "Antes de pasar a la Parte 2, realiza una autoevaluación rigurosa de tu ensayo. Cada criterio es clave para asegurar una calificación sobresaliente (Grade A / Band 5):";
-          btnConfirm.textContent = "Confirmar y Continuar a Part 2 ➔";
+          if (subtitle) subtitle.textContent = "Before advancing to Part 2, conduct a rigorous self-audit of your essay. Every criterion is essential for Grade A / Band 5:";
+          btnConfirm.textContent = "Confirm & Continue to Part 2 ➔";
           items = PART1_AUDIT_ITEMS;
         } else {
           const d = P2_DATA[activeP2Option] || P2_DATA[2];
           if (title) title.innerHTML = `📋 Part 2 Pre-Flight Quality Audit (${d.type})`;
-          if (subtitle) subtitle.textContent = `Audita los requisitos de género de tu producción (${d.type}) antes de enviar tus dos tareas a la evaluación final:`;
-          btnConfirm.textContent = "Confirmar y Proceder a Evaluación Final ➔";
+          if (subtitle) subtitle.textContent = `Audit your genre specifications (${d.type}) before sending both tasks to final examiner assessment:`;
+          btnConfirm.textContent = "Confirm & Proceed to Final Assessment ➔";
           items = (d && d.checklistItems) ? d.checklistItems : PART1_AUDIT_ITEMS;
         }
 
@@ -1863,7 +1913,7 @@
 
         modal.classList.add('active');
       } catch (err) {
-        console.error("Error al abrir modal de auditoría:", err);
+        console.error("Error opening audit modal:", err);
         if (stage === 1) {
           switchPart(2);
         } else {
@@ -1951,16 +2001,52 @@
         badge.style.borderColor = "";
         badge.style.color = "";
         banner.classList.add('active-warning');
-        banner.innerHTML = "⚠️ <strong>Atento:</strong> Has excedido la cantidad máxima de palabras. Recuerda que el margen tolerable es de solo 10 palabras más (hasta 200).";
+        banner.innerHTML = "⚠️ <strong>Notice:</strong> Word count exceeds 190 words. Tolerable margin is up to 200 words.";
       } else {
         badge.classList.add('flash-danger');
         badge.style.background = "";
         badge.style.borderColor = "";
         badge.style.color = "";
         banner.classList.add('active-danger');
-        banner.innerHTML = "🚨 <strong>Límite superado:</strong> Has superado las 10 palabras extra permitidas. Te sugerimos que no escribas más para no ser penalizado en organización y concisión.";
+        banner.innerHTML = "🚨 <strong>Word Limit Exceeded:</strong> You have exceeded the 10-word allowable threshold. Cease typing to prevent penalties in organisation and conciseness.";
       }
     }
+
+    // OFFICIAL CAMBRIDGE WRITING ASSESSMENT RUBRIC DESCRIPTORS (B2 FIRST)
+    const CAMBRIDGE_RUBRIC_DESCRIPTORS = {
+      content: {
+        5: "All content is relevant to the task. Target reader is fully informed on all points.",
+        4: "Minor irrelevance or omission may be present, but target reader is well informed on key aspects.",
+        3: "Minor irrelevances and/or omissions present. Target reader is on the whole informed.",
+        2: "Noticeable irrelevances or gaps. Target reader is only partially informed.",
+        1: "Irrelevances and misinterpretation of task present. Target reader is minimally informed.",
+        0: "Content is totally irrelevant or missing. Target reader is not informed."
+      },
+      commAch: {
+        5: "Uses conventions of the communicative task with sufficient flexibility to hold target reader's attention and communicate with ease.",
+        4: "Conventions of the genre are handled effectively with suitable register and consistent tone.",
+        3: "Uses conventions of the communicative task effectively to hold the target reader’s attention and communicate straightforward ideas.",
+        2: "Inconsistent register or inappropriate tone occasionally obscures communicative purpose.",
+        1: "Produces text that communicates simple ideas in simple ways, lacking required genre conventions or register.",
+        0: "Fails to communicate recognizable communicative intention or completely inappropriate register throughout."
+      },
+      org: {
+        5: "Text is well-organised and coherent, using a variety of cohesive devices and organisational patterns with complete flexibility.",
+        4: "Clear paragraphing and logical progression with effective cohesive devices.",
+        3: "Text is generally well-organised and coherent, using a variety of linking words and cohesive devices generally well.",
+        2: "Paragraph structure is weak or inconsistent; reliance on limited, basic connectors.",
+        1: "Text is connected using very basic, high-frequency linking words (and, but, because) and lacks clear paragraphing.",
+        0: "Unstructured, stream-of-consciousness text lacking cohesion and paragraph division."
+      },
+      lang: {
+        5: "Uses a wide range of vocabulary, including less common lexis. Uses a range of simple and complex grammatical forms with full control and flexibility. Errors are minimal/slips.",
+        4: "Good vocabulary range with accurate complex grammar. Minor non-impeding errors.",
+        3: "Uses a range of everyday vocabulary appropriately, with occasional less common lexis. Uses a range of simple and some complex grammatical forms with good control. Errors do not impede communication.",
+        2: "Vocabulary is repetitive; grammatical control is limited to basic structures with frequent non-impeding errors.",
+        1: "Uses basic vocabulary reasonably appropriately. Uses simple grammatical forms with limited control. Errors are noticeable and may occasionally impede communication.",
+        0: "Lexical resources and grammatical control are severely inadequate (A1/A2 level); errors persistently impede comprehension."
+      }
+    };
 
     async function executeFullEvaluation() {
       clearInterval(timerInterval);
@@ -1984,7 +2070,7 @@
 
       if (scoreEl) scoreEl.textContent = "... / 40";
       if (gradeEl) {
-        gradeEl.textContent = "Evaluando con AI Examiner...";
+        gradeEl.textContent = "Evaluating with Cambridge AI Examiner...";
         gradeEl.style.background = "#1e3a8a";
         gradeEl.style.color = "#bfdbfe";
       }
@@ -1994,9 +2080,10 @@
 You are a veteran Cambridge English B2 First Writing Team Leader and Senior Examiner with extensive examining experience. Evaluate the following two tasks strictly according to the 4 canonical Cambridge criteria (0 to 5 marks each: Content, Communicative Achievement, Organisation, Language).
 
 CRITICAL STANDARDS:
+- All qualitative text MUST be written in 100% natural, authoritative, formal ENGLISH.
 - Minimum pass mark per task is 12 / 20. Total pass mark is 24 / 40.
 - Scoring Scale: Grade A (36-40), Grade B (32-35), Grade C (24-31). Below 24 is categorized strictly as: "Insufficient score to pass the test".
-- For every weakness identified, you MUST provide explicit TEXTUAL EVIDENCE directly quoting the student's text, explain the technical linguistic reason for the defect, and provide an advanced C1 formulation/upgrade suggestion.
+- For every weakness identified, provide explicit TEXTUAL EVIDENCE directly quoting the student's text, explain the technical linguistic reason for the defect, and provide an advanced C1 formulation/upgrade suggestion.
 
 PART 1 (Essay): Topic: 'Life is better today than it was 100 years ago.' Do you agree? Notes: 1. health, 2. entertainment, 3. own idea.
 Candidate Essay (${count1} words):
@@ -2014,15 +2101,15 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use code fenc
     "commAch": 0,
     "org": 0,
     "lang": 0,
-    "taskFeedback": "Resumen técnico formal",
-    "strengths": "Puntos fuertes concretos observados",
-    "weaknesses": "Errores concretos y áreas de mejora",
-    "evidenceQuote": "Cita textual exacta con error del alumno",
-    "evidenceIssue": "Explicación técnica de por qué falla",
-    "evidenceUpgrade": "Propuesta de reformulación avanzada C1 sugerida",
-    "spellingAndPunctuation": "Detalle de ortografía y puntuación",
-    "grammarAnalysis": "Estructuras complejas identificadas vs faltantes",
-    "vocabularyAnalysis": "Evaluación de colocaciones y léxico B2/C1"
+    "taskFeedback": "Formal technical task overview",
+    "strengths": "Specific strengths observed in candidate's production",
+    "weaknesses": "Concrete weaknesses, gaps or omissions",
+    "evidenceQuote": "Exact textual quotation from candidate's text",
+    "evidenceIssue": "Technical explanation of the defect",
+    "evidenceUpgrade": "Suggested high-level C1 formulation upgrade",
+    "spellingAndPunctuation": "Detailed analysis of orthography, capitalization, and punctuation",
+    "grammarAnalysis": "Complex structures identified vs missing",
+    "vocabularyAnalysis": "Evaluation of thematic collocations, phrasal verbs, and B2/C1 lexicon"
   },
   "part2": {
     "score": 0,
@@ -2030,18 +2117,18 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use code fenc
     "commAch": 0,
     "org": 0,
     "lang": 0,
-    "taskFeedback": "Resumen técnico formal",
-    "strengths": "Puntos fuertes concretos observados",
-    "weaknesses": "Errores concretos y áreas de mejora",
-    "evidenceQuote": "Cita textual exacta con error del alumno",
-    "evidenceIssue": "Explicación técnica de por qué falla",
-    "evidenceUpgrade": "Propuesta de reformulación avanzada C1 sugerida",
-    "spellingAndPunctuation": "Detalle de ortografía y puntuación",
-    "grammarAnalysis": "Estructuras complejas identificadas vs faltantes",
-    "vocabularyAnalysis": "Evaluación de colocaciones y léxico B2/C1"
+    "taskFeedback": "Formal technical task overview",
+    "strengths": "Specific strengths observed in candidate's production",
+    "weaknesses": "Concrete weaknesses, gaps or omissions",
+    "evidenceQuote": "Exact textual quotation from candidate's text",
+    "evidenceIssue": "Technical explanation of the defect",
+    "evidenceUpgrade": "Suggested high-level C1 formulation upgrade",
+    "spellingAndPunctuation": "Detailed analysis of orthography, capitalization, and punctuation",
+    "grammarAnalysis": "Complex structures identified vs missing",
+    "vocabularyAnalysis": "Evaluation of thematic collocations, phrasal verbs, and B2/C1 lexicon"
   },
   "grandTotal": 0,
-  "examinerSummary": "Veredicto diagnóstico global honesto, severo y con recomendaciones estratégicas para aspirar al Grade A"
+  "examinerSummary": "Rigorous, unsparing diagnostic verdict with strategic action steps to attain Cambridge Grade A"
 }
 `;
 
@@ -2070,7 +2157,7 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use code fenc
         reportData = data;
       } catch (err) {
         console.error("AI Examiner error via Apps Script:", err);
-        alert("DIAGNÓSTICO DEL SISTEMA:\n\n" + err.message);
+        alert("SYSTEM DIAGNOSTIC:\n\n" + err.message);
         return;
       }
 
@@ -2081,30 +2168,30 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use code fenc
       const zeroReport = {
         part1: {
           score: 0, content: 0, commAch: 0, org: 0, lang: 0,
-          taskFeedback: "No se presentó texto o la redacción es inferior a 25 palabras. No es posible evaluar el contenido.",
-          strengths: "Ninguna producción evaluable detectada.",
-          weaknesses: "Omisión total de los 3 puntos guía requeridos.",
+          taskFeedback: "No text submitted or response is under 25 words. Unable to evaluate content.",
+          strengths: "No assessable written production detected.",
+          weaknesses: "Complete omission of the 3 required prompt points.",
           evidenceQuote: "N/A",
-          evidenceIssue: "Ausencia de producción escrita.",
-          evidenceUpgrade: "Redactar un ensayo completo de 140–190 palabras.",
-          spellingAndPunctuation: "Sin producción suficiente.",
-          grammarAnalysis: "Ausencia de estructuras gramaticales evaluables.",
-          vocabularyAnalysis: "Sin léxico suficiente para análisis de nivel B2."
+          evidenceIssue: "Total absence of assessable writing.",
+          evidenceUpgrade: "Compose a complete essay within the 140–190 word range.",
+          spellingAndPunctuation: "Insufficient sample.",
+          grammarAnalysis: "Absence of assessable grammatical structures.",
+          vocabularyAnalysis: "Insufficient lexical production for B2 benchmarking."
         },
         part2: {
           score: 0, content: 0, commAch: 0, org: 0, lang: 0,
-          taskFeedback: "No se presentó texto o la redacción es inferior a 25 palabras. No se cumplen los requisitos mínimos.",
-          strengths: "Ninguna producción evaluable detectada.",
-          weaknesses: "Omisión de las convenciones de género solicitadas.",
+          taskFeedback: "No text submitted or response is under 25 words. Minimum requirements not met.",
+          strengths: "No assessable written production detected.",
+          weaknesses: "Omission of target genre conventions.",
           evidenceQuote: "N/A",
-          evidenceIssue: "Ausencia de producción escrita.",
-          evidenceUpgrade: "Completar la tarea de género elegida.",
-          spellingAndPunctuation: "Sin producción suficiente.",
-          grammarAnalysis: "Ausencia de estructuras gramaticales evaluables.",
-          vocabularyAnalysis: "Sin léxico suficiente para análisis de nivel B2."
+          evidenceIssue: "Total absence of assessable writing.",
+          evidenceUpgrade: "Complete the selected genre task.",
+          spellingAndPunctuation: "Insufficient sample.",
+          grammarAnalysis: "Absence of assessable grammatical structures.",
+          vocabularyAnalysis: "Insufficient lexical production for B2 benchmarking."
         },
         grandTotal: 0,
-        examinerSummary: "La entrega no cuenta con producción escrita suficiente para ser calificada. Se requiere un mínimo de 140 palabras por tarea para aspirar al umbral aprobatorio de 12 puntos por ejercicio (24 global)."
+        examinerSummary: "Submission lacks sufficient text to be graded. A minimum of 140 words per task is required to achieve the pass threshold of 12 marks per task (24 overall)."
       };
 
       displayFeedbackModal(zeroReport);
@@ -2144,96 +2231,98 @@ Respond ONLY with a valid JSON object matching this schema (do NOT use code fenc
       // Part 1 render
       const p1Score = document.getElementById('fbP1Score');
       if (p1Score) p1Score.textContent = `${reportData.part1.score} / 20`;
+      
       const p1Cont = document.getElementById('fb_p1_cont');
       if (p1Cont) p1Cont.textContent = `${reportData.part1.content} / 5`;
-      const p1BarCont = document.getElementById('fb_bar_p1_cont');
-      if (p1BarCont) p1BarCont.style.width = `${(reportData.part1.content / 5) * 100}%`;
+      document.getElementById('fb_bar_p1_cont').style.width = `${(reportData.part1.content / 5) * 100}%`;
+      document.getElementById('fb_desc_p1_cont').textContent = `Scale Band ${reportData.part1.content}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.content[reportData.part1.content] || CAMBRIDGE_RUBRIC_DESCRIPTORS.content[0]}`;
+
       const p1Comm = document.getElementById('fb_p1_comm');
       if (p1Comm) p1Comm.textContent = `${reportData.part1.commAch} / 5`;
-      const p1BarComm = document.getElementById('fb_bar_p1_comm');
-      if (p1BarComm) p1BarComm.style.width = `${(reportData.part1.commAch / 5) * 100}%`;
+      document.getElementById('fb_bar_p1_comm').style.width = `${(reportData.part1.commAch / 5) * 100}%`;
+      document.getElementById('fb_desc_p1_comm').textContent = `Scale Band ${reportData.part1.commAch}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.commAch[reportData.part1.commAch] || CAMBRIDGE_RUBRIC_DESCRIPTORS.commAch[0]}`;
+
       const p1Org = document.getElementById('fb_p1_org');
       if (p1Org) p1Org.textContent = `${reportData.part1.org} / 5`;
-      const p1BarOrg = document.getElementById('fb_bar_p1_org');
-      if (p1BarOrg) p1BarOrg.style.width = `${(reportData.part1.org / 5) * 100}%`;
+      document.getElementById('fb_bar_p1_org').style.width = `${(reportData.part1.org / 5) * 100}%`;
+      document.getElementById('fb_desc_p1_org').textContent = `Scale Band ${reportData.part1.org}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.org[reportData.part1.org] || CAMBRIDGE_RUBRIC_DESCRIPTORS.org[0]}`;
+
       const p1Lang = document.getElementById('fb_p1_lang');
       if (p1Lang) p1Lang.textContent = `${reportData.part1.lang} / 5`;
-      const p1BarLang = document.getElementById('fb_bar_p1_lang');
-      if (p1BarLang) p1BarLang.style.width = `${(reportData.part1.lang / 5) * 100}%`;
+      document.getElementById('fb_bar_p1_lang').style.width = `${(reportData.part1.lang / 5) * 100}%`;
+      document.getElementById('fb_desc_p1_lang').textContent = `Scale Band ${reportData.part1.lang}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.lang[reportData.part1.lang] || CAMBRIDGE_RUBRIC_DESCRIPTORS.lang[0]}`;
 
       const p1Fb = document.getElementById('fb_p1_taskFeedback');
       if (p1Fb) p1Fb.textContent = reportData.part1.taskFeedback;
       const p1Str = document.getElementById('fb_p1_strengths');
-      if (p1Str) p1Str.textContent = reportData.part1.strengths || "Adecuada intención comunicativa general.";
+      if (p1Str) p1Str.textContent = reportData.part1.strengths || "Adequate communicative intent throughout.";
       const p1Weak = document.getElementById('fb_p1_weaknesses');
-      if (p1Weak) p1Weak.textContent = reportData.part1.weaknesses || "Ninguna omisión crítica identificada.";
+      if (p1Weak) p1Weak.textContent = reportData.part1.weaknesses || "No critical omissions identified.";
       
       const p1Ev = document.getElementById('fb_p1_evidenceBlock');
       if (p1Ev && reportData.part1.evidenceQuote) {
         p1Ev.innerHTML = `
           <div class="fb-evidence-box">
-            <strong>🔍 Evidencia Textual Directa Identificada:</strong>
-            <div>Escribiste: <span class="fb-evidence-quote">"${reportData.part1.evidenceQuote}"</span></div>
-            <div>Diagnóstico: ${reportData.part1.evidenceIssue}</div>
-            <div class="fb-evidence-fix">🚀 Sugerencia C1: ${reportData.part1.evidenceUpgrade}</div>
+            <strong>🔍 Identified Textual Evidence:</strong>
+            <div>You wrote: <span class="fb-evidence-quote">"${reportData.part1.evidenceQuote}"</span></div>
+            <div>Diagnostic: ${reportData.part1.evidenceIssue}</div>
+            <div class="fb-evidence-fix">🚀 High-Scoring C1 Upgrade: ${reportData.part1.evidenceUpgrade}</div>
           </div>
         `;
       }
 
-      const p1Spell = document.getElementById('fb_p1_spelling');
-      if (p1Spell) p1Spell.textContent = reportData.part1.spellingAndPunctuation;
-      const p1Gram = document.getElementById('fb_p1_grammar');
-      if (p1Gram) p1Gram.textContent = reportData.part1.grammarAnalysis;
-      const p1Voc = document.getElementById('fb_p1_vocabulary');
-      if (p1Voc) p1Voc.textContent = reportData.part1.vocabularyAnalysis;
+      document.getElementById('fb_p1_spelling').textContent = reportData.part1.spellingAndPunctuation;
+      document.getElementById('fb_p1_grammar').textContent = reportData.part1.grammarAnalysis;
+      document.getElementById('fb_p1_vocabulary').textContent = reportData.part1.vocabularyAnalysis;
 
       // Part 2 render
-      const p2Title = document.getElementById('fbP2TaskTitle');
-      if (p2Title) p2Title.textContent = `Part 2: ${P2_DATA[activeP2Option].type}`;
+      document.getElementById('fbP2TaskTitle').textContent = `Part 2: ${P2_DATA[activeP2Option].type}`;
       const p2Score = document.getElementById('fbP2Score');
       if (p2Score) p2Score.textContent = `${reportData.part2.score} / 20`;
+
       const p2Cont = document.getElementById('fb_p2_cont');
       if (p2Cont) p2Cont.textContent = `${reportData.part2.content} / 5`;
-      const p2BarCont = document.getElementById('fb_bar_p2_cont');
-      if (p2BarCont) p2BarCont.style.width = `${(reportData.part2.content / 5) * 100}%`;
+      document.getElementById('fb_bar_p2_cont').style.width = `${(reportData.part2.content / 5) * 100}%`;
+      document.getElementById('fb_desc_p2_cont').textContent = `Scale Band ${reportData.part2.content}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.content[reportData.part2.content] || CAMBRIDGE_RUBRIC_DESCRIPTORS.content[0]}`;
+
       const p2Comm = document.getElementById('fb_p2_comm');
       if (p2Comm) p2Comm.textContent = `${reportData.part2.commAch} / 5`;
-      const p2BarComm = document.getElementById('fb_bar_p2_comm');
-      if (p2BarComm) p2BarComm.style.width = `${(reportData.part2.commAch / 5) * 100}%`;
+      document.getElementById('fb_bar_p2_comm').style.width = `${(reportData.part2.commAch / 5) * 100}%`;
+      document.getElementById('fb_desc_p2_comm').textContent = `Scale Band ${reportData.part2.commAch}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.commAch[reportData.part2.commAch] || CAMBRIDGE_RUBRIC_DESCRIPTORS.commAch[0]}`;
+
       const p2Org = document.getElementById('fb_p2_org');
       if (p2Org) p2Org.textContent = `${reportData.part2.org} / 5`;
-      const p2BarOrg = document.getElementById('fb_bar_p2_org');
-      if (p2BarOrg) p2BarOrg.style.width = `${(reportData.part2.org / 5) * 100}%`;
+      document.getElementById('fb_bar_p2_org').style.width = `${(reportData.part2.org / 5) * 100}%`;
+      document.getElementById('fb_desc_p2_org').textContent = `Scale Band ${reportData.part2.org}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.org[reportData.part2.org] || CAMBRIDGE_RUBRIC_DESCRIPTORS.org[0]}`;
+
       const p2Lang = document.getElementById('fb_p2_lang');
       if (p2Lang) p2Lang.textContent = `${reportData.part2.lang} / 5`;
-      const p2BarLang = document.getElementById('fb_bar_p2_lang');
-      if (p2BarLang) p2BarLang.style.width = `${(reportData.part2.lang / 5) * 100}%`;
+      document.getElementById('fb_bar_p2_lang').style.width = `${(reportData.part2.lang / 5) * 100}%`;
+      document.getElementById('fb_desc_p2_lang').textContent = `Scale Band ${reportData.part2.lang}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.lang[reportData.part2.lang] || CAMBRIDGE_RUBRIC_DESCRIPTORS.lang[0]}`;
 
-      const p2Fb = document.getElementById('fb_p2_taskFeedback');
-      if (p2Fb) p2Fb.textContent = reportData.part2.taskFeedback;
-      const p2Str = document.getElementById('fb_p2_strengths');
-      if (p2Str) p2Str.textContent = reportData.part2.strengths || "Adecuada adecuación al formato de género.";
-      const p2Weak = document.getElementById('fb_p2_weaknesses');
-      if (p2Weak) p2Weak.textContent = reportData.part2.weaknesses || "Sin inconsistencias graves detectadas.";
+      document.getElementById('fb_p2_taskFeedback').textContent = reportData.part2.taskFeedback;
+      document.getElementById('fb_p2_strengths').textContent = reportData.part2.strengths || "Proper alignment with genre format.";
+      document.getElementById('fb_p2_weaknesses').textContent = reportData.part2.weaknesses || "No critical flaws identified.";
 
       const p2Ev = document.getElementById('fb_p2_evidenceBlock');
       if (p2Ev && reportData.part2.evidenceQuote) {
         p2Ev.innerHTML = `
           <div class="fb-evidence-box">
-            <strong>🔍 Evidencia Textual Directa Identificada:</strong>
-            <div>Escribiste: <span class="fb-evidence-quote">"${reportData.part2.evidenceQuote}"</span></div>
-            <div>Diagnóstico: ${reportData.part2.evidenceIssue}</div>
-            <div class="fb-evidence-fix">🚀 Sugerencia C1: ${reportData.part2.evidenceUpgrade}</div>
+            <strong>🔍 Identified Textual Evidence:</strong>
+            <div>You wrote: <span class="fb-evidence-quote">"${reportData.part2.evidenceQuote}"</span></div>
+            <div>Diagnostic: ${reportData.part2.evidenceIssue}</div>
+            <div class="fb-evidence-fix">🚀 High-Scoring C1 Upgrade: ${reportData.part2.evidenceUpgrade}</div>
           </div>
         `;
       }
 
-      const p2Spell = document.getElementById('fb_p2_spelling');
-      if (p2Spell) p2Spell.textContent = reportData.part2.spellingAndPunctuation;
-      const p2Gram = document.getElementById('fb_p2_grammar');
-      if (p2Gram) p2Gram.textContent = reportData.part2.grammarAnalysis;
-      const p2Voc = document.getElementById('fb_p2_vocabulary');
-      if (p2Voc) p2Voc.textContent = reportData.part2.vocabularyAnalysis;
+      document.getElementById('fb_p2_spelling').textContent = reportData.part2.spellingAndPunctuation;
+      document.getElementById('fb_p2_grammar').textContent = reportData.part2.grammarAnalysis;
+      document.getElementById('fb_p2_vocabulary').textContent = reportData.part2.vocabularyAnalysis;
+    }
+
+    function printReportDirectly() {
+      window.print();
     }
 
     function proceedToListening() {
