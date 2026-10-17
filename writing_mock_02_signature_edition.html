@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cambridge B2 First • Paper 2: Guided Writing Practice | JM ELT Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,32 +12,25 @@
       --bg-canvas-blue: #1e3a8a;
       --surface-white: #ffffff;
       --surface-card: #f8fafc;
-      
       --cambridge-navy: #091e3a;
       --cambridge-blue: #1d4ed8;
       --cambridge-blue-vivid: #2563eb;
       --cambridge-emerald: #059669;
       --cambridge-purple: #7c3aed;
       --cambridge-gold: #d97706;
-
       --text-pure-black: #000000;
       --text-dark: #0f172a;
       --text-body: #334155;
       --text-muted: #64748b;
-
       --border-subtle: #cbd5e1;
       --border-strong: #94a3b8;
-
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 22px;
       --radius-full: 9999px;
-
       --shadow-card: 0 16px 36px -6px rgba(0, 0, 0, 0.28);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-
     body {
       background-color: var(--bg-canvas-blue);
       background-image: 
@@ -54,8 +47,6 @@
       flex-direction: column;
       font-size: 16px;
     }
-
-    /* TOP HEADER */
     header.exam-header {
       background: rgba(6, 21, 45, 0.94);
       backdrop-filter: blur(14px);
@@ -69,13 +60,7 @@
       z-index: 100;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
     }
-
-    .brand-left-cluster {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-
+    .brand-left-cluster { display: flex; align-items: center; gap: 22px; }
     .cambridge-badge-frame {
       background: #ffffff;
       padding: 8px 18px;
@@ -86,13 +71,7 @@
       justify-content: center;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     }
-
-    .cambridge-crest-img {
-      height: 52px;
-      width: auto;
-      object-fit: contain;
-    }
-
+    .cambridge-crest-img { height: 52px; width: auto; object-fit: contain; }
     .jm-brand-box {
       display: flex;
       align-items: center;
@@ -100,55 +79,12 @@
       padding-left: 20px;
       border-left: 2.5px solid #3b82f6;
     }
-
-    .jm-logo-img {
-      height: 72px;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));
-    }
-
-    .jm-titles {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      line-height: 1.15;
-    }
-
-    .jm-title-top {
-      font-family: 'Outfit', sans-serif;
-      font-size: 28px;
-      font-weight: 900;
-      color: #ffffff;
-      letter-spacing: 1.5px;
-      text-align: center;
-      width: 100%;
-    }
-
-    .jm-title-sub {
-      font-family: 'Outfit', sans-serif;
-      font-size: 14px;
-      font-weight: 800;
-      color: #f59e0b;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-    }
-
-    .jm-title-tagline {
-      font-size: 11px;
-      font-weight: 700;
-      color: #38bdf8;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 2px;
-    }
-
-    .header-center-cluster {
-      display: flex;
-      align-items: center;
-    }
-
+    .jm-logo-img { height: 72px; width: auto; object-fit: contain; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4)); }
+    .jm-titles { display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1.15; }
+    .jm-title-top { font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 900; color: #ffffff; letter-spacing: 1.5px; text-align: center; width: 100%; }
+    .jm-title-sub { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 800; color: #f59e0b; letter-spacing: 1.2px; text-transform: uppercase; }
+    .jm-title-tagline { font-size: 11px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+    .header-center-cluster { display: flex; align-items: center; }
     .timer-pill {
       display: inline-flex;
       align-items: center;
@@ -163,13 +99,7 @@
       font-weight: 900;
       box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
     }
-
-    .header-right-cluster {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
+    .header-right-cluster { display: flex; align-items: center; gap: 16px; }
     .btn-return-menu {
       background: rgba(255, 255, 255, 0.1);
       border: 1.5px solid #60a5fa;
@@ -186,13 +116,7 @@
       transition: all 0.2s ease;
       text-decoration: none;
     }
-
-    .btn-return-menu:hover {
-      background: #2563eb;
-      border-color: #bfdbfe;
-      transform: translateY(-1px);
-    }
-
+    .btn-return-menu:hover { background: #2563eb; border-color: #bfdbfe; transform: translateY(-1px); }
     .trainer-profile-card {
       display: flex;
       align-items: center;
@@ -203,7 +127,6 @@
       border-radius: var(--radius-full);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
-
     .trainer-avatar-lg {
       width: 62px;
       height: 62px;
@@ -212,27 +135,10 @@
       object-fit: cover;
       box-shadow: 0 0 16px rgba(245, 158, 11, 0.6);
     }
+    .trainer-meta { text-align: right; }
+    .trainer-name-top { font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 800; color: #ffffff; line-height: 1.2; }
+    .trainer-desc-sub { font-size: 12px; font-weight: 700; color: #38bdf8; letter-spacing: 0.5px; }
 
-    .trainer-meta {
-      text-align: right;
-    }
-
-    .trainer-name-top {
-      font-family: 'Outfit', sans-serif;
-      font-size: 16px;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.2;
-    }
-
-    .trainer-desc-sub {
-      font-size: 12px;
-      font-weight: 700;
-      color: #38bdf8;
-      letter-spacing: 0.5px;
-    }
-
-    /* MAIN WORKSPACE */
     main.writing-viewport {
       flex: 1;
       max-width: 1520px;
@@ -242,26 +148,15 @@
       flex-direction: column;
       gap: 24px;
     }
-
-    .writing-section {
-      display: none;
-      flex-direction: column;
-      gap: 24px;
-    }
-
+    .writing-section { display: none; flex-direction: column; gap: 24px; }
     .writing-section.active { display: flex; }
-
     .top-workspace-grid {
       display: grid;
       grid-template-columns: 1fr 1.35fr;
       gap: 26px;
       align-items: stretch;
     }
-
-    @media (max-width: 1100px) {
-      .top-workspace-grid { grid-template-columns: 1fr; }
-    }
-
+    @media (max-width: 1100px) { .top-workspace-grid { grid-template-columns: 1fr; } }
     .prompt-card {
       background: var(--surface-white);
       border: 2.5px solid var(--border-subtle);
@@ -272,7 +167,6 @@
       flex-direction: column;
       gap: 16px;
     }
-
     .exam-main-title-block {
       display: flex;
       flex-direction: column;
@@ -281,7 +175,6 @@
       padding-bottom: 10px;
       margin-bottom: 4px;
     }
-
     .exam-paper-heading {
       font-family: 'Outfit', sans-serif;
       font-size: 26px;
@@ -292,7 +185,6 @@
       align-items: center;
       gap: 10px;
     }
-
     .exam-part-heading {
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
@@ -301,26 +193,19 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
     .task-instruction-p {
       font-size: 17px;
       color: #1e293b;
       line-height: 1.65;
       font-weight: 400;
     }
-
-    .task-instruction-p strong {
-      color: var(--text-pure-black);
-      font-weight: 900;
-    }
-
+    .task-instruction-p strong { color: var(--text-pure-black); font-weight: 900; }
     .exam-section-divider {
       border: none;
       height: 2px;
       background: #e2e8f0;
       margin: 4px 0 10px 0;
     }
-
     .context-scenario-text {
       font-size: 17.5px;
       color: #0f172a;
@@ -331,12 +216,7 @@
       border-radius: 10px;
       border-left: 4px solid #3b82f6;
     }
-
-    .context-scenario-text strong {
-      font-weight: 900;
-      color: #000000;
-    }
-
+    .context-scenario-text strong { font-weight: 900; color: #000000; }
     .notepad-container {
       background: #ffffff;
       border: 2px solid #cbd5e1;
@@ -348,7 +228,6 @@
       gap: 14px;
       box-shadow: 0 8px 20px rgba(5, 150, 105, 0.08);
     }
-
     .notepad-title-header {
       display: flex;
       flex-direction: column;
@@ -356,7 +235,6 @@
       padding-bottom: 12px;
       border-bottom: 2px dashed #a7f3d0;
     }
-
     .notepad-quote-title {
       font-family: 'Outfit', sans-serif;
       font-size: 22px;
@@ -364,7 +242,6 @@
       color: #064e3b;
       line-height: 1.35;
     }
-
     .notepad-notes-header {
       font-size: 14.5px;
       font-weight: 900;
@@ -375,7 +252,6 @@
       align-items: center;
       gap: 8px;
     }
-
     .notepad-note-item {
       font-size: 18px;
       font-weight: 500;
@@ -384,7 +260,6 @@
       align-items: baseline;
       gap: 14px;
     }
-
     .note-num {
       font-family: 'JetBrains Mono', monospace;
       font-weight: 900;
@@ -398,7 +273,6 @@
       border-radius: 8px;
       font-size: 16px;
     }
-
     .exam-verbatim-footer {
       font-size: 16px;
       color: #1e293b;
@@ -406,12 +280,7 @@
       font-weight: 400;
       margin-top: 6px;
     }
-
-    .exam-verbatim-footer strong {
-      font-weight: 900;
-      color: #000000;
-    }
-
+    .exam-verbatim-footer strong { font-weight: 900; color: #000000; }
     .p2-instruction-banner {
       background: #f8fafc;
       border: 2px solid #cbd5e1;
@@ -423,7 +292,6 @@
       justify-content: space-between;
       margin-bottom: 4px;
     }
-
     .p2-instruction-text {
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
@@ -434,36 +302,28 @@
       gap: 10px;
       letter-spacing: 0.5px;
     }
-
     .p2-options-cards-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       margin: 4px 0 10px 0;
     }
-
-    @media (max-width: 768px) {
-      .p2-options-cards-grid { grid-template-columns: 1fr; }
-    }
-
+    @media (max-width: 768px) { .p2-options-cards-grid { grid-template-columns: 1fr; } }
     @keyframes glowAmber {
       0% { box-shadow: 0 0 12px rgba(245, 158, 11, 0.4); border-color: #f59e0b; }
       50% { box-shadow: 0 0 24px rgba(245, 158, 11, 0.85); border-color: #d97706; }
       100% { box-shadow: 0 0 12px rgba(245, 158, 11, 0.4); border-color: #f59e0b; }
     }
-
     @keyframes glowEmerald {
       0% { box-shadow: 0 0 12px rgba(16, 185, 129, 0.4); border-color: #10b981; }
       50% { box-shadow: 0 0 24px rgba(16, 185, 129, 0.85); border-color: #059669; }
       100% { box-shadow: 0 0 12px rgba(16, 185, 129, 0.4); border-color: #10b981; }
     }
-
     @keyframes glowPurple {
       0% { box-shadow: 0 0 12px rgba(139, 92, 246, 0.4); border-color: #8b5cf6; }
       50% { box-shadow: 0 0 24px rgba(139, 92, 246, 0.85); border-color: #7c3aed; }
       100% { box-shadow: 0 0 12px rgba(139, 92, 246, 0.4); border-color: #8b5cf6; }
     }
-
     .btn-option-card {
       border-radius: var(--radius-md);
       padding: 18px;
@@ -475,35 +335,16 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-align: left;
     }
-
-    .btn-option-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card-opt-amber {
-      background: #fffbeb;
-      border: 3px solid #fcd34d;
-      animation: glowAmber 2.2s infinite ease-in-out;
-    }
+    .btn-option-card:hover { transform: translateY(-4px); }
+    .card-opt-amber { background: #fffbeb; border: 3px solid #fcd34d; animation: glowAmber 2.2s infinite ease-in-out; }
     .card-opt-amber .opt-card-label { color: #b45309; }
     .card-opt-amber .opt-card-title { color: #78350f; }
-
-    .card-opt-emerald {
-      background: #f0fdf4;
-      border: 3px solid #86efac;
-      animation: glowEmerald 2.2s infinite ease-in-out;
-    }
+    .card-opt-emerald { background: #f0fdf4; border: 3px solid #86efac; animation: glowEmerald 2.2s infinite ease-in-out; }
     .card-opt-emerald .opt-card-label { color: #047857; }
     .card-opt-emerald .opt-card-title { color: #064e3b; }
-
-    .card-opt-purple {
-      background: #faf5ff;
-      border: 3px solid #d8b4fe;
-      animation: glowPurple 2.2s infinite ease-in-out;
-    }
+    .card-opt-purple { background: #faf5ff; border: 3px solid #d8b4fe; animation: glowPurple 2.2s infinite ease-in-out; }
     .card-opt-purple .opt-card-label { color: #6d28d9; }
     .card-opt-purple .opt-card-title { color: #4c1d95; }
-
     .opt-card-label {
       font-family: 'JetBrains Mono', monospace;
       font-size: 13.5px;
@@ -513,19 +354,8 @@
       align-items: center;
       gap: 6px;
     }
-
-    .opt-card-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 21px;
-      font-weight: 900;
-    }
-
-    .opt-card-desc {
-      font-size: 14px;
-      font-weight: 600;
-      color: #334155;
-      line-height: 1.4;
-    }
+    .opt-card-title { font-family: 'Outfit', sans-serif; font-size: 21px; font-weight: 900; }
+    .opt-card-desc { font-size: 14px; font-weight: 600; color: #334155; line-height: 1.4; }
 
     .editor-card {
       background: var(--surface-white);
@@ -537,7 +367,6 @@
       flex-direction: column;
       gap: 16px;
     }
-
     .editor-top-bar {
       display: flex;
       flex-direction: column;
@@ -545,19 +374,8 @@
       border-bottom: 2.5px solid var(--border-subtle);
       padding-bottom: 14px;
     }
-
-    .editor-top-row {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-
-    .editor-hierarchy-cluster {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
+    .editor-top-row { display: flex; align-items: flex-start; justify-content: space-between; }
+    .editor-hierarchy-cluster { display: flex; flex-direction: column; gap: 3px; }
     .editor-eyebrow-part {
       font-family: 'Outfit', sans-serif;
       font-size: 14px;
@@ -566,7 +384,6 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
     .editor-main-genre-title {
       font-family: 'Outfit', sans-serif;
       font-size: 26px;
@@ -574,14 +391,7 @@
       color: #0b1a30;
       line-height: 1.15;
     }
-
-    .editor-register-sub {
-      font-size: 14.5px;
-      font-weight: 700;
-      color: #475569;
-      font-style: italic;
-    }
-
+    .editor-register-sub { font-size: 14.5px; font-weight: 700; color: #475569; font-style: italic; }
     .editor-command-callout {
       font-size: 15.5px;
       font-weight: 800;
@@ -591,7 +401,6 @@
       align-items: center;
       gap: 6px;
     }
-
     .word-counter-badge {
       font-family: 'JetBrains Mono', monospace;
       font-size: 14.5px;
@@ -603,40 +412,14 @@
       color: #991b1b;
       transition: all 0.25s;
     }
-
-    .word-counter-badge.optimal {
-      border-color: #059669;
-      color: #065f46;
-      background: #d1fae5;
-    }
-
-    .word-counter-badge.warning {
-      border-color: #d97706;
-      color: #78350f;
-      background: #fef3c7;
-    }
-
+    .word-counter-badge.optimal { border-color: #059669; color: #065f46; background: #d1fae5; }
+    .word-counter-badge.warning { border-color: #d97706; color: #78350f; background: #fef3c7; }
     @keyframes flashDangerPulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
-        background-color: #fee2e2;
-      }
-      50% {
-        box-shadow: 0 0 18px 5px rgba(220, 38, 38, 0.9);
-        background-color: #dc2626;
-        color: #ffffff;
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
-        background-color: #fee2e2;
-      }
+      0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); background-color: #fee2e2; }
+      50% { box-shadow: 0 0 18px 5px rgba(220, 38, 38, 0.9); background-color: #dc2626; color: #ffffff; }
+      100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); background-color: #fee2e2; }
     }
-
-    .word-counter-badge.flash-danger {
-      border-color: #991b1b;
-      animation: flashDangerPulse 1.2s infinite ease-in-out;
-    }
-
+    .word-counter-badge.flash-danger { border-color: #991b1b; animation: flashDangerPulse 1.2s infinite ease-in-out; }
     .word-advice-banner {
       display: none;
       font-size: 14px;
@@ -645,21 +428,18 @@
       padding: 10px 16px;
       line-height: 1.5;
     }
-
     .word-advice-banner.active-warning {
       display: block;
       background: #fef3c7;
       color: #92400e;
       border: 2px solid #fde68a;
     }
-
     .word-advice-banner.active-danger {
       display: block;
       background: #fee2e2;
       color: #991b1b;
       border: 2px solid #fca5a5;
     }
-
     .writing-textarea {
       width: 100%;
       height: 480px;
@@ -676,13 +456,8 @@
       resize: vertical;
       transition: all 0.2s;
     }
+    .writing-textarea:focus { border-color: var(--cambridge-blue); box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.18); }
 
-    .writing-textarea:focus {
-      border-color: var(--cambridge-blue);
-      box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.18);
-    }
-
-    /* FULL-WIDTH PEDAGOGICAL SCAFFOLDING SUITE */
     .full-width-scaffolding-suite {
       background: var(--surface-white);
       border: 2.5px solid var(--border-subtle);
@@ -692,7 +467,6 @@
       display: flex;
       flex-direction: column;
     }
-
     .suite-nav-bar {
       display: flex;
       align-items: center;
@@ -701,7 +475,6 @@
       padding: 16px 32px;
       border-bottom: 2.5px solid #1e3a8a;
     }
-
     .suite-title {
       font-family: 'Outfit', sans-serif;
       font-size: 20px;
@@ -711,12 +484,7 @@
       align-items: center;
       gap: 12px;
     }
-
-    .suite-tabs-group {
-      display: flex;
-      gap: 12px;
-    }
-
+    .suite-tabs-group { display: flex; gap: 12px; }
     .suite-tab-btn {
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
@@ -732,27 +500,15 @@
       background: rgba(255, 255, 255, 0.12);
       color: #cbd5e1;
     }
-
-    .suite-tab-btn:hover {
-      background: rgba(255, 255, 255, 0.22);
-      color: #ffffff;
-    }
-
+    .suite-tab-btn:hover { background: rgba(255, 255, 255, 0.22); color: #ffffff; }
     .suite-tab-btn.active {
       background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
       color: #ffffff;
       border-color: #60a5fa;
       box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
     }
-
-    .suite-content-pane {
-      display: none;
-      padding: 34px;
-      background: #ffffff;
-    }
-
+    .suite-content-pane { display: none; padding: 34px; background: #ffffff; }
     .suite-content-pane.active { display: block; }
-
     .model-essay-box {
       background: #f8fafc;
       border: 2px solid #cbd5e1;
@@ -763,16 +519,9 @@
       line-height: 1.9;
       color: #1e293b;
     }
-
-    .model-essay-box strong,
-    .model-essay-box b {
-      color: #000000;
-      font-weight: 900;
-    }
-
+    .model-essay-box strong, .model-essay-box b { color: #000000; font-weight: 900; }
     .model-essay-box p { margin-bottom: 18px; }
     .model-essay-box p:last-child { margin-bottom: 0; }
-
     .model-title-banner {
       font-family: 'Outfit', sans-serif;
       font-size: 22px;
@@ -782,7 +531,6 @@
       margin-bottom: 18px;
       border-bottom: 2px solid #cbd5e1;
     }
-
     .annotation-tag {
       font-size: 12px;
       font-weight: 800;
@@ -793,23 +541,13 @@
       text-transform: uppercase;
       letter-spacing: 0.6px;
     }
-
     .tag-title { background: #e0e7ff; color: #3730a3; }
     .tag-p1 { background: #dbeafe; color: #1e40af; }
     .tag-p2 { background: #fef3c7; color: #92400e; }
     .tag-p3 { background: #d1fae5; color: #065f46; }
     .tag-conc { background: #f3e8ff; color: #6b21a8; }
-
-    .toolkit-super-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 1024px) {
-      .toolkit-super-grid { grid-template-columns: 1fr; }
-    }
-
+    .toolkit-super-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 1024px) { .toolkit-super-grid { grid-template-columns: 1fr; } }
     .toolkit-card {
       border-radius: var(--radius-md);
       padding: 22px;
@@ -818,11 +556,7 @@
       gap: 14px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.04);
     }
-
-    .toolkit-card-purple {
-      background: #faf5ff;
-      border: 2px solid #e9d5ff;
-    }
+    .toolkit-card-purple { background: #faf5ff; border: 2px solid #e9d5ff; }
     .toolkit-card-purple h4 {
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
@@ -834,18 +568,9 @@
       padding-bottom: 10px;
       border-bottom: 2px solid #d8b4fe;
     }
-    .toolkit-card-purple .stacked-lexicon-item {
-      background: #ffffff;
-      border: 1.5px solid #e9d5ff;
-    }
-    .toolkit-card-purple .item-en {
-      color: #6b21a8;
-    }
-
-    .toolkit-card-emerald {
-      background: #f0fdf4;
-      border: 2px solid #bbf7d0;
-    }
+    .toolkit-card-purple .stacked-lexicon-item { background: #ffffff; border: 1.5px solid #e9d5ff; }
+    .toolkit-card-purple .item-en { color: #6b21a8; }
+    .toolkit-card-emerald { background: #f0fdf4; border: 2px solid #bbf7d0; }
     .toolkit-card-emerald h4 {
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
@@ -857,18 +582,9 @@
       padding-bottom: 10px;
       border-bottom: 2px solid #86efac;
     }
-    .toolkit-card-emerald .stacked-lexicon-item {
-      background: #ffffff;
-      border: 1.5px solid #bbf7d0;
-    }
-    .toolkit-card-emerald .item-en {
-      color: #047857;
-    }
-
-    .toolkit-card-amber {
-      background: #fffbeb;
-      border: 2px solid #fde68a;
-    }
+    .toolkit-card-emerald .stacked-lexicon-item { background: #ffffff; border: 1.5px solid #bbf7d0; }
+    .toolkit-card-emerald .item-en { color: #047857; }
+    .toolkit-card-amber { background: #fffbeb; border: 2px solid #fde68a; }
     .toolkit-card-amber h4 {
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
@@ -880,20 +596,9 @@
       padding-bottom: 10px;
       border-bottom: 2px solid #fcd34d;
     }
-    .toolkit-card-amber .stacked-lexicon-item {
-      background: #ffffff;
-      border: 1.5px solid #fde68a;
-    }
-    .toolkit-card-amber .item-en {
-      color: #b45309;
-    }
-
-    .stacked-lexicon-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
+    .toolkit-card-amber .stacked-lexicon-item { background: #ffffff; border: 1.5px solid #fde68a; }
+    .toolkit-card-amber .item-en { color: #b45309; }
+    .stacked-lexicon-list { display: flex; flex-direction: column; gap: 12px; }
     .stacked-lexicon-item {
       border-radius: var(--radius-sm);
       padding: 12px 14px;
@@ -902,27 +607,10 @@
       gap: 4px;
       transition: all 0.2s ease;
     }
+    .stacked-lexicon-item:hover { transform: translateX(3px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+    .item-en { font-size: 16px; font-weight: 900; line-height: 1.4; }
+    .item-es { font-size: 13.5px; font-weight: 500; color: #475569; font-style: italic; line-height: 1.35; }
 
-    .stacked-lexicon-item:hover {
-      transform: translateX(3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-
-    .item-en {
-      font-size: 16px;
-      font-weight: 900;
-      line-height: 1.4;
-    }
-
-    .item-es {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: #475569;
-      font-style: italic;
-      line-height: 1.35;
-    }
-
-    /* CONTROLS ROW */
     .controls-bar {
       max-width: 1520px;
       width: 95%;
@@ -937,12 +625,7 @@
       box-shadow: var(--shadow-card);
       position: relative;
     }
-
-    .btn-prev-anchor {
-      position: absolute;
-      left: 36px;
-    }
-
+    .btn-prev-anchor { position: absolute; left: 36px; }
     .btn-act {
       font-family: 'Outfit', sans-serif;
       font-size: 17px;
@@ -956,30 +639,13 @@
       border: 2px solid transparent;
       transition: all 0.25s ease;
     }
-
-    .btn-prev {
-      background: #f1f5f9;
-      border-color: #cbd5e1;
-      color: #1e293b;
-    }
-
+    .btn-prev { background: #f1f5f9; border-color: #cbd5e1; color: #1e293b; }
     .btn-prev:hover { background: #e2e8f0; }
-
     @keyframes submitGlowPulse {
-      0% {
-        box-shadow: 0 0 16px rgba(37, 99, 235, 0.45), 0 0 0 0 rgba(37, 99, 235, 0.7);
-        transform: scale(1);
-      }
-      50% {
-        box-shadow: 0 0 34px rgba(37, 99, 235, 0.9), 0 0 18px rgba(29, 78, 216, 0.8);
-        transform: scale(1.03);
-      }
-      100% {
-        box-shadow: 0 0 16px rgba(37, 99, 235, 0.45), 0 0 0 0 rgba(37, 99, 235, 0.7);
-        transform: scale(1);
-      }
+      0% { box-shadow: 0 0 16px rgba(37, 99, 235, 0.45), 0 0 0 0 rgba(37, 99, 235, 0.7); transform: scale(1); }
+      50% { box-shadow: 0 0 34px rgba(37, 99, 235, 0.9), 0 0 18px rgba(29, 78, 216, 0.8); transform: scale(1.03); }
+      100% { box-shadow: 0 0 16px rgba(37, 99, 235, 0.45), 0 0 0 0 rgba(37, 99, 235, 0.7); transform: scale(1); }
     }
-
     .btn-submit-glow {
       background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
       color: #ffffff;
@@ -997,14 +663,8 @@
       animation: submitGlowPulse 2s infinite ease-in-out;
       transition: all 0.2s ease;
     }
+    .btn-submit-glow:hover { animation: none; transform: scale(1.05); box-shadow: 0 0 38px rgba(37, 99, 235, 1); }
 
-    .btn-submit-glow:hover {
-      animation: none;
-      transform: scale(1.05);
-      box-shadow: 0 0 38px rgba(37, 99, 235, 1);
-    }
-
-    /* FOOTER BRANDING */
     footer.exam-footer {
       background: rgba(6, 21, 45, 0.98);
       border-top: 2.5px solid #1e3a8a;
@@ -1016,28 +676,9 @@
       color: #94a3b8;
       margin-top: auto;
     }
-
-    .footer-left {
-      text-align: left;
-      font-family: 'Outfit', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: #cbd5e1;
-    }
-
-    .footer-center {
-      text-align: center;
-      font-weight: 600;
-      color: #cbd5e1;
-      line-height: 1.4;
-    }
-
-    .footer-author-highlight {
-      color: #f59e0b;
-      font-weight: 900;
-      letter-spacing: 0.5px;
-    }
-
+    .footer-left { text-align: left; font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; color: #cbd5e1; }
+    .footer-center { text-align: center; font-weight: 600; color: #cbd5e1; line-height: 1.4; }
+    .footer-author-highlight { color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; }
     .footer-right {
       display: flex;
       align-items: center;
@@ -1050,7 +691,6 @@
       letter-spacing: 0.8px;
     }
 
-    /* MODALS */
     .modal-veil {
       position: fixed;
       inset: 0;
@@ -1061,9 +701,7 @@
       z-index: 500;
       padding: 20px;
     }
-
     .modal-veil.active { display: grid; }
-
     .modal-box-audit {
       background: #ffffff;
       border: 3px solid #1e293b;
@@ -1074,7 +712,6 @@
       box-shadow: 0 25px 60px rgba(0,0,0,0.5);
       text-align: left;
     }
-
     .audit-header-title {
       font-family: 'Outfit', sans-serif;
       font-size: 25px;
@@ -1085,7 +722,6 @@
       gap: 14px;
       margin-bottom: 8px;
     }
-
     .audit-header-subtitle {
       font-size: 16px;
       font-weight: 500;
@@ -1093,7 +729,6 @@
       margin-bottom: 24px;
       line-height: 1.5;
     }
-
     .audit-checklist-vertical {
       display: flex;
       flex-direction: column;
@@ -1103,7 +738,6 @@
       overflow-y: auto;
       padding-right: 6px;
     }
-
     .chk-audit-row {
       display: flex;
       align-items: flex-start;
@@ -1115,36 +749,10 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-
-    .chk-audit-row:hover {
-      background: #eff6ff;
-      border-color: #3b82f6;
-    }
-
-    .chk-audit-row input[type="checkbox"] {
-      width: 22px;
-      height: 22px;
-      accent-color: var(--cambridge-blue);
-      cursor: pointer;
-      margin-top: 3px;
-    }
-
-    .chk-audit-details strong {
-      font-size: 16.5px;
-      font-weight: 800;
-      color: #0f172a;
-      display: block;
-      line-height: 1.35;
-    }
-
-    .chk-audit-details span {
-      font-size: 14px;
-      font-weight: 500;
-      color: #475569;
-      display: block;
-      line-height: 1.45;
-      margin-top: 3px;
-    }
+    .chk-audit-row:hover { background: #eff6ff; border-color: #3b82f6; }
+    .chk-audit-row input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--cambridge-blue); cursor: pointer; margin-top: 3px; }
+    .chk-audit-details strong { font-size: 16.5px; font-weight: 800; color: #0f172a; display: block; line-height: 1.35; }
+    .chk-audit-details span { font-size: 14px; font-weight: 500; color: #475569; display: block; line-height: 1.45; margin-top: 3px; }
 
     .modal-box-alarm {
       background: #ffffff;
@@ -1156,38 +764,11 @@
       box-shadow: 0 25px 60px rgba(220, 38, 38, 0.45);
       text-align: center;
     }
-
-    .alarm-icon-siren {
-      font-size: 60px;
-      margin-bottom: 12px;
-      animation: flashSiren 1s infinite alternate;
-    }
-
-    @keyframes flashSiren {
-      0% { transform: scale(1) rotate(-8deg); }
-      100% { transform: scale(1.15) rotate(8deg); }
-    }
-
-    .alarm-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 26px;
-      font-weight: 900;
-      color: #991b1b;
-      margin-bottom: 14px;
-    }
-
-    .alarm-message {
-      font-size: 16.5px;
-      font-weight: 600;
-      color: #1e293b;
-      line-height: 1.65;
-      margin-bottom: 26px;
-    }
-
-    .alarm-message strong {
-      font-weight: 900;
-      color: #000000;
-    }
+    .alarm-icon-siren { font-size: 60px; margin-bottom: 12px; animation: flashSiren 1s infinite alternate; }
+    @keyframes flashSiren { 0% { transform: scale(1) rotate(-8deg); } 100% { transform: scale(1.15) rotate(8deg); } }
+    .alarm-title { font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 900; color: #991b1b; margin-bottom: 14px; }
+    .alarm-message { font-size: 16.5px; font-weight: 600; color: #1e293b; line-height: 1.65; margin-bottom: 26px; }
+    .alarm-message strong { font-weight: 900; color: #000000; }
 
     /* LOADING WAIT OVERLAY */
     .modal-box-wait {
@@ -1828,7 +1409,7 @@
             <div class="p2-instruction-text">
               <span>🎯 SELECT ONLY ONE TASK:</span>
             </div>
-            <span style="font-size:13px; font-weight:800; color:#92400e; text-transform:uppercase; letter-spacing:0.6px;">
+            <span style="font-size:13px; font-weight:800; color:#92400e; text-transform:uppercase; letter-spacing:0.8px;">
               ⚡ Pick an option below to load its workspace:
             </span>
           </div>
@@ -2162,7 +1743,7 @@
         <button type="button" class="btn-fb-action btn-fb-print" onclick="printReportDirectly()">
           <span>🖨️</span> Print / Save PDF Diagnostic
         </button>
-        <a href="./writing_mock_03.html" class="btn-fb-action btn-fb-next">
+        <a href="./writing_mock_03_signature_edition.html" class="btn-fb-action btn-fb-next">
           <span>🎯</span> Proceed to Writing Mock 03 ➔
         </a>
       </div>
@@ -2721,4 +2302,284 @@
       lang: {
         5: "Uses a wide range of vocabulary, including less common lexis. Uses a range of simple and complex grammatical forms with full control and flexibility. Errors are minimal/slips.",
         4: "Good vocabulary range with accurate complex grammar. Minor non-impeding errors.",
-        3: "Uses a range of everyday vocabulary appropriately, with occasional less common lexis. Uses a
+        3: "Uses a range of everyday vocabulary appropriately, with occasional less common lexis. Uses a range of simple and some complex grammatical forms with good control. Errors do not impede communication.",
+        2: "Vocabulary is repetitive; grammatical control is limited to basic structures with frequent non-impeding errors.",
+        1: "Uses basic vocabulary reasonably appropriately. Uses simple grammatical forms with limited control. Errors are noticeable and may occasionally impede communication.",
+        0: "Lexical resources and grammatical control are severely inadequate (A1/A2 level); errors persistently impede comprehension."
+      }
+    };
+
+    async function executeFullEvaluation() {
+      clearInterval(timerInterval);
+
+      const t1 = document.getElementById('textPart1').value.trim();
+      const t2 = document.getElementById('textPart2').value.trim();
+
+      const count1 = t1 ? t1.split(/\s+/).filter(w => w.length > 0).length : 0;
+      const count2 = t2 ? t2.split(/\s+/).filter(w => w.length > 0).length : 0;
+
+      if (count1 < 25 && count2 < 25) {
+        renderDirectZeroReport();
+        return;
+      }
+
+      // DISPLAY LOADING WAIT OVERLAY FIRST
+      const waitOverlay = document.getElementById('modalEvaluatingWait');
+      if (waitOverlay) waitOverlay.classList.add('active');
+
+      const evaluationPrompt = `
+You are a veteran Cambridge English B2 First Writing Team Leader and Senior Examiner with extensive examining experience. Evaluate the following two tasks strictly according to the 4 canonical Cambridge criteria (0 to 5 marks each: Content, Communicative Achievement, Organisation, Language).
+
+CRITICAL STANDARDS:
+- All qualitative text MUST be written in 100% natural, authoritative, formal ENGLISH.
+- Minimum pass mark per task is 12 / 20. Total pass mark is 24 / 40.
+- Scoring Scale: Grade A (36-40), Grade B (32-35), Grade C (24-31). Below 24 is categorized strictly as: "Insufficient score to pass the test".
+- For every weakness identified, provide explicit TEXTUAL EVIDENCE directly quoting the student's text, explain the technical linguistic reason for the defect, and provide an advanced C1 formulation/upgrade suggestion.
+
+PART 1 (Essay): Topic: "Which is more important – friends or family?" Notes: 1. who you can enjoy yourself with, 2. who will help you when you have problems, 3. own idea.
+Candidate Essay (${count1} words):
+"""${t1 || "(No text provided)"}"""
+
+PART 2 (${P2_DATA[activeP2Option].type}):
+Candidate Task (${count2} words):
+"""${t2 || "(No text provided)"}"""
+
+Respond ONLY with a valid JSON object matching this schema (do NOT use code fences or backticks):
+{
+  "part1": {
+    "score": 0,
+    "content": 0,
+    "commAch": 0,
+    "org": 0,
+    "lang": 0,
+    "taskFeedback": "Formal technical task overview",
+    "strengths": "Specific strengths observed in candidate's production",
+    "weaknesses": "Concrete weaknesses, gaps or omissions",
+    "evidenceQuote": "Exact textual quotation from candidate's text",
+    "evidenceIssue": "Technical explanation of the defect",
+    "evidenceUpgrade": "Suggested high-level C1 formulation upgrade",
+    "spellingAndPunctuation": "Detailed analysis of orthography, capitalization, and punctuation",
+    "grammarAnalysis": "Complex structures identified vs missing",
+    "vocabularyAnalysis": "Evaluation of thematic collocations, phrasal verbs, and B2/C1 lexicon"
+  },
+  "part2": {
+    "score": 0,
+    "content": 0,
+    "commAch": 0,
+    "org": 0,
+    "lang": 0,
+    "taskFeedback": "Formal technical task overview",
+    "strengths": "Specific strengths observed in candidate's production",
+    "weaknesses": "Concrete weaknesses, gaps or omissions",
+    "evidenceQuote": "Exact textual quotation from candidate's text",
+    "evidenceIssue": "Technical explanation of the defect",
+    "evidenceUpgrade": "Suggested high-level C1 formulation upgrade",
+    "spellingAndPunctuation": "Detailed analysis of orthography, capitalization, and punctuation",
+    "grammarAnalysis": "Complex structures identified vs missing",
+    "vocabularyAnalysis": "Evaluation of thematic collocations, phrasal verbs, and B2/C1 lexicon"
+  },
+  "grandTotal": 0,
+  "examinerSummary": "Rigorous, unsparing diagnostic verdict with strategic action steps to attain Cambridge Grade A"
+}
+`;
+
+      let reportData = null;
+
+      try {
+        const response = await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            prompt: evaluationPrompt,
+            mockTitle: "Mock 02 - Signature Edition",
+            p2Type: P2_DATA[activeP2Option].type,
+            t1Text: t1,
+            t2Text: t2
+          })
+        });
+
+        const raw = await response.text();
+        const data = JSON.parse(raw);
+
+        if (data.error) {
+          throw new Error("Apps Script API Error: " + data.error);
+        }
+
+        reportData = data;
+      } catch (err) {
+        if (waitOverlay) waitOverlay.classList.remove('active');
+        console.error("AI Examiner error via Apps Script:", err);
+        alert("SYSTEM DIAGNOSTIC:\n\n" + err.message);
+        return;
+      }
+
+      if (waitOverlay) waitOverlay.classList.remove('active');
+      displayFeedbackModal(reportData);
+    }
+
+    function renderDirectZeroReport() {
+      const zeroReport = {
+        part1: {
+          score: 0, content: 0, commAch: 0, org: 0, lang: 0,
+          taskFeedback: "No text submitted or response is under 25 words. Unable to evaluate content.",
+          strengths: "No assessable written production detected.",
+          weaknesses: "Complete omission of the 3 required prompt points on family and friends.",
+          evidenceQuote: "N/A",
+          evidenceIssue: "Total absence of assessable writing.",
+          evidenceUpgrade: "Compose a complete essay within the 140–190 word range.",
+          spellingAndPunctuation: "Insufficient sample.",
+          grammarAnalysis: "Absence of assessable grammatical structures.",
+          vocabularyAnalysis: "Insufficient lexical production for B2 benchmarking."
+        },
+        part2: {
+          score: 0, content: 0, commAch: 0, org: 0, lang: 0,
+          taskFeedback: "No text submitted or response is under 25 words. Minimum requirements not met.",
+          strengths: "No assessable written production detected.",
+          weaknesses: "Omission of target genre conventions.",
+          evidenceQuote: "N/A",
+          evidenceIssue: "Total absence of assessable writing.",
+          evidenceUpgrade: "Complete the selected genre task.",
+          spellingAndPunctuation: "Insufficient sample.",
+          grammarAnalysis: "Absence of assessable grammatical structures.",
+          vocabularyAnalysis: "Insufficient lexical production for B2 benchmarking."
+        },
+        grandTotal: 0,
+        examinerSummary: "Submission lacks sufficient text to be graded. A minimum of 140 words per task is required to achieve the pass threshold of 12 marks per task (24 overall)."
+      };
+      displayFeedbackModal(zeroReport);
+    }
+
+    function displayFeedbackModal(reportData) {
+      const modalFb = document.getElementById('modalOfficialFeedback');
+      if (modalFb) modalFb.classList.add('active');
+
+      const scoreEl = document.getElementById('fbGrandTotalScore');
+      if (scoreEl) scoreEl.textContent = `${reportData.grandTotal} / 40`;
+      
+      const gradeResult = document.getElementById('fbGradeResult');
+      if (gradeResult) {
+        if (reportData.grandTotal >= 36) {
+          gradeResult.textContent = "🏆 PASS WITH DISTINCTION (Grade A / C1 Level)";
+          gradeResult.style.background = "#064e3b";
+          gradeResult.style.color = "#a7f3d0";
+        } else if (reportData.grandTotal >= 32) {
+          gradeResult.textContent = "🥇 PASS WITH MERIT (Grade B / Upper B2)";
+          gradeResult.style.background = "#065f46";
+          gradeResult.style.color = "#d1fae5";
+        } else if (reportData.grandTotal >= 24) {
+          gradeResult.textContent = "✅ PASS (Grade C / B2 Standard Threshold)";
+          gradeResult.style.background = "#1e3a8a";
+          gradeResult.style.color = "#bfdbfe";
+        } else {
+          gradeResult.textContent = "⚠️ INSUFFICIENT SCORE TO PASS THE TEST";
+          gradeResult.style.background = "#7f1d1d";
+          gradeResult.style.color = "#fecaca";
+        }
+      }
+
+      const verdictEl = document.getElementById('fbExaminerVerdict');
+      if (verdictEl) verdictEl.textContent = reportData.examinerSummary;
+
+      // Part 1 render
+      const p1Score = document.getElementById('fbP1Score');
+      if (p1Score) p1Score.textContent = `${reportData.part1.score} / 20`;
+      
+      const p1Cont = document.getElementById('fb_p1_cont');
+      if (p1Cont) p1Cont.textContent = `${reportData.part1.content} / 5`;
+      document.getElementById('fb_bar_p1_cont').style.width = `${(reportData.part1.content / 5) * 100}%`;
+      document.getElementById('fb_desc_p1_cont').textContent = `Scale Band ${reportData.part1.content}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.content[reportData.part1.content] || CAMBRIDGE_RUBRIC_DESCRIPTORS.content[0]}`;
+
+      const p1Comm = document.getElementById('fb_p1_comm');
+      if (p1Comm) p1Comm.textContent = `${reportData.part1.commAch} / 5`;
+      document.getElementById('fb_bar_p1_comm').style.width = `${(reportData.part1.commAch / 5) * 100}%`;
+      document.getElementById('fb_desc_p1_comm').textContent = `Scale Band ${reportData.part1.commAch}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.commAch[reportData.part1.commAch] || CAMBRIDGE_RUBRIC_DESCRIPTORS.commAch[0]}`;
+
+      const p1Org = document.getElementById('fb_p1_org');
+      if (p1Org) p1Org.textContent = `${reportData.part1.org} / 5`;
+      document.getElementById('fb_bar_p1_org').style.width = `${(reportData.part1.org / 5) * 100}%`;
+      document.getElementById('fb_desc_p1_org').textContent = `Scale Band ${reportData.part1.org}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.org[reportData.part1.org] || CAMBRIDGE_RUBRIC_DESCRIPTORS.org[0]}`;
+
+      const p1Lang = document.getElementById('fb_p1_lang');
+      if (p1Lang) p1Lang.textContent = `${reportData.part1.lang} / 5`;
+      document.getElementById('fb_bar_p1_lang').style.width = `${(reportData.part1.lang / 5) * 100}%`;
+      document.getElementById('fb_desc_p1_lang').textContent = `Scale Band ${reportData.part1.lang}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.lang[reportData.part1.lang] || CAMBRIDGE_RUBRIC_DESCRIPTORS.lang[0]}`;
+
+      const p1Fb = document.getElementById('fb_p1_taskFeedback');
+      if (p1Fb) p1Fb.textContent = reportData.part1.taskFeedback;
+      const p1Str = document.getElementById('fb_p1_strengths');
+      if (p1Str) p1Str.textContent = reportData.part1.strengths || "Adequate communicative intent throughout.";
+      const p1Weak = document.getElementById('fb_p1_weaknesses');
+      if (p1Weak) p1Weak.textContent = reportData.part1.weaknesses || "No critical omissions identified.";
+      
+      const p1Ev = document.getElementById('fb_p1_evidenceBlock');
+      if (p1Ev && reportData.part1.evidenceQuote) {
+        p1Ev.innerHTML = `
+          <div class="fb-evidence-box">
+            <strong>🔍 Identified Textual Evidence:</strong>
+            <div>You wrote: <span class="fb-evidence-quote">"${reportData.part1.evidenceQuote}"</span></div>
+            <div>Diagnostic: ${reportData.part1.evidenceIssue}</div>
+            <div class="fb-evidence-fix">🚀 High-Scoring C1 Upgrade: ${reportData.part1.evidenceUpgrade}</div>
+          </div>
+        `;
+      }
+
+      document.getElementById('fb_p1_spelling').textContent = reportData.part1.spellingAndPunctuation;
+      document.getElementById('fb_p1_grammar').textContent = reportData.part1.grammarAnalysis;
+      document.getElementById('fb_p1_vocabulary').textContent = reportData.part1.vocabularyAnalysis;
+
+      // Part 2 render
+      document.getElementById('fbP2TaskTitle').textContent = `Part 2: ${P2_DATA[activeP2Option].type}`;
+      const p2Score = document.getElementById('fbP2Score');
+      if (p2Score) p2Score.textContent = `${reportData.part2.score} / 20`;
+
+      const p2Cont = document.getElementById('fb_p2_cont');
+      if (p2Cont) p2Cont.textContent = `${reportData.part2.content} / 5`;
+      document.getElementById('fb_bar_p2_cont').style.width = `${(reportData.part2.content / 5) * 100}%`;
+      document.getElementById('fb_desc_p2_cont').textContent = `Scale Band ${reportData.part2.content}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.content[reportData.part2.content] || CAMBRIDGE_RUBRIC_DESCRIPTORS.content[0]}`;
+
+      const p2Comm = document.getElementById('fb_p2_comm');
+      if (p2Comm) p2Comm.textContent = `${reportData.part2.commAch} / 5`;
+      document.getElementById('fb_bar_p2_comm').style.width = `${(reportData.part2.commAch / 5) * 100}%`;
+      document.getElementById('fb_desc_p2_comm').textContent = `Scale Band ${reportData.part2.commAch}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.commAch[reportData.part2.commAch] || CAMBRIDGE_RUBRIC_DESCRIPTORS.commAch[0]}`;
+
+      const p2Org = document.getElementById('fb_p2_org');
+      if (p2Org) p2Org.textContent = `${reportData.part2.org} / 5`;
+      document.getElementById('fb_bar_p2_org').style.width = `${(reportData.part2.org / 5) * 100}%`;
+      document.getElementById('fb_desc_p2_org').textContent = `Scale Band ${reportData.part2.org}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.org[reportData.part2.org] || CAMBRIDGE_RUBRIC_DESCRIPTORS.org[0]}`;
+
+      const p2Lang = document.getElementById('fb_p2_lang');
+      if (p2Lang) p2Lang.textContent = `${reportData.part2.lang} / 5`;
+      document.getElementById('fb_bar_p2_lang').style.width = `${(reportData.part2.lang / 5) * 100}%`;
+      document.getElementById('fb_desc_p2_lang').textContent = `Scale Band ${reportData.part2.lang}: ${CAMBRIDGE_RUBRIC_DESCRIPTORS.lang[reportData.part2.lang] || CAMBRIDGE_RUBRIC_DESCRIPTORS.lang[0]}`;
+
+      document.getElementById('fb_p2_taskFeedback').textContent = reportData.part2.taskFeedback;
+      document.getElementById('fb_p2_strengths').textContent = reportData.part2.strengths || "Proper alignment with genre format.";
+      document.getElementById('fb_p2_weaknesses').textContent = reportData.part2.weaknesses || "No critical flaws identified.";
+
+      const p2Ev = document.getElementById('fb_p2_evidenceBlock');
+      if (p2Ev && reportData.part2.evidenceQuote) {
+        p2Ev.innerHTML = `
+          <div class="fb-evidence-box">
+            <strong>🔍 Identified Textual Evidence:</strong>
+            <div>You wrote: <span class="fb-evidence-quote">"${reportData.part2.evidenceQuote}"</span></div>
+            <div>Diagnostic: ${reportData.part2.evidenceIssue}</div>
+            <div class="fb-evidence-fix">🚀 High-Scoring C1 Upgrade: ${reportData.part2.evidenceUpgrade}</div>
+          </div>
+        `;
+      }
+
+      document.getElementById('fb_p2_spelling').textContent = reportData.part2.spellingAndPunctuation;
+      document.getElementById('fb_p2_grammar').textContent = reportData.part2.grammarAnalysis;
+      document.getElementById('fb_p2_vocabulary').textContent = reportData.part2.vocabularyAnalysis;
+    }
+
+    function printReportDirectly() {
+      window.print();
+    }
+
+    // INITIAL SETUP (MOCK 2)
+    selectP2Option(2);
+    switchPart(1);
+  </script>
+</body>
+</html>
